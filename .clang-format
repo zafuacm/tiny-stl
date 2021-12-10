@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+BreakBeforeBraces: Attach
+IndentWidth: '4'
+Language: Cpp
+TabWidth: '4'
+UseTab: Never
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: true
+ColumnLimit: 80
+BinPackParameters: false
+BinPackArguments: false
+SortIncludes: false
