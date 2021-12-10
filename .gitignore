@@ -1,0 +1,11 @@
+# Xmake cache
+.xmake/
+build/
+tmp/
+
+# IDE
+.vscode
+.idea
+
+# MacOS Cache
+.DS_Store
