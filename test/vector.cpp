@@ -4,15 +4,15 @@
 template <typename T>
 std::ostream &operator<<(std::ostream &os, tstl::vector<T> &v) {
     os << "[vector] : [";
-    for (size_t i = 0; i < v.size(); i++) {
-        os << v[i] << ", ";
+    for (auto i : v) {
+        os << i << ", ";
     }
     os << "]";
     return os;
 }
 
 int main() {
-    tstl::vector<int> v1(5);
+    tstl::vector<int> v1(5, 1);
     tstl::vector<int> v2(5);
     v1[0] = 1, v2[0] = 1;
     v1[1] = 2, v2[1] = 2;
