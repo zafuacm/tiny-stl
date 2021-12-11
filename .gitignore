@@ -3,6 +3,10 @@
 build/
 tmp/
 
+# Cmake Cache
+cmake-build-debug/
+CMakeLists.txt
+
 # IDE
 .vscode
 .idea
