@@ -1,3 +1,6 @@
+#ifndef TEST_TEST_VECTOR
+#define TEST_TEST_VECTOR
+
 #include "../src/vector.hpp"
 #include "../src/algorithm.hpp"
 #include <iostream>
@@ -12,7 +15,7 @@ std::ostream &operator<<(std::ostream &os, tstl::vector<T> &v) {
     return os;
 }
 
-int main() {
+int test_vector() {
     tstl::vector<int> v1 = {1, 2, 3, 4};
     v1 = {4, 3, 2, 1};
     tstl::vector<int> v2 = v1;
@@ -29,3 +32,5 @@ int main() {
     printf("v1 == v2 : %c\n", ret ? 'Y' : 'N');
     return 0;
 }
+
+#endif
