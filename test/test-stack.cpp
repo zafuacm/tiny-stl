@@ -6,8 +6,10 @@
 #include <iostream>
 
 int test_stack() {
-    tstl::stack<int> s1;
+    tstl::stack<int, tstl::vector<int>> s1;
     s1.push(1);
+    s1.push(2);
+    s1.pop();
     std::cout << s1.top() << std::endl;
     return 0;
 }

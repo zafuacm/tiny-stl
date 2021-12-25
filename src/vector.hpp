@@ -556,7 +556,7 @@ class vector {
 
     template <class... Args>
     void m_realloc_insert(iterator pos, Args &&...args) {
-        const size_type len = size() * 2;
+        const size_type len = size() + tstl::max<size_type>(1, size());
         pointer old_start = m_start;
         pointer old_finish = m_finish;
         const size_type elems_before = pos - begin();
