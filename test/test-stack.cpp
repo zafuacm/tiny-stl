@@ -11,13 +11,13 @@ template <class T>
 class mystack : public tstl::stack<T, tstl::deque<T>> {
   public:
     using tstl::stack<T, tstl::deque<T>>::stack;
-    void show() const {
-        std::cout << "[stack] (" << this->size() << ") : ";
-        std::cout << "[";
-        for (auto i : this->c) {
-            std::cout << i << ", ";
+    friend std::ostream &operator<<(std::ostream &os, mystack &s) {
+        os << "[stack] (" << s.size() << ") : [";
+        for (auto i : s.c) {
+            os << i << ", ";
         }
-        std::cout << "]" << std::endl;
+        os << "]";
+        return os;
     }
 };
 
@@ -25,9 +25,9 @@ int test_stack() {
     mystack<double> s1;
     s1.push(1.5);
     s1.push(2);
-    s1.show();
+    std::cout << s1 << std::endl;
     s1.pop();
-    s1.show();
+    std::cout << s1 << std::endl;
     return 0;
 }
 
