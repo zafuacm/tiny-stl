@@ -5,29 +5,33 @@
 #include "../src/algorithm.hpp"
 #include <iostream>
 
-template <typename T>
-std::ostream &operator<<(std::ostream &os, tstl::vector<T> &v) {
-    os << "[vector] : [";
-    for (auto i : v) {
-        os << i << ", ";
+template <class T>
+class myvector : public tstl::vector<T> {
+  public:
+    using tstl::vector<T>::vector;
+    void show() const {
+        std::cout << "[vector] (" << this->size() << ") : ";
+        std::cout << "[";
+        for (auto i : *this) {
+            std::cout << i << ", ";
+        }
+        std::cout << "]" << std::endl;
     }
-    os << "]";
-    return os;
-}
+};
 
 int test_vector() {
-    tstl::vector<int> v1 = {1, 2, 3, 4};
+    myvector<int> v1 = {1, 2, 3, 4};
     v1 = {4, 3, 2, 1};
-    tstl::vector<int> v2 = v1;
-    v2 = tstl::vector<int>(5, -5);
+    myvector<int> v2 = v1;
+    v2 = myvector<int>(5, -5);
     v1.insert(v1.begin() + 1, -1);
-    tstl::vector<int> v3 = {v1.rbegin(), v1.rend()};
-    std::cout << v1 << std::endl;
-    std::cout << v2 << std::endl;
-    std::cout << v3 << std::endl;
+    myvector<int> v3 = {v1.rbegin(), v1.rend()};
+    v1.show();
+    v2.show();
+    v3.show();
     tstl::reverse(v3.begin(), v3.end());
     v3.insert(v3.end(), 2);
-    std::cout << v3 << std::endl;
+    v3.show();
     bool ret = v1 == v2;
     printf("v1 == v2 : %c\n", ret ? 'Y' : 'N');
     return 0;

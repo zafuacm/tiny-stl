@@ -122,12 +122,12 @@ T max(std::initializer_list<T> ilist, Compare comp) {
 }
 
 template <class T>
-const T &min(const T &a, const T &b) {
+T min(const T &a, const T &b) {
     return (b < a) ? b : a;
 }
 
 template <class T, class Compare>
-const T &min(const T &a, const T &b, Compare comp) {
+T min(const T &a, const T &b, Compare comp) {
     return (comp(b, a)) ? b : a;
 }
 
@@ -184,6 +184,14 @@ OutputIt fill_n(OutputIt first, Size count, const T &value) {
         *first++ = value;
     }
     return first;
+}
+
+template <class BidirIt1, class BidirIt2>
+BidirIt2 copy_backward(BidirIt1 first, BidirIt1 last, BidirIt2 d_last) {
+    while (first != last) {
+        *(--d_last) = *(--last);
+    }
+    return d_last;
 }
 
 } // namespace tstl

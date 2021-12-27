@@ -3,7 +3,9 @@
 
 #include "iterator.hpp"
 #include "algorithm.hpp"
+#include "memory/uninitialized.hpp"
 #include <limits>
+#include <stdexcept>
 
 namespace tstl {
 
@@ -19,8 +21,8 @@ class vector {
     using difference_type = std::ptrdiff_t;
     using reference = value_type &;
     using const_reference = const value_type &;
-    using pointer = typename Allocator::pointer;
-    using const_pointer = typename Allocator::const_pointer;
+    using pointer = typename alloc_traits::pointer;
+    using const_pointer = typename alloc_traits::const_pointer;
     using iterator = tstl::_normal_iterator<pointer, vector>;
     using const_iterator = tstl::_normal_iterator<const_pointer, vector>;
     using reverse_iterator = tstl::reverse_iterator<iterator>;
@@ -412,9 +414,9 @@ class vector {
     }
 
   private:
-    pointer m_start = pointer();
-    pointer m_finish = pointer();
-    pointer m_end_of_storage = pointer();
+    pointer m_start = nullptr;
+    pointer m_finish = nullptr;
+    pointer m_end_of_storage = nullptr;
     Allocator m_alloc;
 
     pointer m_allocate(size_type count) {
@@ -448,16 +450,16 @@ class vector {
     }
 
     void m_default_init(size_type count) {
-        m_finish = std::__uninitialized_default_n_a(m_start, count, m_alloc);
+        m_finish = tstl::_uninitialized_default_construct_n_a(m_start, count, m_alloc);
     }
 
     void m_fill_init(size_type count, const value_type &value) {
-        m_finish = std::__uninitialized_fill_n_a(m_start, count, value, m_alloc);
+        m_finish = tstl::_uninitialized_fill_n_a(m_start, count, value, m_alloc);
     }
 
     template <typename InputIter, typename ForwardIter>
     pointer m_uninitialized_copy(InputIter first, InputIter last, ForwardIter result) {
-        return std::__uninitialized_copy_a(first, last, result, m_alloc);
+        return tstl::_uninitialized_copy_a(first, last, result, m_alloc);
     }
 
     template <class Arg>
@@ -493,7 +495,7 @@ class vector {
     template <typename InputIt>
     void m_assign_aux(InputIt first, InputIt last, input_iterator_tag) {
         pointer cur = m_start;
-        for (; first != last && cur != m_finish; ++cur, (void)++first) {
+        for (; first != last && cur != m_finish; ++cur, ++first) {
             *cur = *first;
         }
         if (first == last) {
@@ -513,12 +515,12 @@ class vector {
             m_start = tmp;
             m_end_of_storage = m_finish = m_start + len;
         } else if (size() >= len) {
-            pointer i = std::copy(first, last, m_start);
+            pointer i = tstl::copy(first, last, m_start);
             m_erase_at_end(i);
         } else {
             ForwardIt mid = first;
             tstl::advance(mid, size());
-            std::copy(first, mid, m_start);
+            tstl::copy(first, mid, m_start);
             m_finish = m_uninitialized_copy(mid, last, m_finish);
         }
     }
@@ -530,7 +532,7 @@ class vector {
         } else if (count > size()) {
             tstl::fill(begin(), end(), value);
             const size_type add = count - size();
-            m_finish = std::__uninitialized_fill_n_a(m_finish, add, value, m_alloc);
+            m_finish = tstl::_uninitialized_fill_n_a(m_finish, add, value, m_alloc);
         } else {
             iterator i = tstl::fill_n(m_start, count, value);
             m_erase_at_end(i);
@@ -547,7 +549,6 @@ class vector {
         vector tmp(get_allocator());
         m_swap_data(other);
         tmp.m_swap_data(other);
-        std::__alloc_on_move(m_alloc, other.m_alloc);
     }
 
     iterator m_emplace_aux(const_iterator pos, T &&value) {
@@ -620,8 +621,7 @@ class vector {
      */
     void m_range_check(size_type pos) {
         if (pos >= size()) {
-            std::__throw_out_of_range_fmt(
-                "vector::m_range_check: pos (which is %zu) >= size() (which is %zu)", pos, size());
+            throw std::out_of_range("vector::m_range_check: out of range");
         }
     }
 };
