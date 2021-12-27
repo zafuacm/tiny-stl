@@ -9,13 +9,13 @@ template <class T>
 class myvector : public tstl::vector<T> {
   public:
     using tstl::vector<T>::vector;
-    void show() const {
-        std::cout << "[vector] (" << this->size() << ") : ";
-        std::cout << "[";
-        for (auto i : *this) {
-            std::cout << i << ", ";
+    friend std::ostream &operator<<(std::ostream &os, myvector &v) {
+        os << "[vector] (" << v.size() << ") : [";
+        for (auto i : v) {
+            os << i << ", ";
         }
-        std::cout << "]" << std::endl;
+        os << "]";
+        return os;
     }
 };
 
@@ -26,12 +26,12 @@ int test_vector() {
     v2 = myvector<int>(5, -5);
     v1.insert(v1.begin() + 1, -1);
     myvector<int> v3 = {v1.rbegin(), v1.rend()};
-    v1.show();
-    v2.show();
-    v3.show();
+    std::cout << v1 << std::endl;
+    std::cout << v2 << std::endl;
+    std::cout << v3 << std::endl;
     tstl::reverse(v3.begin(), v3.end());
     v3.insert(v3.end(), 2);
-    v3.show();
+    std::cout << v3 << std::endl;
     bool ret = v1 == v2;
     printf("v1 == v2 : %c\n", ret ? 'Y' : 'N');
     return 0;
