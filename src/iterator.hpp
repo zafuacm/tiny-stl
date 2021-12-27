@@ -268,7 +268,7 @@ class _normal_iterator {
     _normal_iterator &operator=(const _normal_iterator &) = default;
 
     _normal_iterator &operator[](difference_type n) const {
-        return base()[-n - 1];
+        return current[n];
     }
 
     friend bool operator==(const _normal_iterator &lhs, const _normal_iterator &rhs) {
