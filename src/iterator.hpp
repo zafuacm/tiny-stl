@@ -371,7 +371,7 @@ typename iterator_traits<Iter>::difference_type distance(Iter first, Iter last) 
 }
 
 template <typename InputIter>
-using _RequireInputIter = std::__enable_if_t<
+using _RequireInputIter = std::enable_if_t<
     std::is_convertible<_iterator_category_t<InputIter>, tstl::input_iterator_tag>::value>;
 
 } // namespace tstl

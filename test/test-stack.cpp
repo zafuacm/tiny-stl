@@ -2,14 +2,15 @@
 #define TEST_TEST_STACK
 
 #include "../src/vector.hpp"
+#include "../src/deque.hpp"
 #include "../src/stack.hpp"
 #include "../src/algorithm.hpp"
 #include <iostream>
 
 template <class T>
-class mystack : public tstl::stack<T, tstl::vector<int>> {
+class mystack : public tstl::stack<T, tstl::deque<T>> {
   public:
-    using tstl::stack<T, tstl::vector<int>>::stack;
+    using tstl::stack<T, tstl::deque<T>>::stack;
     void show() const {
         std::cout << "[stack] (" << this->size() << ") : ";
         std::cout << "[";
@@ -21,8 +22,8 @@ class mystack : public tstl::stack<T, tstl::vector<int>> {
 };
 
 int test_stack() {
-    mystack<int> s1;
-    s1.push(1);
+    mystack<double> s1;
+    s1.push(1.5);
     s1.push(2);
     s1.show();
     s1.pop();
