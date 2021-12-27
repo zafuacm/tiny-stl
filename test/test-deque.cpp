@@ -20,6 +20,8 @@ class mydeque : public tstl::deque<T> {
 };
 
 int test_deque() {
+    std::cout << "||||||||| DEQUE TEST |||||||||" << std::endl;
+
     mydeque<int> d1 = {1, 2, 3, 4};
     std::cout << d1 << std::endl;
     d1 = {4, 3, 2, 1};

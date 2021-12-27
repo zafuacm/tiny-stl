@@ -7,7 +7,9 @@
 
 int main() {
     test_vector();
+    std::cout << "\n" << std::endl;
     test_deque();
+    std::cout << "\n" << std::endl;
     test_stack();
     return 0;
 }

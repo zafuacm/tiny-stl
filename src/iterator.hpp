@@ -117,13 +117,13 @@ class reverse_iterator : public iterator<typename iterator_traits<Iter>::iterato
     }
 
     reverse_iterator operator++(int) {
-        Iter tmp = *this;
+        reverse_iterator tmp = *this;
         --current;
         return tmp;
     }
 
     reverse_iterator operator--(int) {
-        Iter tmp = *this;
+        reverse_iterator tmp = *this;
         ++current;
         return tmp;
     }
