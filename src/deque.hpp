@@ -404,7 +404,7 @@ class deque {
         return begin() + offset;
     }
 
-    template <class InputIt>
+    template <class InputIt, typename = tstl::_RequireInputIter<InputIt>>
     iterator insert(const_iterator pos, InputIt first, InputIt last) {
         size_type offset = pos - cbegin();
         m_range_insert_aux(pos, first, last, tstl::_iterator_category(first));
@@ -653,8 +653,14 @@ class deque {
         }
     }
 
+    void m_erase_at_begin(iterator pos) {
+        m_destroy_data(begin(), pos);
+        m_destroy_nodes(m_start.m_node, pos.m_node);
+        m_start = pos;
+    }
+
     void m_erase_at_end(iterator pos) {
-        m_destroy_data(pos, end(), m_alloc);
+        m_destroy_data(pos, end());
         m_destroy_nodes(pos.m_node + 1, m_finish.m_node + 1);
         m_finish = pos;
     }
@@ -704,6 +710,47 @@ class deque {
         }
     }
 
+    iterator m_erase(iterator pos) {
+        iterator next = pos;
+        ++next;
+        const difference_type id = pos - begin();
+        if (id < size() / 2) {
+            if (pos != begin()) {
+                tstl::move_backward(begin(), pos, next);
+            }
+            pop_front();
+        } else {
+            if (next != end()) {
+                tstl::move(next, end(), pos);
+            }
+            pop_back();
+        }
+        return begin() + id;
+    }
+
+    iterator m_erase(iterator first, iterator last) {
+        if (first == last) {
+            return first;
+        } else if (first == begin() && last == end()) {
+            clear();
+            return end();
+        }
+        const difference_type n = last - first;
+        const difference_type elems_before = first - begin();
+        if (elems_before <= size() - n) {
+            if (first != begin()) {
+                tstl::move_backward(begin(), first, last);
+            }
+            m_erase_at_begin(begin() + n);
+        } else {
+            if (last != end()) {
+                tstl::move(last, end(), first);
+            }
+            m_erase_at_end(end() - n);
+        }
+        return begin() + elems_before;
+    }
+
     void m_default_append(size_type n) {
         if (n > 0) {
             iterator new_finish = m_reserve_elements_at_back(n);
@@ -718,11 +765,11 @@ class deque {
     }
 
     iterator m_reserve_elements_at_front(size_type n) {
-        const size_type vacancies = m_finish.m_cur - m_start.m_first;
+        const size_type vacancies = m_start.m_cur - m_start.m_first;
         if (n > vacancies) {
             m_new_elements_at_front(n - vacancies);
         }
-        return m_finish + n;
+        return m_start - n;
     }
 
     iterator m_reserve_elements_at_back(size_type n) {
@@ -915,7 +962,8 @@ class deque {
         } else {
             iterator new_finish = m_reserve_elements_at_back(n);
             iterator old_finish = m_finish;
-            const difference_type elems_after = difference_type(length) - elems_after;
+            const difference_type elems_after = difference_type(length) - elems_before;
+            pos = m_finish - elems_after;
             try {
                 if (elems_after > n) {
                     iterator finish_n = m_finish - n;
@@ -936,6 +984,60 @@ class deque {
         }
     }
 
+    template <class ForwardIt>
+    void m_insert_aux(iterator pos, ForwardIt first, ForwardIt last, size_type n) {
+        const difference_type elems_before = pos - m_start;
+        const size_type length = size();
+        if (elems_before < length / 2) {
+            iterator new_start = m_reserve_elements_at_front(n);
+            iterator old_start = m_start;
+            pos = m_start + elems_before;
+            try {
+                if (elems_before >= n) {
+                    iterator start_n = m_start + n;
+                    tstl::_uninitialized_move_a(m_start, start_n, new_start, m_alloc);
+                    m_start = new_start;
+                    tstl::move(start_n, pos, old_start);
+                    tstl::copy(first, last, pos - n);
+                } else {
+                    ForwardIt mid = first;
+                    tstl::advance(mid, n - elems_before);
+                    iterator mid2 = tstl::_uninitialized_move_a(m_start, pos, new_start, m_alloc);
+                    tstl::_uninitialized_copy_a(first, mid, mid2, m_alloc);
+                    m_start = new_start;
+                    tstl::copy(mid, last, old_start);
+                }
+            } catch (...) {
+                m_destroy_nodes(new_start.m_node, m_start.m_node);
+                throw;
+            }
+        } else {
+            iterator new_finish = m_reserve_elements_at_back(n);
+            iterator old_finish = m_finish;
+            const difference_type elems_after = length - elems_before;
+            pos = m_finish - elems_after;
+            try {
+                if (elems_after > n) {
+                    iterator finish_n = m_finish - n;
+                    _uninitialized_move_a(finish_n, m_finish, m_finish, m_alloc);
+                    m_finish = new_finish;
+                    tstl::move_backward(pos, finish_n, old_finish);
+                    tstl::copy(first, last, pos);
+                } else {
+                    ForwardIt mid = first;
+                    tstl::advance(mid, elems_after);
+                    iterator mid2 = tstl::_uninitialized_move_a(mid, last, m_finish, m_alloc);
+                    tstl::_uninitialized_copy_a(pos, m_finish, mid2, m_alloc);
+                    m_finish = new_finish;
+                    tstl::copy(first, mid, pos);
+                }
+            } catch (...) {
+                m_destroy_nodes(m_finish.m_node + 1, new_finish.m_node + 1);
+                throw;
+            }
+        }
+    }
+
     void m_fill_insert(iterator pos, size_type n, const T &value) {
         if (pos.m_cur == m_start.m_cur) {
             iterator new_start = m_reserve_elements_at_front(n);
@@ -947,7 +1049,7 @@ class deque {
                 throw;
             }
         } else if (pos.m_cur == m_finish.m_cur) {
-            iterator new_finish = -m_reserve_elements_at_back(n);
+            iterator new_finish = m_reserve_elements_at_back(n);
             try {
                 tstl::_uninitialized_fill_a(m_finish, new_finish, value, m_alloc);
                 m_finish = new_finish;
@@ -1006,6 +1108,14 @@ class deque {
         }
     }
 };
+
+/**
+ * @brief 为 deque 特化 swap 算法。
+ */
+template <class T, class Alloc>
+void swap(deque<T, Alloc> &lhs, deque<T, Alloc> &rhs) {
+    lhs.swap(rhs);
+}
 
 } // namespace tstl
 

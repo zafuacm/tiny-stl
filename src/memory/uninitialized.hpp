@@ -200,16 +200,17 @@ ForwardIt _uninitialized_copy_n_a(InputIt first, Size n, ForwardIt d_first, Allo
 template <class InputIt, class ForwardIt, class Allocator>
 ForwardIt _uninitialized_move_a(InputIt first, InputIt last, ForwardIt d_first, Allocator &alloc) {
     using alloc_traits = std::allocator_traits<Allocator>;
-    ForwardIt cur = first, d_cur = d_first;
+    InputIt cur = first;
+    ForwardIt d_cur = d_first;
     try {
         for (; cur != last; ++cur, ++d_cur) {
             alloc_traits::construct(alloc, std::addressof(*d_cur), std::move(*cur));
         }
+        return d_cur;
     } catch (...) {
-        tstl::destroy(first, cur);
+        tstl::destroy(d_first, d_cur);
         throw;
     }
-    return cur;
 }
 
 } // namespace tstl
