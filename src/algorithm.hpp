@@ -194,6 +194,49 @@ BidirIt2 copy_backward(BidirIt1 first, BidirIt1 last, BidirIt2 d_last) {
     return d_last;
 }
 
+// 快速排序
+template <typename RandomIt, typename Compare>
+void quick_sort(RandomIt first, RandomIt last, Compare cmp) {
+    if (first < last) {
+        typename tstl::iterator_traits<RandomIt>::value_type basic = *first;
+        RandomIt l = first;
+        RandomIt r = last - 1;
+        while (l < r) {
+            while (cmp(basic, *r) && l < r)
+                --r;
+            if (l < r) {
+                *l = *r;
+                ++l;
+            }
+            while (cmp(*l, basic) && l < r)
+                ++l;
+            if (l < r) {
+                *r = *l;
+                --r;
+            }
+        }
+        *l = basic;
+        quick_sort(first, l, cmp);
+        quick_sort(l + 1, last, cmp);
+    }
+}
+
+// sort()接口
+template <class RandomIt>
+inline void sort(RandomIt first, RandomIt last) {
+    if (!(first == last)) {
+        quick_sort(first, last, std::less<typename iterator_traits<RandomIt>::value_type>());
+    } // 萃取类型后，默认调用 less<>()
+}
+
+// 有仿函数接口的sort
+template <class RandomIt, class Compare>
+inline void sort(RandomIt first, RandomIt last, Compare cmp) {
+    if (!(first == last)) {
+        quick_sort(first, last, cmp);
+    }
+}
+
 } // namespace tstl
 
 #endif
