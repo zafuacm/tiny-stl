@@ -3,6 +3,7 @@
 
 #include "memory/construct.hpp"
 #include "iterator.hpp"
+#include "algorithm.hpp"
 #include <iostream>
 #include <ostream>
 #include <utility>
@@ -59,6 +60,7 @@ struct list_node : public list_node_base<T> {
 
     // ListNode 的构造函数
     list_node() = default;
+
     list_node(const T &_data) : data(_data) {
     }
 
@@ -69,6 +71,7 @@ struct list_node : public list_node_base<T> {
     node_ptr self() {
         return static_cast<node_ptr>(&*this);
     }
+
     base_ptr as_base() {
         return static_cast<base_ptr>(self());
     }
@@ -84,43 +87,53 @@ struct list_iterator : public tstl::iterator<tstl::bidirectional_iterator_tag, T
     typedef typename node_traits<T>::node_ptr node_ptr;
     typedef list_iterator<T> self;
 
-    base_ptr node_; // 指向当前结点的指针
+    base_ptr m_node; // 指向当前结点的指针
 
     // 构造函数
     list_iterator() = default;
-    list_iterator(base_ptr p) : node_(p) {
+
+    list_iterator(base_ptr p) : m_node(p) {
     }
-    list_iterator(node_ptr p) : node_(p->as_base()) {
+
+    list_iterator(node_ptr p) : m_node(p->as_base()) {
     }
-    list_iterator(const list_iterator &iter) : node_(iter.node_) {
+
+    list_iterator(const list_iterator &iter) : m_node(iter.m_node) {
     }
 
     // 重载操作符
     reference operator*() const {
-        return node_->as_node()->data;
+        return m_node->as_node()->data;
     }
+
     pointer operator->() const {
         return &(operator*());
     }
+
     bool operator==(const self &iter) const {
-        return node_ == iter.node_;
+        return m_node == iter.m_node;
     }
+
     bool operator!=(const self &iter) const {
-        return node_ != iter.node_;
+        return m_node != iter.m_node;
     }
+
     self &operator++() {
-        node_ = node_->next;
+        m_node = m_node->next;
         return *this;
     }
+
     self operator++(int) {
         self tmp = *this;
         ++*this;
         return tmp;
     }
+
     self &operator--() {
-        node_ = node_->prev;
+        m_node = m_node->prev;
         return *this;
     }
+
     self operator--(int) {
         self tmp = *this;
         --*this;
@@ -138,43 +151,56 @@ struct list_const_iterator : public tstl::iterator<tstl::bidirectional_iterator_
     typedef typename node_traits<T>::node_ptr node_ptr;
     typedef list_const_iterator<T> self;
 
-    base_ptr node_; // 指向当前结点的指针
+    base_ptr m_node; // 指向当前结点的指针
 
     // 构造函数
     list_const_iterator() = default;
-    list_const_iterator(base_ptr p) : node_(p) {
+
+    list_const_iterator(base_ptr p) : m_node(p) {
     }
-    list_const_iterator(node_ptr p) : node_(p->as_base()) {
+
+    list_const_iterator(node_ptr p) : m_node(p->as_base()) {
     }
-    list_const_iterator(const list_const_iterator &iter) : node_(iter.node_) {
+
+    list_const_iterator(const list_const_iterator &iter) : m_node(iter.m_node) {
+    }
+
+    list_const_iterator(const list_iterator<T> &other) : m_node(other.m_node) {
     }
 
     // 重载操作符
     reference operator*() const {
-        return node_->as_node()->data;
+        return m_node->as_node()->data;
     }
+
     pointer operator->() const {
         return &(operator*());
     }
+
     bool operator==(const self &iter) const {
-        return node_ == iter.node_;
+        return m_node == iter.m_node;
     }
+
     bool operator!=(const self &iter) const {
-        return node_ != iter.node_;
+        return m_node != iter.m_node;
     }
+
     self &operator++() {
-        node_ = node_->next;
+        m_node = m_node->next;
         return *this;
     }
+
     self operator++(int) {
         self tmp = *this;
         ++*this;
         return tmp;
     }
+
     self &operator--() {
-        node_ = node_->prev;
+        m_node = m_node->prev;
         return *this;
     }
+
     self operator--(int) {
         self tmp = *this;
         --*this;
@@ -191,8 +217,8 @@ class list {
     using const_pointer = const value_type *;
     using reference = value_type &;
     using const_reference = const value_type &;
-    using size_type = size_t;
-    using difference_type = ptrdiff_t;
+    using size_type = std::size_t;
+    using difference_type = std::ptrdiff_t;
 
     using iterator = list_iterator<T>;
     using const_iterator = list_const_iterator<T>;
@@ -208,43 +234,51 @@ class list {
 
   private:
     base_ptr node;              // 指向末尾的结点 = end()
-    size_type size_;            // 容器大小
+    size_type m_size;           // 容器大小
     list_bnode_alloc basealloc; // 构造器
     list_node_alloc alloc;      // 构造器
 
   public:
     // 构造函数
     list() {
-        empety_initialized();
+        empty_initialized();
     }
+
     explicit list(size_type n, const value_type &value = value_type()) {
-        empety_initialized();
+        empty_initialized();
         fill_insert(begin(), n, value);
     }
-    list(iterator first, iterator last) {
-        empety_initialized();
+
+    template <class InputIt, typename = tstl::_RequireInputIter<InputIt>>
+    list(InputIt first, InputIt last) {
+        empty_initialized();
         list_insert(begin(), first, last);
     }
+
     list(const list &l) {
-        empety_initialized();
+        empty_initialized();
         list_insert(begin(), l.begin(), l.end());
     }
+
     list &operator=(const list &l) noexcept {
         list temp(l);
         swap(temp);
         return *this;
-    };
+    }
+
     list(list &&rhs) noexcept { // 右值引用
-        empety_initialized();
+        empty_initialized();
         swap(rhs);
         tstl::distance(begin(), end());
     }
+
     list &operator=(list &&rhs) noexcept {
         clear();
         swap(rhs);
-        size_ = tstl::distance(begin(), end());
+        m_size = tstl::distance(begin(), end());
         return *this;
     }
+
     ~list() {
         clear();
         put_node(node);
@@ -255,85 +289,95 @@ class list {
     void push_back(const T &value) {
         insert(end(), value);
     }
+
     void push_front(const T &value) {
         insert(begin(), value);
     }
+
     void pop_fornt() {
         erase(begin());
     }
+
     void pop_back() {
         iterator temp = end();
         erase(--temp);
     }
+
     template <class... Args> // 右值引用，暂时没写好 forward，先用一下std的
     void emplace_back(Args &&...args) {
         insert(end(), std::forward<Args>(args)...);
     }
+
     template <class... Args>
     void emplace_front(Args &&...args) {
         insert(begin(), std::forward<Args>(args)...);
     }
+
     size_type size() const noexcept {
-        return size_;
+        return m_size;
     }
+
     bool empty() const noexcept {
         return begin() == end();
     }
+
     void swap(list &rhs) noexcept {
-        // std::swap(node, rhs.node);
-        // std::swap(size_, rhs.size_);
-        std::swap(node, rhs.node);
-        std::swap(size_, rhs.size_);
+        tstl::swap(node, rhs.node);
+        tstl::swap(m_size, rhs.m_size);
     }
+
     void assign(size_type n, const value_type &val = value_type()) {
         fill_assign(n, val);
-        size_ = n;
+        m_size = n;
     }
+
     void assign(iterator first, iterator last) {
         assign_dispatch(first, last);
     }
 
     void resize(size_type n) {
-        if (size_ >= n) {
+        if (m_size >= n) {
             iterator cur = begin();
-            for (; cur != end() && n; ++cur, --n)
-                ;
+            for (; cur != end() && n; ++cur, --n) {
+            }
             erase(cur, end());
-        } else
-            fill_insert(end(), n - size_, value_type());
-        // size_ = n;
+        } else {
+            fill_insert(end(), n - m_size, value_type());
+        }
     }
 
     // 在 position 迭代器之前插入一个结点
     iterator insert(iterator position) {
         return insert(position, value_type());
     }
+
     iterator insert(iterator position, const T &x) {
-        ++size_;
+        ++m_size;
         node_ptr tmp = create_node(x);
-        tmp->next = position.node_;
-        tmp->prev = position.node_->prev;
-        position.node_->prev->next = tmp;
-        position.node_->prev = tmp;
+        tmp->next = position.m_node;
+        tmp->prev = position.m_node->prev;
+        position.m_node->prev->next = tmp;
+        position.m_node->prev = tmp;
         return tmp;
     }
 
     // 删除迭代器指向的结点
     iterator erase(iterator position) {
-        --size_;
-        base_ptr next_node = position.node_->next;
-        base_ptr prev_node = position.node_->prev;
+        --m_size;
+        base_ptr next_node = position.m_node->next;
+        base_ptr prev_node = position.m_node->prev;
         prev_node->next = next_node;
         next_node->prev = prev_node;
-        destroy_node(position.node_);
+        destroy_node(position.m_node);
         return iterator(next_node);
     }
 
     // 删除 [first, last)
     iterator erase(iterator first, iterator last) {
         iterator res;
-        while (first != last)
+        while (first != last) {
             res = erase(first++);
+        }
         return res;
     }
 
@@ -346,22 +390,24 @@ class list {
             destroy_node(temp);
         }
         node->unlink();
-        size_ = 0;
+        m_size = 0;
     }
 
     // 链表去重
     void unique() {
         iterator first = begin();
         iterator last = end();
-        if (first == last)
+        if (first == last) {
             return;
+        }
         iterator next = first;
         while (++next != last) {
             if (*first == *next) {
                 erase(next);
                 next = first;
-            } else
+            } else {
                 first = next;
+            }
         }
     }
 
@@ -369,23 +415,26 @@ class list {
     void splice(iterator pos, list &rhs) {
         if (!rhs.empty()) {
             transfer(pos, rhs.begin(), rhs.end());
-            size_ += rhs.size_;
-            rhs.size_ = 0;
+            m_size += rhs.m_size;
+            rhs.m_size = 0;
         }
     }
+
     void splice(iterator position, list &l, iterator last) {
         iterator tmp = last;
         ++tmp;
         // i==pos 自身无法插于自身之前
         // j==pos 已处于pos之前
-        if (position == last || position == tmp)
+        if (position == last || position == tmp) {
             return;
-        size_ += distance(l.begin(), last); // 更新大小（复杂度高，待优化）
+        }
+        m_size += distance(l.begin(), last); // 更新大小（复杂度高，待优化）
         transfer(position, last, tmp);
     }
+
     void splice(iterator pos, list &, iterator first, iterator last) {
         if (first != last) {
-            size_ += distance(first, last);
+            m_size += distance(first, last);
             transfer(pos, first, last);
         }
     }
@@ -402,14 +451,17 @@ class list {
                 iterator next = first2;
                 transfer(first1, first2, ++next);
                 first2 = next;
-            } else
+            } else {
                 ++first1;
+            }
         }
-        if (first2 != last2)
+        if (first2 != last2) {
             transfer(last1, first2, last2);
-        size_ += l.size_;
-        l.size_ = 0;
+        }
+        m_size += l.m_size;
+        l.m_size = 0;
     }
+
     // 链表合并（支持仿函数）
     template <class Compare>
     void merge(list &l, Compare cmp) {
@@ -423,13 +475,15 @@ class list {
                 iterator next = first2;
                 transfer(first1, first2, ++next);
                 first2 = next;
-            } else
+            } else {
                 ++first1;
+            }
         }
-        if (first2 != last2)
+        if (first2 != last2) {
             transfer(last1, first2, last2);
-        size_ += l.size_;
-        l.size_ = 0;
+        }
+        m_size += l.m_size;
+        l.m_size = 0;
     }
 
     // 链表翻转
@@ -455,7 +509,7 @@ class list {
         // _tmp[n]中最多存放2^(n+1)个元素，若大于则与_tmp[n+1]作归并
         list carry;
         list counter[64];
-        int fill = 0, size = size_;
+        int fill = 0, size = m_size;
         while (!empty()) {
             carry.splice(carry.begin(), *this, begin());
             int i = 0;
@@ -464,14 +518,17 @@ class list {
                 carry.swap(counter[i++]);
             }
             carry.swap(counter[i]);
-            if (i == fill)
+            if (i == fill) {
                 ++fill;
+            }
         }
-        for (int i = 1; i < fill; ++i)
+        for (int i = 1; i < fill; ++i) {
             counter[i].merge(counter[i - 1]);
+        }
         swap(counter[fill - 1]);
-        size_ = size;
+        m_size = size;
     }
+
     // 支持仿函数的排序
     template <class Compare>
     void sort(Compare cmp) {
@@ -481,7 +538,7 @@ class list {
         // _tmp[n]中最多存放2^(n+1)个元素，若大于则与_tmp[n+1]作归并
         list carry;
         list counter[64];
-        int fill = 0, size = size_;
+        int fill = 0, size = m_size;
         while (!empty()) {
             carry.splice(carry.begin(), *this, begin());
             int i = 0;
@@ -490,14 +547,17 @@ class list {
                 carry.swap(counter[i++]);
             }
             carry.swap(counter[i]);
-            if (i == fill)
+            if (i == fill) {
                 ++fill;
+            }
         }
-        for (int i = 1; i < fill; ++i)
+        for (int i = 1; i < fill; ++i) {
             counter[i].merge(counter[i - 1], cmp);
+        }
         swap(counter[fill - 1]);
-        size_ = size;
+        m_size = size;
     }
+
     // 从 list 种移除 value 元素
     void remove(const T &value) {
         iterator first = begin();
@@ -505,8 +565,9 @@ class list {
         while (first != last) {
             iterator next = first;
             ++next;
-            if (*first == value)
+            if (*first == value) {
                 erase(first);
+            }
             first = next;
         }
     }
@@ -517,43 +578,56 @@ class list {
     iterator begin() noexcept {
         return iterator(node->next);
     }
+
     iterator end() noexcept {
         return iterator(node);
     }
+
     reverse_iterator rbegin() noexcept {
         return reverse_iterator(end());
     }
+
     reverse_iterator rend() noexcept {
         return reverse_iterator(begin());
     }
+
     reference front() noexcept {
         return *begin();
     }
+
     reference back() noexcept {
         return *(--end());
     }
+
     // getter
     const_iterator begin() const noexcept {
         return const_iterator(node->next);
     }
+
     const_iterator end() const noexcept {
         return const_iterator(node);
     }
+
     const_iterator cbegin() const noexcept {
         return const_iterator(node->next);
     }
+
     const_iterator cend() const noexcept {
         return const_iterator(node);
     }
+
     const_reverse_iterator crbegin() const noexcept {
         return const_reverse_iterator(cend());
     }
+
     const_reverse_iterator crend() const noexcept {
         return const_reverse_iterator(cbegin());
     }
+
     const_reference front() const noexcept {
         return *begin();
     }
+
     const_reference back() const noexcept {
         return *(--end());
     }
@@ -567,7 +641,7 @@ class list {
         node_ptr p = alloc.allocate(1);
         try {
             alloc.construct(p, value);
-        } catch (std::exception) {
+        } catch (...) {
             put_node(p);
             throw;
         }
@@ -578,51 +652,54 @@ class list {
     void put_node(base_ptr p) {
         basealloc.deallocate(p, 1);
     }
+
     void put_node(node_ptr p) {
         alloc.deallocate(p, 1);
     }
+
     void destroy_node(base_ptr p) {
         put_node(p);
     }
+
     void destroy_node(node_ptr p) {
         alloc.destory(&p->data);
         put_node(p);
     }
 
     // 链表为空的初始化
-    void empety_initialized() {
+    void empty_initialized() {
         node = create_base_node(); // 链表的末尾结点
         node->unlink();            // 指针自连（初始化）
-        size_ = 0;
+        m_size = 0;
     }
 
     // 在 position 之前插入 [first， last)
-    void list_insert(iterator position, iterator first, iterator last) {
+    template <class InputIt>
+    void list_insert(iterator position, InputIt first, InputIt last) {
         size_type size = 0;
-        for (; first != last; ++first, ++size)
+        for (; first != last; ++first, ++size) {
             insert(position, *first);
-    }
-    void list_insert(iterator position, const_iterator first, const_iterator last) {
-        size_type size = 0;
-        for (; first != last; ++first, ++size)
-            insert(position, *first);
+        }
     }
 
     // 在 pos 的位置之前，填充 n 个值为 val 的结点
     void fill_insert(iterator position, size_type n, const value_type &val) {
-        for (size_type i = n; i != 0; --i)
+        for (size_type i = n; i != 0; --i) {
             position = insert(position, val);
+        }
     }
 
     // 对链表只填充 n 个位置
     void fill_assign(size_type n, const value_type &val = value_type()) {
         iterator i = begin();
-        for (; i != end(); ++i, --n)
+        for (; i != end(); ++i, --n) {
             *i = val;
-        if (n > 0)
+        }
+        if (n > 0) {
             fill_insert(end(), n, val);
-        else
+        } else {
             erase(i, end());
+        }
     }
 
     // 将链表变为 [first, last)
@@ -630,30 +707,32 @@ class list {
         size_type size = 0;
         iterator start = begin();
         iterator finish = end();
-        for (; start != finish && first != last; ++start, ++first, ++size)
+        for (; start != finish && first != last; ++start, ++first, ++size) {
             *start = *first;
-        if (first == last)
+        }
+        if (first == last) {
             erase(start, finish);
-        else
+        } else {
             list_insert(finish, first, last);
+        }
         return size;
     }
 
     // 在position 前面插入 [first, last)
     void transfer(iterator position, iterator first, iterator last) {
         if (position != last) {
-            last.node_->prev->next = position.node_;
-            first.node_->prev->next = last.node_;
-            position.node_->prev->next = first.node_;
-            base_ptr temp = position.node_->prev;
-            position.node_->prev = last.node_->prev;
-            last.node_->prev = first.node_->prev;
-            first.node_->prev = temp;
+            last.m_node->prev->next = position.m_node;
+            first.m_node->prev->next = last.m_node;
+            position.m_node->prev->next = first.m_node;
+            base_ptr temp = position.m_node->prev;
+            position.m_node->prev = last.m_node->prev;
+            last.m_node->prev = first.m_node->prev;
+            first.m_node->prev = temp;
         }
     }
 
     friend std::ostream &operator<<(std::ostream &output, const list &l) {
-        output << "[deque] (" << l.size() << ") : [";
+        output << "[list] (" << l.size() << ") : [";
         for (auto i : l) {
             output << i << ", ";
         }
@@ -684,31 +763,6 @@ bool operator==(const list<T> &lhs, const list<T> &rhs) {
 template <class T>
 inline bool operator!=(const list<T> &lhs, const list<T> &rhs) {
     return !(lhs == rhs);
-}
-
-template <class T>
-inline bool operator<(const list<T> &lhs, const list<T> &rhs) {
-    typedef typename list<T>::const_iterator iter;
-    for (iter i = lhs.begin(), j = rhs.begin(); i != lhs.end() && j != lhs.end(); ++i, ++j) {
-        if (*i.node_ > *j.node_)
-            return false;
-    }
-    return true;
-}
-
-template <class T>
-inline bool operator>(const list<T> &lhs, const list<T> &rhs) {
-    return rhs < lhs;
-}
-
-template <class T>
-inline bool operator<=(const list<T> &lhs, const list<T> &rhs) {
-    return !(rhs < lhs);
-}
-
-template <class T>
-inline bool operator>=(const list<T> &lhs, const list<T> &rhs) {
-    return !(lhs < rhs);
 }
 
 } // namespace tstl
