@@ -22,6 +22,8 @@ class mystack : public tstl::stack<T, tstl::deque<T>> {
 };
 
 int test_stack() {
+    std::cout << "||||||||| STACK TEST |||||||||" << std::endl;
+
     mystack<double> s1;
     s1.push(1.5);
     s1.push(2);
