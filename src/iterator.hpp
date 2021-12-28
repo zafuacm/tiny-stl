@@ -67,248 +67,15 @@ struct iterator_traits<const T *> {
     using iterator_category = random_access_iterator_tag;
 };
 
-template <class Iter>
-class reverse_iterator : public iterator<typename iterator_traits<Iter>::iterator_category,
-                                         typename iterator_traits<Iter>::value_type,
-                                         typename iterator_traits<Iter>::difference_type,
-                                         typename iterator_traits<Iter>::pointer,
-                                         typename iterator_traits<Iter>::reference> {
-  private:
-    Iter current;
-    using traits_type = iterator_traits<Iter>;
+#include "iterator/reverse_iterator.hpp"
 
-  public:
-    using iterator_type = Iter;
-    using difference_type = typename traits_type::difference_type;
-    using pointer = typename traits_type::pointer;
-    using reference = typename traits_type::reference;
-
-    reverse_iterator() : current() {
-    }
-
-    explicit reverse_iterator(iterator_type x) : current(x) {
-    }
-
-    template <class U>
-    reverse_iterator(const reverse_iterator<U> &other) : current(other.current) {
-    }
-
-    iterator_type base() const {
-        return current;
-    }
-
-    reference operator*() const {
-        Iter tmp = current;
-        return *--tmp;
-    }
-
-    pointer operator->() const {
-        return std::addressof(operator*());
-    }
-
-    reverse_iterator &operator++() {
-        --current;
-        return *this;
-    }
-
-    reverse_iterator &operator--() {
-        ++current;
-        return *this;
-    }
-
-    reverse_iterator operator++(int) {
-        reverse_iterator tmp = *this;
-        --current;
-        return tmp;
-    }
-
-    reverse_iterator operator--(int) {
-        reverse_iterator tmp = *this;
-        ++current;
-        return tmp;
-    }
-
-    reverse_iterator operator+(difference_type n) const {
-        return reverse_iterator(base() - n);
-    }
-
-    reverse_iterator operator-(difference_type n) const {
-        return reverse_iterator(base() + n);
-    }
-
-    reverse_iterator &operator+=(difference_type n) {
-        current -= n;
-        return *this;
-    }
-
-    reverse_iterator &operator-=(difference_type n) {
-        current += n;
-        return *this;
-    }
-
-    reverse_iterator &operator=(const reverse_iterator &) = default;
-
-    reverse_iterator make_reverse_iterator(Iter i) {
-        return reverse_iterator(i);
-    }
-
-    reverse_iterator &operator[](difference_type n) const {
-        return base()[-n - 1];
-    }
-
-    friend bool operator==(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() == rhs.base();
-    }
-
-    friend bool operator!=(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() != rhs.base();
-    }
-
-    friend bool operator<(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() > rhs.base();
-    }
-
-    friend bool operator<=(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() >= rhs.base();
-    }
-
-    friend bool operator>(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() < rhs.base();
-    }
-
-    friend bool operator>=(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return lhs.base() <= rhs.base();
-    }
-
-    friend reverse_iterator operator+(difference_type n, const reverse_iterator &it) {
-        return reverse_iterator(it.base() - n);
-    }
-
-    friend difference_type operator-(const reverse_iterator &lhs, const reverse_iterator &rhs) {
-        return rhs.base() - lhs.base();
-    }
-};
-
-template <class Iter, class Container>
-class _normal_iterator {
-  private:
-    Iter current;
-    using traits_type = iterator_traits<Iter>;
-
-  public:
-    using iterator_type = Iter;
-    using difference_type = typename traits_type::difference_type;
-    using value_type = typename traits_type::value_type;
-    using iterator_category = typename traits_type::iterator_category;
-    using pointer = typename traits_type::pointer;
-    using reference = typename traits_type::reference;
-
-    _normal_iterator() : current() {
-    }
-
-    explicit _normal_iterator(iterator_type x) : current(x) {
-    }
-
-    _normal_iterator(const _normal_iterator<typename Container::pointer, Container> &i)
-        : current(i.base()) {
-    }
-
-    _normal_iterator(const _normal_iterator<typename Container::const_pointer, Container> &i)
-        : current(i.base()) {
-    }
-
-    iterator_type base() const {
-        return current;
-    }
-
-    reference operator*() const {
-        return *current;
-    }
-
-    pointer operator->() const {
-        return current;
-    }
-
-    _normal_iterator &operator++() {
-        ++current;
-        return *this;
-    }
-
-    _normal_iterator &operator--() {
-        --current;
-        return *this;
-    }
-
-    _normal_iterator operator++(int) {
-        return _normal_iterator(current++);
-    }
-
-    _normal_iterator operator--(int) {
-        return _normal_iterator(current--);
-    }
-
-    _normal_iterator operator+(difference_type n) const {
-        return _normal_iterator(current + n);
-    }
-
-    _normal_iterator operator-(difference_type n) const {
-        return _normal_iterator(current - n);
-    }
-
-    _normal_iterator &operator+=(difference_type n) {
-        current += n;
-        return *this;
-    }
-
-    _normal_iterator &operator-=(difference_type n) {
-        current -= n;
-        return *this;
-    }
-
-    _normal_iterator &operator=(const _normal_iterator &) = default;
-
-    _normal_iterator &operator[](difference_type n) const {
-        return current[n];
-    }
-
-    friend bool operator==(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() == rhs.base();
-    }
-
-    friend bool operator!=(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() != rhs.base();
-    }
-
-    friend bool operator<(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() < rhs.base();
-    }
-
-    friend bool operator<=(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() <= rhs.base();
-    }
-
-    friend bool operator>(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() > rhs.base();
-    }
-
-    friend bool operator>=(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() >= rhs.base();
-    }
-
-    friend _normal_iterator operator+(difference_type n, const _normal_iterator &it) {
-        return _normal_iterator(it.base() - n);
-    }
-
-    friend difference_type operator-(const _normal_iterator &lhs, const _normal_iterator &rhs) {
-        return lhs.base() - rhs.base();
-    }
-};
+#include "iterator/normal_iterator.hpp"
 
 namespace detail {
 
-template <class It>
-typename iterator_traits<It>::difference_type do_distance(It first, It last, input_iterator_tag) {
-    typename iterator_traits<It>::difference_type result = 0;
+template <class Iter>
+typename iterator_traits<Iter>::difference_type do_distance(Iter first, Iter last, input_iterator_tag) {
+    typename iterator_traits<Iter>::difference_type result = 0;
     while (first != last) {
         ++first;
         ++result;
@@ -316,22 +83,22 @@ typename iterator_traits<It>::difference_type do_distance(It first, It last, inp
     return result;
 }
 
-template <class It>
-typename iterator_traits<It>::difference_type
-do_distance(It first, It last, random_access_iterator_tag) {
+template <class Iter>
+typename iterator_traits<Iter>::difference_type
+do_distance(Iter first, Iter last, random_access_iterator_tag) {
     return last - first;
 }
 
-template <class It, class Distance>
-void do_advance(It &it, Distance n, input_iterator_tag) {
+template <class Iter, class Distance>
+void do_advance(Iter &it, Distance n, input_iterator_tag) {
     while (n > 0) {
         --n;
         ++it;
     }
 }
 
-template <class It, class Distance>
-void do_advance(It &it, Distance n, bidirectional_iterator_tag) {
+template <class Iter, class Distance>
+void do_advance(Iter &it, Distance n, bidirectional_iterator_tag) {
     while (n > 0) {
         --n;
         ++it;
@@ -342,19 +109,19 @@ void do_advance(It &it, Distance n, bidirectional_iterator_tag) {
     }
 }
 
-template <class It, class Distance>
-void do_advance(It &it, Distance n, random_access_iterator_tag) {
+template <class Iter, class Distance>
+void do_advance(Iter &it, Distance n, random_access_iterator_tag) {
     it += n;
 }
 
 } // namespace detail
 
-template <class It, class Distance>
-void advance(It &it, Distance n) {
-    typename iterator_traits<It>::difference_type d = n;
+template <class Iter, class Distance>
+void advance(Iter &it, Distance n) {
+    typename iterator_traits<Iter>::difference_type d = n;
     detail::do_advance(it,
-                       typename iterator_traits<It>::difference_type(n),
-                       typename iterator_traits<It>::iterator_category());
+                       typename iterator_traits<Iter>::difference_type(n),
+                       typename iterator_traits<Iter>::iterator_category());
 }
 
 template <typename Iter>
@@ -372,7 +139,7 @@ typename iterator_traits<Iter>::difference_type distance(Iter first, Iter last) 
 
 template <typename InputIter>
 using _RequireInputIter = std::enable_if_t<
-    std::is_convertible<_iterator_category_t<InputIter>, tstl::input_iterator_tag>::value>;
+    std::is_convertible<_iterator_category_t<InputIter>, input_iterator_tag>::value>;
 
 } // namespace tstl
 

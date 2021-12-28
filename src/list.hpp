@@ -4,9 +4,6 @@
 #include "memory/construct.hpp"
 #include "iterator.hpp"
 #include "algorithm.hpp"
-#include <iostream>
-#include <ostream>
-#include <utility>
 
 // 文件内容主要是容器 —— List 以及 其配件
 namespace tstl {
@@ -19,14 +16,13 @@ struct list_node;
 // 结点萃取
 template <class T>
 struct node_traits {
-    typedef list_node_base<T> *base_ptr; // 指向基本结点的指针
-    typedef list_node<T> *node_ptr;      // 指向含数据域结点的指针
+    using base_ptr = list_node_base<T> *; // 指向基本结点的指针
+    using node_ptr = list_node<T> *;      // 指向含数据域结点的指针
 };
 
 // list 的基本结点
 template <class T>
 struct list_node_base {
-
     using base_ptr = typename node_traits<T>::base_ptr;
     using node_ptr = typename node_traits<T>::node_ptr;
 
@@ -80,12 +76,12 @@ struct list_node : public list_node_base<T> {
 // list 的迭代器
 template <class T>
 struct list_iterator : public tstl::iterator<tstl::bidirectional_iterator_tag, T> {
-    typedef T value_type;
-    typedef T *pointer;
-    typedef T &reference;
-    typedef typename node_traits<T>::base_ptr base_ptr;
-    typedef typename node_traits<T>::node_ptr node_ptr;
-    typedef list_iterator<T> self;
+    using value_type = T;
+    using pointer = T *;
+    using reference = T &;
+    using base_ptr = typename node_traits<T>::base_ptr;
+    using node_ptr = typename node_traits<T>::node_ptr;
+    using self = list_iterator;
 
     base_ptr m_node; // 指向当前结点的指针
 
@@ -144,12 +140,12 @@ struct list_iterator : public tstl::iterator<tstl::bidirectional_iterator_tag, T
 // list 的常迭代器
 template <class T>
 struct list_const_iterator : public tstl::iterator<tstl::bidirectional_iterator_tag, T> {
-    typedef T value_type;
-    typedef T *pointer;
-    typedef T &reference;
-    typedef typename node_traits<T>::base_ptr base_ptr;
-    typedef typename node_traits<T>::node_ptr node_ptr;
-    typedef list_const_iterator<T> self;
+    using value_type = T;
+    using pointer = T *;
+    using reference = T &;
+    using base_ptr = typename node_traits<T>::base_ptr;
+    using node_ptr = typename node_traits<T>::node_ptr;
+    using self = list_const_iterator;
 
     base_ptr m_node; // 指向当前结点的指针
 
@@ -211,6 +207,8 @@ struct list_const_iterator : public tstl::iterator<tstl::bidirectional_iterator_
 // list 容器
 template <class T, class Allocator = std::allocator<T>>
 class list {
+    using alloc_traits = std::allocator_traits<Allocator>;
+
   public:
     using value_type = T;
     using pointer = value_type *;
@@ -225,18 +223,21 @@ class list {
     using reverse_iterator = tstl::reverse_iterator<iterator>;
     using const_reverse_iterator = tstl::reverse_iterator<const_iterator>;
 
-    typedef typename node_traits<T>::base_ptr base_ptr;
-    typedef typename node_traits<T>::node_ptr node_ptr;
-    typedef list_node<T> Lnode;
-    typedef list_node_base<T> Lbnode;
-    typedef std::allocator<Lnode> list_node_alloc;
-    typedef std::allocator<Lbnode> list_bnode_alloc;
+    using base_ptr = typename node_traits<T>::base_ptr;
+    using node_ptr = typename node_traits<T>::node_ptr;
+    using Lnode = list_node<T>;
+    using Lbnode = list_node_base<T>;
+    using list_node_alloc = typename alloc_traits::template rebind_alloc<Lnode>;
+    using list_bnode_alloc = typename alloc_traits::template rebind_alloc<Lbnode>;
 
   private:
-    base_ptr node;              // 指向末尾的结点 = end()
-    size_type m_size;           // 容器大小
-    list_bnode_alloc basealloc; // 构造器
-    list_node_alloc alloc;      // 构造器
+    base_ptr m_node;                // 指向末尾的结点 = end()
+    size_type m_size;               // 容器大小
+    list_bnode_alloc m_bnode_alloc; // 构造器
+    list_node_alloc m_node_alloc;   // 构造器
+
+    using node_alloc_traits = std::allocator_traits<list_node_alloc>;
+    using bnode_alloc_traits = std::allocator_traits<list_bnode_alloc>;
 
   public:
     // 构造函数
@@ -281,7 +282,7 @@ class list {
 
     ~list() {
         clear();
-        put_node(node);
+        m_deallocate(m_node);
     }
 
   public:
@@ -303,7 +304,7 @@ class list {
         erase(--temp);
     }
 
-    template <class... Args> // 右值引用，暂时没写好 forward，先用一下std的
+    template <class... Args>
     void emplace_back(Args &&...args) {
         insert(end(), std::forward<Args>(args)...);
     }
@@ -322,7 +323,7 @@ class list {
     }
 
     void swap(list &rhs) noexcept {
-        tstl::swap(node, rhs.node);
+        tstl::swap(m_node, rhs.m_node);
         tstl::swap(m_size, rhs.m_size);
     }
 
@@ -383,13 +384,13 @@ class list {
 
     // 清空链表
     void clear() {
-        base_ptr now = node->next;
-        while (now != node) {
+        base_ptr now = m_node->next;
+        while (now != m_node) {
             base_ptr temp = now;
             now = now->next;
             destroy_node(temp);
         }
-        node->unlink();
+        m_node->unlink();
         m_size = 0;
     }
 
@@ -489,7 +490,7 @@ class list {
     // 链表翻转
     void reverse() {
         // empty || size()==1
-        if (node->next == node || node->next->next == node)
+        if (m_node->next == m_node || m_node->next->next == m_node)
             return;
         iterator first = begin();
         ++first; // begin自身并不需要移动，它将作为指示末元素的哨兵（确切地说，最终begin.node->next
@@ -503,8 +504,9 @@ class list {
 
     // 归并排序
     void sort() {
-        if (node->next == node || node->next->next == node)
+        if (m_node->next == m_node || m_node->next->next == m_node) {
             return;
+        }
         // 数据缓存区
         // _tmp[n]中最多存放2^(n+1)个元素，若大于则与_tmp[n+1]作归并
         list carry;
@@ -532,8 +534,9 @@ class list {
     // 支持仿函数的排序
     template <class Compare>
     void sort(Compare cmp) {
-        if (node->next == node || node->next->next == node)
+        if (m_node->next == m_node || m_node->next->next == m_node) {
             return;
+        }
         // 数据缓存区
         // _tmp[n]中最多存放2^(n+1)个元素，若大于则与_tmp[n+1]作归并
         list carry;
@@ -576,11 +579,11 @@ class list {
     // 迭代器相关
     // setter
     iterator begin() noexcept {
-        return iterator(node->next);
+        return iterator(m_node->next);
     }
 
     iterator end() noexcept {
-        return iterator(node);
+        return iterator(m_node);
     }
 
     reverse_iterator rbegin() noexcept {
@@ -601,19 +604,19 @@ class list {
 
     // getter
     const_iterator begin() const noexcept {
-        return const_iterator(node->next);
+        return const_iterator(m_node->next);
     }
 
     const_iterator end() const noexcept {
-        return const_iterator(node);
+        return const_iterator(m_node);
     }
 
     const_iterator cbegin() const noexcept {
-        return const_iterator(node->next);
+        return const_iterator(m_node->next);
     }
 
     const_iterator cend() const noexcept {
-        return const_iterator(node);
+        return const_iterator(m_node);
     }
 
     const_reverse_iterator crbegin() const noexcept {
@@ -634,42 +637,46 @@ class list {
 
   private:
     // 生成一个结点
-    base_ptr create_base_node() {
-        return alloc.allocate(1);
+    base_ptr m_bnode_allocate(size_type count) {
+        return bnode_alloc_traits::allocate(m_bnode_alloc, count);
     }
+    node_ptr m_node_allocate(size_type count) {
+        return node_alloc_traits::allocate(m_node_alloc, count);
+    }
+
     node_ptr create_node(const value_type &value) {
-        node_ptr p = alloc.allocate(1);
+        node_ptr p = m_node_allocate(1);
         try {
-            alloc.construct(p, value);
+            node_alloc_traits::construct(m_node_alloc, p, value);
         } catch (...) {
-            put_node(p);
+            m_deallocate(p);
             throw;
         }
         return p;
     }
 
     // 销毁一个结点
-    void put_node(base_ptr p) {
-        basealloc.deallocate(p, 1);
+    void m_deallocate(base_ptr p) {
+        bnode_alloc_traits::deallocate(m_bnode_alloc, p, 1);
     }
 
-    void put_node(node_ptr p) {
-        alloc.deallocate(p, 1);
+    void m_deallocate(node_ptr p) {
+        node_alloc_traits::deallocate(m_node_alloc, p, 1);
     }
 
     void destroy_node(base_ptr p) {
-        put_node(p);
+        m_deallocate(p);
     }
 
     void destroy_node(node_ptr p) {
-        alloc.destory(&p->data);
-        put_node(p);
+        m_node_alloc.destory(&p->data);
+        m_deallocate(p);
     }
 
     // 链表为空的初始化
     void empty_initialized() {
-        node = create_base_node(); // 链表的末尾结点
-        node->unlink();            // 指针自连（初始化）
+        m_node = m_node_allocate(1); // 链表的末尾结点
+        m_node->unlink();            // 指针自连（初始化）
         m_size = 0;
     }
 
@@ -720,43 +727,37 @@ class list {
 
     // 在position 前面插入 [first, last)
     void transfer(iterator position, iterator first, iterator last) {
-        if (position != last) {
-            last.m_node->prev->next = position.m_node;
-            first.m_node->prev->next = last.m_node;
-            position.m_node->prev->next = first.m_node;
-            base_ptr temp = position.m_node->prev;
-            position.m_node->prev = last.m_node->prev;
-            last.m_node->prev = first.m_node->prev;
-            first.m_node->prev = temp;
+        if (position == last) {
+            return;
         }
-    }
-
-    friend std::ostream &operator<<(std::ostream &output, const list &l) {
-        output << "[list] (" << l.size() << ") : [";
-        for (auto i : l) {
-            output << i << ", ";
-        }
-        output << "]";
-        return output;
+        last.m_node->prev->next = position.m_node;
+        first.m_node->prev->next = last.m_node;
+        position.m_node->prev->next = first.m_node;
+        base_ptr temp = position.m_node->prev;
+        position.m_node->prev = last.m_node->prev;
+        last.m_node->prev = first.m_node->prev;
+        first.m_node->prev = temp;
     }
 };
 
 template <class T>
-inline bool operator==(const tstl::list<int>::iterator &lhs, const tstl::list<int>::iterator &rhs) {
+inline bool operator==(const list<int>::iterator &lhs, const list<int>::iterator &rhs) {
     return lhs == rhs;
 }
 
 template <class T>
-inline bool operator!=(const tstl::list<int>::iterator &lhs, const tstl::list<int>::iterator &rhs) {
+inline bool operator!=(const list<int>::iterator &lhs, const list<int>::iterator &rhs) {
     return lhs != rhs;
 }
 
 template <class T>
 bool operator==(const list<T> &lhs, const list<T> &rhs) {
     auto it1 = lhs.begin(), it2 = rhs.begin(); // same as cbegin()
-    for (; it1 != lhs.end() && it2 != rhs.end(); ++it1, ++it2)
-        if (*it1 != *it2)
+    for (; it1 != lhs.end() && it2 != rhs.end(); ++it1, ++it2) {
+        if (*it1 != *it2) {
             return false;
+        }
+    }
     return it1 == lhs.end() && it2 == rhs.end();
 }
 

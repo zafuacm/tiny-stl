@@ -15,8 +15,7 @@ class myvector : public tstl::vector<T> {
         for (auto i : v) {
             os << i << ", ";
         }
-        os << "]";
-        return os;
+        return os << "]";
     }
 };
 

@@ -1,3 +1,6 @@
+#ifndef TEST_TEST_LIST
+#define TEST_TEST_LIST
+
 #include <iostream>
 #include "../src/list.hpp"
 
@@ -17,116 +20,138 @@ struct Test {
     }
 };
 
-// 针对各种构造函数的测试（还未测试右值类型）
+template <class T>
+class mylist : public tstl::list<T> {
+  public:
+    using tstl::list<T>::list;
+    friend std::ostream &operator<<(std::ostream &os, const mylist &l) {
+        os << "[list] (" << l.size() << ") : [";
+        for (auto i : l) {
+            os << i << ", ";
+        }
+        return os << "]";
+    }
+};
+
+namespace test_list_detail {
+
+template <class T>
+void show(const mylist<T> &v, const std::string &s) {
+    std::cout << s << " | " << v << std::endl;
+}
+
+#define dbg(x) show(x, #x)
+// #define dbg(x) 1
+
 void constructedTest() {
-    std::cout << "构造函数测试：" << std::endl;
-    tstl::list<int> intlist1(5, 3);
-    tstl::list<int> intlist2(7, 6);
-    tstl::list<int>::iterator tmp = intlist2.begin();
+    std::cout << "====== list construct ======" << std::endl;
+    mylist<int> l1(5, 3);
+    mylist<int> l2(7, 6);
+    mylist<int>::iterator tmp = l2.begin();
     tstl::advance(tmp, 2);
-    tstl::list<int> intlist3(tmp, --intlist2.end());
-    tstl::list<int> intlist4(intlist3);
-    std::cout << intlist1 << std::endl;
-    std::cout << intlist2 << std::endl;
-    std::cout << intlist3 << std::endl;
-    std::cout << intlist4 << std::endl;
-    intlist4 = intlist2;
-    std::cout << intlist4 << std::endl;
-    intlist4.swap(intlist1);
-    std::cout << intlist1 << std::endl;
-    std::cout << intlist4 << std::endl;
+    mylist<int> l3(tmp, --l2.end());
+    mylist<int> l4(l3);
+    dbg(l1);
+    dbg(l2);
+    dbg(l3);
+    dbg(l4);
+    l4 = l2;
+    dbg(l4);
+    l4.swap(l1);
+    dbg(l1);
+    dbg(l4);
 }
-// 与链表存取操作有关的方法的测试
+
 void modifyListTest() {
-    std::cout << "存取修改函数测试：" << std::endl;
-    tstl::list<double> ilist(2, 1.5);
-    std::cout << ilist << std::endl;
+    std::cout << "====== list modify ======" << std::endl;
+    mylist<double> l(2, 1.5);
+    dbg(l);
 
-    ilist.push_back(2.5);
-    ilist.push_back(5.1);
-    ilist.push_front(3.5);
-    ilist.push_front(4.1);
-    std::cout << ilist << std::endl;
+    l.push_back(2.5);
+    l.push_back(5.1);
+    l.push_front(3.5);
+    l.push_front(4.1);
+    dbg(l);
 
-    ilist.pop_back();
-    ilist.pop_fornt();
-    std::cout << ilist << std::endl;
+    l.pop_back();
+    l.pop_fornt();
 
-    if(ilist.empty())
-        std::cout << "List is empty" << '\n';
-    else
-        std::cout << "List is not empty" << '\n';
-    
-    tstl::list<double> ilist2;
-    ilist2.assign(ilist.begin(),ilist.end());
-    ilist.assign(6, 2.2);
-    std::cout << ilist2 << std::endl;
-    std::cout << ilist << std::endl;
-    ilist.resize(8);
-    std::cout << ilist << std::endl;
-    tstl::list<double>::iterator tmp = ilist.begin();
+    dbg(l);
+
+    mylist<double> l2;
+    l2.assign(l.begin(), l.end());
+    l.assign(6, 2.2);
+    dbg(l2);
+
+    dbg(l);
+    l.resize(8);
+
+    dbg(l);
+    mylist<double>::iterator tmp = l.begin();
     tstl::advance(tmp, 3);
-    ilist.insert(tmp, 4.6);
-    std::cout << ilist << std::endl;
+    l.insert(tmp, 4.6);
 
-    ilist.erase(--tmp);
-    std::cout << ilist << std::endl;
-    tmp = ilist.begin();
+    dbg(l);
+
+    l.erase(--tmp);
+
+    dbg(l);
+    tmp = l.begin();
     tstl::advance(tmp, 2);
-    // ilist.splice(tmp, ilist2);
-    // ilist.splice(tmp, ilist2, --ilist2.end());
-    ilist.splice(tmp, ilist2, ++ilist2.begin(), --ilist2.end());
-    std::cout << ilist << std::endl;
-    
-    // ilist.unique();
-    // std::cout << ilist);
-    // std::cout << "size = " << ilist.size() << '\n';
-    // ilist.erase(ilist.begin(),ilist.end());
-    // std::cout << ilist);
-    // std::cout << "size = " << ilist.size() << '\n';
-    // ilist.clear();
-    // std::cout << ilist);
-    // std::cout << "size = " << ilist.size() << '\n';
+    // l.splice(tmp, l2);
+    // l.splice(tmp, l2, --l2.end());
+    l.splice(tmp, l2, ++l2.begin(), --l2.end());
+
+    dbg(l);
+
+    // l.unique();
+    // std::cout << l);
+    // std::cout << "size = " << l.size() << '\n';
+    // l.erase(l.begin(),l.end());
+    // std::cout << l);
+    // std::cout << "size = " << l.size() << '\n';
+    // l.clear();
+    // std::cout << l);
+    // std::cout << "size = " << l.size() << '\n';
 }
 
-// list 元素移动类函数测试
 void move_element_Test() {
-    std::cout << "移动分割函数测试：" << std::endl;
-    tstl::list<int> list1(2, 3);
-    tstl::list<int> list2(2, 2);
-    std::cout << list1 << std::endl;
+    std::cout << "====== list move ======" << std::endl;
+    mylist<int> list1(2, 3);
+    mylist<int> list2(2, 2);
+    dbg(list1);
     list2.push_back(3);
     list2.push_back(4);
-    std::cout << list2 << std::endl;
+    dbg(list2);
     list1.merge(list2);
-    std::cout << list1 << std::endl;
+    dbg(list1);
 
     list1.remove(2);
-    std::cout << list1 << std::endl;
+    dbg(list1);
 }
-// 针对 list.sort（）的测试
+
 void sortTest() {
-    std::cout << "随机生成长度为 10 的链表排序" << std::endl;
-    tstl::list<int> list;
-    for(int i = 0 ; i < 10; i ++)
+    std::cout << "====== list sort ======" << std::endl;
+    mylist<int> list;
+    for (int i = 0; i < 10; i++)
         list.push_back(rand() % 10 + 1);
 
-    std::cout << "初始 ： "<< std::endl;
-    std::cout << list << std::endl;
+    dbg(list);
     list.sort();
-    std::cout << "从小到大（默认） ： "<< std::endl;
-    std::cout << list << std::endl;
-    std::cout << "从大到小（cmp函数调用） ： "<< std::endl;
-    list.sort([&](int a, int b){
-        return a > b;
-    });
-    std::cout << list << std::endl;
+    dbg(list);
+    list.sort([&](int a, int b) { return a > b; });
+    dbg(list);
 }
 
-int main() {
-    constructedTest();
-    modifyListTest();
-    move_element_Test();
-    sortTest();
+} // namespace test_list_detail
+
+int test_list() {
+    std::cout << "||||||||| LIST TEST |||||||||" << std::endl;
+    test_list_detail::constructedTest();
+    test_list_detail::modifyListTest();
+    test_list_detail::move_element_Test();
+    test_list_detail::sortTest();
     return 0;
 }
+
+#endif

@@ -14,8 +14,7 @@ class mydeque : public tstl::deque<T> {
         for (auto i : d) {
             os << i << ", ";
         }
-        os << "]";
-        return os;
+        return os << "]";
     }
 };
 
