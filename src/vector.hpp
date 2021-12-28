@@ -929,7 +929,7 @@ class vector {
  * @brief 为 vector 特化 swap 算法。
  */
 template <class T, class Alloc>
-void swap(tstl::vector<T, Alloc> &lhs, tstl::vector<T, Alloc> &rhs) {
+void swap(vector<T, Alloc> &lhs, vector<T, Alloc> &rhs) {
     lhs.swap(rhs);
 }
 

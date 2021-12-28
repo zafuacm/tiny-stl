@@ -34,12 +34,12 @@ class stack {
     explicit stack(const Container &cont) : c(cont) {
     }
 
-    explicit stack(Container &&cont) : c(std::move(cont)) {
+    explicit stack(Container &&cont) : c(cont) {
     }
 
     stack(const stack &other) = default;
 
-    stack(stack &&other) = default;
+    stack(stack &&other) noexcept = default;
 
     template <class Alloc, _Uses<Alloc>>
     explicit stack(const Alloc &alloc) : c(alloc) {
@@ -132,6 +132,14 @@ class stack {
         lhs.swap(rhs);
     }
 };
+
+/**
+ * @brief 为 stack 特化 swap 算法。
+ */
+template <class T, class Alloc>
+void swap(stack<T, Alloc> &lhs, stack<T, Alloc> &rhs) {
+    lhs.swap(rhs);
+}
 
 } // namespace tstl
 
