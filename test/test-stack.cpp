@@ -16,8 +16,7 @@ class mystack : public tstl::stack<T, tstl::deque<T>> {
         for (auto i : s.c) {
             os << i << ", ";
         }
-        os << "]";
-        return os;
+        return os << "]";
     }
 };
 

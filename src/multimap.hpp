@@ -3,17 +3,16 @@
 
 // #include "rb_tree/rbTree.hpp"
 #include "rbtree.hpp"
-#include <ostream>
 
 namespace tstl {
 
 template <class Key, class T, class Compare = std::less<Key>>
 class multimap {
   public:
-    typedef Key key_type;
-    typedef T mapped_type;
-    typedef std::pair<const Key, T> value_type;
-    typedef Compare key_compare;
+    using key_type = Key;
+    using mapped_type = T;
+    using value_type = std::pair<const Key, T>;
+    using key_compare = Compare;
 
     // 定义一个仿函数
     class value_compare : public std::binary_function<value_type, value_type, bool> {
@@ -31,91 +30,100 @@ class multimap {
     };
 
   private:
-    // 底层为红黑树
-    typedef tstl::rb_tree<value_type, key_compare> base_type;
-    base_type tree_;
+    using base_type = tstl::rb_tree<value_type, key_compare>;
+    base_type m_tree;
 
   public:
     // 红黑树的一些基本定义
-    typedef typename base_type::node_type node_type;
-    typedef typename base_type::pointer pointer;
-    typedef typename base_type::const_pointer const_pointer;
-    typedef typename base_type::reference reference;
-    typedef typename base_type::const_reference const_reference;
-    typedef typename base_type::iterator iterator;
-    typedef typename base_type::const_iterator const_iterator;
-    typedef typename base_type::reverse_iterator reverse_iterator;
-    typedef typename base_type::const_reverse_iterator const_reverse_iterator;
-    typedef typename base_type::size_type size_type;
-    typedef typename base_type::difference_type difference_type;
-    typedef typename base_type::allocator_type allocator_type;
+    using node_type = typename base_type::node_type;
+    using pointer = typename base_type::pointer;
+    using const_pointer = typename base_type::const_pointer;
+    using reference = typename base_type::reference;
+    using const_reference = typename base_type::const_reference;
+    using iterator = typename base_type::iterator;
+    using const_iterator = typename base_type::const_iterator;
+    using reverse_iterator = typename base_type::reverse_iterator;
+    using const_reverse_iterator = typename base_type::const_reverse_iterator;
+    using size_type = typename base_type::size_type;
+    using difference_type = typename base_type::difference_type;
+    using allocator_type = typename base_type::allocator_type;
 
   public:
     // 构造、复制、移动函数
     multimap() = default;
 
-    template <class InputIterator>
-    multimap(InputIterator first, InputIterator last) : tree_() {
-        tree_.insert_multi(first, last);
-    }
-    multimap(std::initializer_list<value_type> ilist) : tree_() {
-        tree_.insert_multi(ilist.begin(), ilist.end());
+    template <class InputIt>
+    multimap(InputIt first, InputIt last) : m_tree() {
+        m_tree.insert_multi(first, last);
     }
 
-    multimap(const multimap &rhs) : tree_(rhs.tree_) {
+    multimap(std::initializer_list<T> ilist) : m_tree() {
+        m_tree.insert_multi(ilist.begin(), ilist.end());
     }
-    multimap(multimap &&rhs) noexcept : tree_(std::move(rhs.tree_)) {
+
+    multimap(const multimap &other) : m_tree(other.m_tree) {
+    }
+
+    multimap(multimap &&other) noexcept : m_tree(std::move(other.m_tree)) {
     }
 
     multimap &operator=(const multimap &rhs) {
-        tree_ = rhs.tree_;
-        return *this;
-    }
-    multimap &operator=(multimap &&rhs) {
-        tree_ = std::move(rhs.tree_);
+        m_tree = rhs.m_tree;
         return *this;
     }
 
-    multimap &operator=(std::initializer_list<value_type> ilist) {
-        tree_.clear();
-        tree_.insert_multi(ilist.begin(), ilist.end());
+    multimap &operator=(multimap &&rhs) noexcept {
+        m_tree = std::move(rhs.m_tree);
+        return *this;
+    }
+
+    multimap &operator=(std::initializer_list<T> ilist) {
+        m_tree.clear();
+        m_tree.insert_multi(ilist.begin(), ilist.end());
         return *this;
     }
 
     // 接口
     key_compare key_comp() const {
-        return tree_.key_comp();
-    }
-    value_compare value_comp() const {
-        return value_compare(tree_.key_comp());
-    }
-    allocator_type get_allocator() const {
-        return tree_.get_allocator();
+        return m_tree.key_comp();
     }
 
-    // 迭代器相关方法
+    value_compare value_comp() const {
+        return value_compare(m_tree.key_comp());
+    }
+
+    allocator_type get_allocator() const {
+        return m_tree.get_allocator();
+    }
+
     iterator begin() noexcept {
-        return tree_.begin();
+        return m_tree.begin();
     }
+
     const_iterator begin() const noexcept {
-        return tree_.begin();
+        return m_tree.begin();
     }
+
     iterator end() noexcept {
-        return tree_.end();
+        return m_tree.end();
     }
+
     const_iterator end() const noexcept {
-        return tree_.end();
+        return m_tree.end();
     }
 
     reverse_iterator rbegin() noexcept {
         return reverse_iterator(end());
     }
+
     const_reverse_iterator rbegin() const noexcept {
         return const_reverse_iterator(end());
     }
+
     reverse_iterator rend() noexcept {
         return reverse_iterator(begin());
     }
+
     const_reverse_iterator rend() const noexcept {
         return const_reverse_iterator(begin());
     }
@@ -123,120 +131,124 @@ class multimap {
     const_iterator cbegin() const noexcept {
         return begin();
     }
+
     const_iterator cend() const noexcept {
         return end();
     }
+
     const_reverse_iterator crbegin() const noexcept {
         return rbegin();
     }
+
     const_reverse_iterator crend() const noexcept {
         return rend();
     }
 
-    // size相关
     bool empty() const noexcept {
-        return tree_.empty();
-    }
-    size_type size() const noexcept {
-        return tree_.size();
-    }
-    size_type max_size() const noexcept {
-        return tree_.max_size();
+        return m_tree.empty();
     }
 
-    // 插入删除
+    size_type size() const noexcept {
+        return m_tree.size();
+    }
+
+    size_type max_size() const noexcept {
+        return m_tree.max_size();
+    }
+
     template <class... Args>
     iterator emplace(Args &&...args) {
-        return tree_.emplace_multi(std::forward<Args>(args)...);
+        return m_tree.emplace_multi(std::forward<Args>(args)...);
     }
+
     template <class... Args>
     iterator emplace_hint(iterator hint, Args &&...args) {
-        return tree_.emplace_multi_use_hint(hint, std::forward<Args>(args)...);
+        return m_tree.emplace_multi_use_hint(hint, std::forward<Args>(args)...);
     }
+
     iterator insert(const value_type &value) {
-        return tree_.insert_multi(value);
+        return m_tree.insert_multi(value);
     }
+
     iterator insert(value_type &&value) {
-        return tree_.insert_multi(std::move(value));
+        return m_tree.insert_multi(std::move(value));
     }
 
     iterator insert(iterator hint, const value_type &value) {
-        return tree_.insert_multi(hint, value);
-    }
-    iterator insert(iterator hint, value_type &&value) {
-        return tree_.insert_multi(hint, std::move(value));
-    }
-    template <class InputIterator>
-    void insert(InputIterator first, InputIterator last) {
-        tree_.insert_multi(first, last);
-    }
-    void erase(iterator position) {
-        tree_.erase(position);
-    }
-    size_type erase(const key_type &key) {
-        return tree_.erase_multi(key);
-    }
-    void erase(iterator first, iterator last) {
-        tree_.erase(first, last);
-    }
-    void clear() {
-        tree_.clear();
+        return m_tree.insert_multi(hint, value);
     }
 
-    // 查找操作
-    iterator find(const key_type &key) {
-        return tree_.find(key);
+    iterator insert(iterator hint, value_type &&value) {
+        return m_tree.insert_multi(hint, std::move(value));
     }
+
+    template <class InputIt>
+    void insert(InputIt first, InputIt last) {
+        m_tree.insert_multi(first, last);
+    }
+
+    void erase(iterator position) {
+        m_tree.erase(position);
+    }
+
+    size_type erase(const key_type &key) {
+        return m_tree.erase_multi(key);
+    }
+
+    void erase(iterator first, iterator last) {
+        m_tree.erase(first, last);
+    }
+
+    void clear() {
+        m_tree.clear();
+    }
+
+    iterator find(const key_type &key) {
+        return m_tree.find(key);
+    }
+
     const_iterator find(const key_type &key) const {
-        return tree_.find(key);
+        return m_tree.find(key);
     }
 
     size_type count(const key_type &key) const {
-        return tree_.count_multi(key);
+        return m_tree.count_multi(key);
     }
 
     iterator lower_bound(const key_type &key) {
-        return tree_.lower_bound(key);
+        return m_tree.lower_bound(key);
     }
+
     const_iterator lower_bound(const key_type &key) const {
-        return tree_.lower_bound(key);
+        return m_tree.lower_bound(key);
     }
 
     iterator upper_bound(const key_type &key) {
-        return tree_.upper_bound(key);
+        return m_tree.upper_bound(key);
     }
+
     const_iterator upper_bound(const key_type &key) const {
-        return tree_.upper_bound(key);
+        return m_tree.upper_bound(key);
     }
 
-    pair<iterator, iterator> equal_range(const key_type &key) {
-        return tree_.equal_range_multi(key);
+    std::pair<iterator, iterator> equal_range(const key_type &key) {
+        return m_tree.equal_range_multi(key);
     }
 
-    pair<const_iterator, const_iterator> equal_range(const key_type &key) const {
-        return tree_.equal_range_multi(key);
+    std::pair<const_iterator, const_iterator> equal_range(const key_type &key) const {
+        return m_tree.equal_range_multi(key);
     }
 
-    void swap(multimap &rhs) noexcept {
-        tree_.swap(rhs.tree_);
+    void swap(multimap &other) noexcept {
+        m_tree.swap(other.m_tree);
     }
 
-  public:
     friend bool operator==(const multimap &lhs, const multimap &rhs) {
-        return lhs.tree_ == rhs.tree_;
+        return lhs.m_tree == rhs.m_tree;
     }
+
     friend bool operator<(const multimap &lhs, const multimap &rhs) {
-        return lhs.tree_ < rhs.tree_;
-    }
-    friend std::ostream &operator<<(std::ostream &output, const multimap &mp) {
-        output << '[';
-        for (auto i : mp) {
-            if (i != *mp.begin())
-                output << ',';
-            output << '{' << i.first << " , " << i.second << '}';
-        }
-        output << ']';
-        return output;
+        return lhs.m_tree < rhs.m_tree;
     }
 };
 
