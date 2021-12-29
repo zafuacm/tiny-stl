@@ -74,7 +74,8 @@ struct iterator_traits<const T *> {
 namespace detail {
 
 template <class Iter>
-typename iterator_traits<Iter>::difference_type do_distance(Iter first, Iter last, input_iterator_tag) {
+typename iterator_traits<Iter>::difference_type
+do_distance(Iter first, Iter last, input_iterator_tag) {
     typename iterator_traits<Iter>::difference_type result = 0;
     while (first != last) {
         ++first;
@@ -119,9 +120,7 @@ void do_advance(Iter &it, Distance n, random_access_iterator_tag) {
 template <class Iter, class Distance>
 void advance(Iter &it, Distance n) {
     typename iterator_traits<Iter>::difference_type d = n;
-    detail::do_advance(it,
-                       typename iterator_traits<Iter>::difference_type(n),
-                       typename iterator_traits<Iter>::iterator_category());
+    detail::do_advance(it, d, typename iterator_traits<Iter>::iterator_category());
 }
 
 template <typename Iter>

@@ -714,7 +714,7 @@ class deque {
         iterator next = pos;
         ++next;
         const difference_type id = pos - begin();
-        if (id < size() / 2) {
+        if (size_type(id) < size() / 2) {
             if (pos != begin()) {
                 tstl::move_backward(begin(), pos, next);
             }
@@ -737,7 +737,7 @@ class deque {
         }
         const difference_type n = last - first;
         const difference_type elems_before = first - begin();
-        if (elems_before <= size() - n) {
+        if (size_type(elems_before) <= size() - n) {
             if (first != begin()) {
                 tstl::move_backward(begin(), first, last);
             }
@@ -819,7 +819,7 @@ class deque {
     }
 
     void m_reserve_map_at_front(size_type nodes_to_add = 1) {
-        if (nodes_to_add > m_start.m_node - m_map) {
+        if (nodes_to_add > size_type(m_start.m_node - m_map)) {
             m_reallocate_map(nodes_to_add, true);
         }
     }
@@ -938,12 +938,12 @@ class deque {
         const difference_type elems_before = pos - m_start;
         const size_type length = size();
         T x_copy = value;
-        if (elems_before < length / 2) {
+        if (size_type(elems_before) < length / 2) {
             iterator new_start = m_reserve_elements_at_front(n);
             iterator old_start = m_start;
             pos = m_start + elems_before;
             try {
-                if (elems_before >= n) {
+                if (size_type(elems_before) >= n) {
                     iterator start_n = m_start + n;
                     tstl::_uninitialized_move_a(m_start, start_n, new_start, m_alloc);
                     m_start = new_start;
@@ -965,7 +965,7 @@ class deque {
             const difference_type elems_after = difference_type(length) - elems_before;
             pos = m_finish - elems_after;
             try {
-                if (elems_after > n) {
+                if (size_type(elems_after) > n) {
                     iterator finish_n = m_finish - n;
                     tstl::_uninitialized_move_a(finish_n, m_finish, m_finish, m_alloc);
                     m_finish = new_finish;
@@ -988,12 +988,12 @@ class deque {
     void m_insert_aux(iterator pos, ForwardIt first, ForwardIt last, size_type n) {
         const difference_type elems_before = pos - m_start;
         const size_type length = size();
-        if (elems_before < length / 2) {
+        if (size_type(elems_before) < length / 2) {
             iterator new_start = m_reserve_elements_at_front(n);
             iterator old_start = m_start;
             pos = m_start + elems_before;
             try {
-                if (elems_before >= n) {
+                if (size_type(elems_before) >= n) {
                     iterator start_n = m_start + n;
                     tstl::_uninitialized_move_a(m_start, start_n, new_start, m_alloc);
                     m_start = new_start;
@@ -1017,7 +1017,7 @@ class deque {
             const difference_type elems_after = length - elems_before;
             pos = m_finish - elems_after;
             try {
-                if (elems_after > n) {
+                if (size_type(elems_after) > n) {
                     iterator finish_n = m_finish - n;
                     _uninitialized_move_a(finish_n, m_finish, m_finish, m_alloc);
                     m_finish = new_finish;

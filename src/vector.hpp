@@ -701,7 +701,7 @@ class vector {
         if (first == last)
             return;
         const size_type n = tstl::distance(first, last);
-        if (m_end_of_storage - m_finish >= n) {
+        if (size_type(m_end_of_storage - m_finish) >= n) {
             const size_type elems_after = end() - pos;
             pointer old_finish = m_finish;
             if (elems_after > n) {
@@ -747,7 +747,7 @@ class vector {
     void m_fill_insert(iterator pos, size_type n, const T &value) {
         if (n == 0)
             return;
-        if (m_end_of_storage - m_finish >= n) {
+        if (size_type(m_end_of_storage - m_finish) >= n) {
             const size_type elems_after = end() - pos;
             pointer old_finish = m_finish;
             if (elems_after > n) {
