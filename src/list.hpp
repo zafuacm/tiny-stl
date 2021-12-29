@@ -94,8 +94,7 @@ struct list_iterator : public tstl::iterator<tstl::bidirectional_iterator_tag, T
     list_iterator(node_ptr p) : m_node(p->as_base()) {
     }
 
-    list_iterator(const list_iterator &iter) : m_node(iter.m_node) {
-    }
+    list_iterator(const list_iterator &other) = default;
 
     // 重载操作符
     reference operator*() const {
