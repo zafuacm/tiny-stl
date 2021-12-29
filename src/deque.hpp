@@ -436,7 +436,7 @@ class deque {
     }
 
     iterator erase(const_iterator first, const_iterator last) {
-        m_erase(first, last);
+        return m_erase(first, last);
     }
 
     void push_back(const T &value) {
