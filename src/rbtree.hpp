@@ -10,6 +10,7 @@
 #include "memory.h"
 #include "iterator.hpp"
 #include "type_traits.hpp"
+#include "algorithm.hpp"
 
 namespace tstl {
 
@@ -750,6 +751,8 @@ class rb_tree {
 
     ~rb_tree() {
         clear();
+        m_base_alloc.destroy(m_header);
+        m_base_alloc.deallocate(m_header, 1);
     }
 
   public:
@@ -899,8 +902,8 @@ class rb_tree {
         return emplace_multi_use_hint(hint, std::move(value));
     }
 
-    template <class InputIterator>
-    void insert_multi(InputIterator first, InputIterator last) {
+    template <class InputIt, typename = tstl::_RequireInputIter<InputIt>>
+    void insert_multi(InputIt first, InputIt last) {
         size_type n = tstl::distance(first, last);
         for (; n > 0; --n, ++first) {
             insert_multi(end(), *first);
@@ -1123,6 +1126,7 @@ class rb_tree {
     void destroy_node(node_ptr p) {
         m_data_alloc.destroy(&p->value);
         m_node_alloc.destroy(p);
+        m_node_alloc.deallocate(p, 1);
     }
 
     void rb_tree_init() {

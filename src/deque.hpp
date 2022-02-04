@@ -240,6 +240,13 @@ class deque {
         m_range_init(init.begin(), init.end(), tstl::random_access_iterator_tag());
     }
 
+    ~deque() {
+        if (m_start.m_node != nullptr) {
+            m_destroy_nodes(m_start.m_node, m_finish.m_node + 1);
+            m_deallocate_map(m_map, m_map_size);
+        }
+    }
+
     deque &operator=(const deque &other) {
         if (&other == this)
             return *this;

@@ -52,12 +52,14 @@ class multimap {
     // 构造、复制、移动函数
     multimap() = default;
 
-    template <class InputIt>
+    ~multimap() = default;
+
+    template <class InputIt, typename = tstl::_RequireInputIter<InputIt>>
     multimap(InputIt first, InputIt last) : m_tree() {
         m_tree.insert_multi(first, last);
     }
 
-    multimap(std::initializer_list<T> ilist) : m_tree() {
+    multimap(std::initializer_list<value_type> ilist) : m_tree() {
         m_tree.insert_multi(ilist.begin(), ilist.end());
     }
 
