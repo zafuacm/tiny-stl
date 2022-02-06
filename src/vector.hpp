@@ -23,8 +23,8 @@ class vector {
     using const_reference = const value_type &;
     using pointer = typename alloc_traits::pointer;
     using const_pointer = typename alloc_traits::const_pointer;
-    using iterator = tstl::_normal_iterator<pointer, vector>;
-    using const_iterator = tstl::_normal_iterator<const_pointer, vector>;
+    using iterator = tstl::_normal_iterator<T *, vector>;
+    using const_iterator = tstl::_normal_iterator<const T *, vector>;
     using reverse_iterator = tstl::reverse_iterator<iterator>;
     using const_reverse_iterator = tstl::reverse_iterator<const_iterator>;
 
@@ -97,8 +97,7 @@ class vector {
     /**
      * @brief 构造拥有 initializer_list 内容的容器。
      */
-    vector(std::initializer_list<T> init, const Allocator &alloc = Allocator())
-        : vector(init.begin(), init.end(), alloc) {
+    vector(std::initializer_list<T> init, const Allocator &alloc = Allocator()) : vector(alloc) {
         m_range_init(init.begin(), init.end(), tstl::random_access_iterator_tag());
     }
 
@@ -541,7 +540,7 @@ class vector {
      */
     void swap(vector &other) {
         tstl::swap(m_start, other.m_start);
-        tstl::swap(m_finish, other.finish);
+        tstl::swap(m_finish, other.m_finish);
         tstl::swap(m_end_of_storage, other.m_end_of_storage);
     }
 
@@ -559,7 +558,7 @@ class vector {
         return true;
     }
 
-  private:
+  protected:
     pointer m_start = nullptr;
     pointer m_finish = nullptr;
     pointer m_end_of_storage = nullptr;
@@ -572,8 +571,9 @@ class vector {
     }
 
     void m_deallocate(pointer p, size_type count) {
-        if (p != nullptr)
+        if (p != nullptr) {
             alloc_traits::deallocate(m_alloc, p, count);
+        }
     }
 
     void m_destroy(pointer p) {
@@ -586,8 +586,9 @@ class vector {
         }
     }
 
-    void m_construct(pointer p, const value_type &value) {
-        alloc_traits::construct(m_alloc, p, value);
+    template <class... Args>
+    void m_construct(pointer p, Args &&...args) {
+        alloc_traits::construct(m_alloc, p, std::forward<Args>(args)...);
     }
 
     void m_create_storage(size_type count) {

@@ -229,7 +229,7 @@ class list {
     using list_node_alloc = typename alloc_traits::template rebind_alloc<Lnode>;
     using list_bnode_alloc = typename alloc_traits::template rebind_alloc<Lbnode>;
 
-  private:
+  protected:
     base_ptr m_node;                // 指向末尾的结点 = end()
     size_type m_size;               // 容器大小
     list_bnode_alloc m_bnode_alloc; // 构造器
@@ -244,19 +244,20 @@ class list {
         empty_initialized();
     }
 
-    explicit list(size_type n, const value_type &value = value_type()) {
-        empty_initialized();
+    explicit list(size_type n, const value_type &value = value_type()) : list() {
         fill_insert(begin(), n, value);
     }
 
     template <class InputIt, typename = tstl::_RequireInputIter<InputIt>>
-    list(InputIt first, InputIt last) {
-        empty_initialized();
+    list(InputIt first, InputIt last) : list() {
         list_insert(begin(), first, last);
     }
 
-    list(const list &l) {
-        empty_initialized();
+    list(std::initializer_list<T> init): list() {
+        list_insert(begin(), init.begin(), init.end());
+    }
+
+    list(const list &l) : list() {
         list_insert(begin(), l.begin(), l.end());
     }
 
@@ -281,7 +282,7 @@ class list {
 
     ~list() {
         clear();
-        m_deallocate(m_node);
+        m_deallocate(m_node->as_node());
     }
 
   public:
@@ -294,7 +295,7 @@ class list {
         insert(begin(), value);
     }
 
-    void pop_fornt() {
+    void pop_front() {
         erase(begin());
     }
 
@@ -368,7 +369,7 @@ class list {
         base_ptr prev_node = position.m_node->prev;
         prev_node->next = next_node;
         next_node->prev = prev_node;
-        destroy_node(position.m_node);
+        destroy_node(position.m_node->as_node());
         return iterator(next_node);
     }
 
@@ -387,7 +388,7 @@ class list {
         while (now != m_node) {
             base_ptr temp = now;
             now = now->next;
-            destroy_node(temp);
+            destroy_node(temp->as_node());
         }
         m_node->unlink();
         m_size = 0;
@@ -668,7 +669,7 @@ class list {
     }
 
     void destroy_node(node_ptr p) {
-        m_node_alloc.destory(&p->data);
+        m_node_alloc.destroy(&p->data);
         m_deallocate(p);
     }
 

@@ -3,245 +3,184 @@
 
 #include "../src/vector.hpp"
 #include "../src/algorithm.hpp"
-#include <iostream>
-#include "vector"
 
 template <class T>
-class myvector : public tstl::vector<T> {
-  public:
-    using tstl::vector<T>::vector;
-    friend std::ostream &operator<<(std::ostream &os, const myvector &v) {
-        os << "[vector] (" << v.size() << ") : [";
-        for (auto i : v) {
-            os << i << ", ";
-        }
-        return os << "]";
+using vec = tstl::vector<T, std::allocator<T>>;
+
+TEST(VectorTest, Construct) {
+    {
+        vec<int> v;
+        vec<int> expect = {};
+        EXPECT_EQ(v, expect);
     }
-};
-
-namespace test_vector_detail {
-
-template <class T>
-void show(const myvector<T> &v, const std::string &s) {
-    std::cout << s << " | " << v << std::endl;
+    {
+        vec<int> v(3, -1);
+        vec<int> expect = {-1, -1, -1};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v(3, -1);
+        v[2] = 1;
+        vec<int> expect = {-1, -1, 1};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v1 = {1, 2, 3};
+        vec<int> v2(v1.begin(), v1.end());
+        vec<int> expect = {1, 2, 3};
+        EXPECT_EQ(v2, expect);
+    }
+    {
+        vec<int> v1 = {1, 2, 3};
+        vec<int> v2(v1.rbegin(), v1.rend());
+        vec<int> expect = {3, 2, 1};
+        EXPECT_EQ(v2, expect);
+    }
+    {
+        vec<int> v(vec<int>(vec<int>(3, 1)));
+        vec<int> expect = {1, 1, 1};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-#define dbg(x) show(x, #x)
-// #define dbg(x) 1
-
-void t_construct() {
-    std::cout << "====== vector construct ======" << std::endl;
-    myvector<int> v1;
-    dbg(v1);
-    myvector<int> v2(3, 0);
-    dbg(v2);
-    myvector<int> v3(3);
-    v3[2] = 1;
-    dbg(v3);
-    myvector<int> v4_1(v3.begin(), v3.end());
-    dbg(v4_1);
-    myvector<int> v4_2(v3.rbegin(), v3.rend());
-    dbg(v4_2);
-    myvector<int> v5(v3);
-    dbg(v5);
-    myvector<int> v6(myvector<int>(3, 1));
-    dbg(v6);
-    myvector<int> v7{1, 2, 3};
-    dbg(v7);
+TEST(VectorTest, Assign) {
+    {
+        vec<int> v = {1, 2, 3};
+        v.assign(5, -1);
+        vec<int> expect = {-1, -1, -1, -1, -1};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v1 = {1, 2, 3};
+        vec<int> v2 = {2, 3, 1};
+        v2.assign(v1.begin(), v1.end());
+        vec<int> expect = {1, 2, 3};
+        EXPECT_EQ(v2, expect);
+    }
+    {
+        vec<int> v = {1, 2, 3};
+        v.assign({3, 2, 1});
+        vec<int> expect = {3, 2, 1};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-void t_operator_eq() {
-    std::cout << "====== vector operator eq ======" << std::endl;
-    myvector<int> v1, v2, v3, v4;
-    v1 = {1, 2};
-    dbg(v1);
-    v2 = v1;
-    dbg(v2);
-    v3 = v2 = v1;
-    dbg(v3);
-    v4 = myvector<int>(4, -1);
-    dbg(v4);
+TEST(VectorTest, At) {
+    vec<int> v = {1, 2, 3};
+    EXPECT_EQ(2, v.at(1));
+    EXPECT_THROW(v.at(5), std::out_of_range);
 }
 
-void t_assign() {
-    std::cout << "====== vector assign ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    v1.assign(5, -1);
-    dbg(v1);
-    myvector<int> v2 = {1, 2, 3};
-    v2.assign(v1.begin(), v1.end());
-    dbg(v2);
-    myvector<int> v3 = v2;
-    v3.assign({2, 3, 4});
-    dbg(v3);
+TEST(VectorTest, OperatorAt) {
+    vec<int> v = {1, 2, 3};
+    EXPECT_EQ(2, v[1]);
+    //    EXPECT_EQ(0, v[5]);
 }
 
-void t_at() {
-    std::cout << "====== vector at ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    dbg(v1);
-    std::cout << "v1.at(1) = " << v1.at(1) << std::endl;
-    //    std::cout << "v1.at(5) = " << v1.at(5) << std::endl;
+TEST(VectorTest, FrontAndBack) {
+    vec<int> v = {1, 2, 3};
+    EXPECT_EQ(v.front(), 1);
+    EXPECT_EQ(v.back(), 3);
 }
 
-void t_operator_at() {
-    std::cout << "====== vector operator[] ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    dbg(v1);
-    std::cout << "v1[1] = " << v1[1] << std::endl;
-    //    std::cout << "v1[5] = " << v1[5] << std::endl;
+TEST(VectorTest, EmptySizeCapacity) {
+    vec<int> v;
+    EXPECT_EQ(v.empty(), true);
+    v = {1, 2, 3};
+    v.push_back(4);
+    EXPECT_EQ(v.size(), 4);
+    EXPECT_EQ(v.empty(), false);
+    EXPECT_EQ(v.capacity(), 6);
 }
 
-void t_front_and_back() {
-    std::cout << "====== vector front & back ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    dbg(v1);
-    std::cout << "v1.front() = " << v1.front() << std::endl;
-    std::cout << "v1.back() = " << v1.back() << std::endl;
+TEST(VectorTest, Clear) {
+    vec<int> v = {1, 2, 3};
+    v.clear();
+    vec<int> expect = {};
+    EXPECT_EQ(v, expect);
 }
 
-void t_empty_size_capacity() {
-    std::cout << "====== vector empty & size & capacity ======" << std::endl;
-    myvector<int> v1;
-    dbg(v1);
-    char c1 = v1.empty() ? 'Y' : 'N';
-    std::cout << "v1.empty() = " << c1 << std::endl;
-    std::cout << "v1.size() = " << v1.size() << std::endl;
-    std::cout << "v1.capacity() = " << v1.capacity() << std::endl;
-    myvector<int> v2 = {1, 2, 3};
-    v2.push_back(4);
-    dbg(v2);
-    char c2 = v2.empty() ? 'Y' : 'N';
-    std::cout << "v2.empty() = " << c2 << std::endl;
-    std::cout << "v2.size() = " << v2.size() << std::endl;
-    std::cout << "v2.capacity() = " << v2.capacity() << std::endl;
+TEST(VectorTest, Insert) {
+    {
+        vec<int> v = {1, 2, 3};
+        v.insert(v.begin() + 1, -10);
+        vec<int> expect = {1, -10, 2, 3};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v = {1, 2, 3};
+        v.insert(v.begin() + 1, 2, -10);
+        vec<int> expect = {1, -10, -10, 2, 3};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v1 = {1, 2, 3};
+        vec<int> v2 = v1;
+        v2.insert(v2.begin(), v1.rbegin(), v1.rend());
+        vec<int> expect = {3, 2, 1, 1, 2, 3};
+        EXPECT_EQ(v2, expect);
+    }
+    {
+        vec<int> v = {1, 2, 3};
+        v.insert(v.begin(), {-3, -2, -1});
+        vec<int> expect = {-3, -2, -1, 1, 2, 3};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-void t_clear() {
-    std::cout << "====== vector clear ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    dbg(v1);
-    v1.clear();
-    dbg(v1);
+TEST(VectorTest, PushPopEmplace) {
+    {
+        vec<int> v = {1, 2, 3};
+        v.push_back(-1);
+        vec<int> expect = {1, 2, 3, -1};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<std::pair<int, int>> v = {{1, 1}, {2, 2}};
+        v.emplace_back(-1, -1);
+        vec<std::pair<int, int>> expect = {{1, 1}, {2, 2}, {-1, -1}};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-void t_insert() {
-    std::cout << "====== vector insert ======" << std::endl;
-    myvector<int> v0 = {1, 2, 3};
-    dbg(v0);
-    auto v1 = v0;
-    v1.insert(v1.begin() + 1, -10);
-    dbg(v1);
-    auto v2 = v0;
-    v2.insert(v2.begin() + 1, 5, -10);
-    dbg(v2);
-    auto v3 = v0;
-    v3.insert(v3.begin() + 1, v0.rbegin(), v0.rend());
-    dbg(v3);
-    auto v4 = v0;
-    v4.insert(v4.begin() + 1, {-5, -4, -3});
-    dbg(v4);
+TEST(VectorTest, Erase) {
+    {
+        vec<int> v = {1, 2, 3};
+        v.erase(v.begin() + 1);
+        vec<int> expect = {1, 3};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v = {1, 2, 3, 4, 5};
+        v.erase(v.begin() + 1, v.end() - 1);
+        vec<int> expect = {1, 5};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-void t_push_pop_emplace() {
-    std::cout << "====== vector push_back & pop_back & emplace_back ======" << std::endl;
-    myvector<int> v0 = {1, 2, 3};
-    dbg(v0);
-    auto v1 = v0;
-    v1.push_back(-1);
-    dbg(v1);
-    auto v2 = v0;
-    v2.emplace_back(-2);
-    dbg(v2);
-    auto v3 = v0;
-    v3.pop_back();
-    dbg(v3);
+TEST(VectorTest, Resize) {
+    {
+        vec<int> v = {1, 2, 3};
+        v.resize(1);
+        vec<int> expect = {1};
+        EXPECT_EQ(v, expect);
+    }
+    {
+        vec<int> v = {1, 2, 3};
+        v.resize(5);
+        vec<int> expect = {1, 2, 3, 0, 0};
+        EXPECT_EQ(v, expect);
+    }
 }
 
-void t_erase() {
-    std::cout << "====== vector erase ======" << std::endl;
-    myvector<int> v0 = {1, 2, 3, 4, 5};
-    dbg(v0);
-    auto v1 = v0;
-    v1.erase(v1.begin() + 1);
-    dbg(v1);
-    auto v2 = v0;
-    v2.erase(v2.begin() + 1, v2.end() - 1);
-    dbg(v2);
-}
-
-void t_resize() {
-    std::cout << "====== vector resize ======" << std::endl;
-    myvector<int> v0 = {1, 2, 3, 4, 5};
-    dbg(v0);
-    auto v1 = v0;
-    v1.resize(1);
-    dbg(v1);
-    auto v2 = v0;
-    v2.resize(8);
-    dbg(v2);
-}
-
-void t_swap() {
-    std::cout << "====== vector swap ======" << std::endl;
-    myvector<int> v1 = {1, 2, 3};
-    myvector<int> v2 = {3, 2, 1};
+TEST(VectorTest, Swap) {
+    vec<int> v1 = {1, 2, 3};
+    vec<int> v2 = {4, 5};
     tstl::swap(v1, v2);
-    dbg(v1), dbg(v2);
-}
-
-} // namespace test_vector_detail
-
-int test_vector() {
-    std::cout << "||||||||| VECTOR TEST |||||||||" << std::endl;
-
-    // 测试构造函数
-    test_vector_detail::t_construct();
-
-    // 测试赋值运算符
-    test_vector_detail::t_operator_eq();
-
-    // 测试 assign
-    test_vector_detail::t_assign();
-
-    // 测试 at
-    test_vector_detail::t_at();
-
-    // 测试 operator[]
-    test_vector_detail::t_operator_at();
-
-    // 测试 front 和 back
-    test_vector_detail::t_front_and_back();
-
-    // 测试 empty
-    test_vector_detail::t_empty_size_capacity();
-
-    // 测试 clear
-    test_vector_detail::t_clear();
-
-    // 测试 insert
-    test_vector_detail::t_insert();
-
-    // 测试 push_back | pop_back | emplace_back
-    test_vector_detail::t_push_pop_emplace();
-
-    // 测试 erase
-    test_vector_detail::t_erase();
-
-    // 测试 resize
-    test_vector_detail::t_resize();
-
-    // 测试 swap
-    test_vector_detail::t_swap();
-
-    /**
-     * 不必测试的函数如下。部分是因为不具有可观察性，另外部分是其他测试中已经包含。
-     * - begin() & end() 系列
-     * - data()
-     * - reserve()
-     */
-
-    return 0;
+    vec<int> expect_1 = {4, 5};
+    vec<int> expect_2 = {1, 2, 3};
+    EXPECT_EQ(v1, expect_1);
+    EXPECT_EQ(v2, expect_2);
 }
 
 #endif
