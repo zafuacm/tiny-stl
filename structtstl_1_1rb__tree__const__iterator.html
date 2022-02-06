@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::rb_tree_const_iterator&lt; T &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="structtstl_1_1rb__tree__const__iterator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::rb_tree_const_iterator&lt; T &gt; 模板结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="rbtree_8hpp_source.html">rbtree.hpp</a>&quot;</code></p>
+<div class="dynheader">
+类 tstl::rb_tree_const_iterator&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structtstl_1_1rb__tree__const__iterator__inherit__graph.svg" width="155" height="246"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+tstl::rb_tree_const_iterator&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structtstl_1_1rb__tree__const__iterator__coll__graph.svg" width="155" height="246"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:afc11c705eb867a3f9bcc6ff41ab1fbc2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#afc11c705eb867a3f9bcc6ff41ab1fbc2">tree_traits</a> = <a class="el" href="structtstl_1_1rb__tree__traits.html">rb_tree_traits</a>&lt; T &gt;</td></tr>
+<tr class="separator:afc11c705eb867a3f9bcc6ff41ab1fbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740c579893edf4729fe306ca5197035e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a740c579893edf4729fe306ca5197035e">value_type</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a55d9c548859c9c4c92a98394237314de">tree_traits::value_type</a></td></tr>
+<tr class="separator:a740c579893edf4729fe306ca5197035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac144fa5e598c7960a952b901feb3171"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#aac144fa5e598c7960a952b901feb3171">pointer</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html#aaf1956aa217d0418583e3dc3fcb32b2c">tree_traits::pointer</a></td></tr>
+<tr class="separator:aac144fa5e598c7960a952b901feb3171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acead9a602c58b1011c70d6978394a559"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#acead9a602c58b1011c70d6978394a559">reference</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a45265d64263a5ebdcb5ef2730f7596be">tree_traits::reference</a></td></tr>
+<tr class="separator:acead9a602c58b1011c70d6978394a559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28948891f563898e87ef3717abd383ef"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a28948891f563898e87ef3717abd383ef">base_ptr</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a5d9e06b3000c29f65d3cca1d47bb1b51">tree_traits::base_ptr</a></td></tr>
+<tr class="separator:a28948891f563898e87ef3717abd383ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d040d2b3995032fd1c735f2e9922f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ae3d040d2b3995032fd1c735f2e9922f7">node_ptr</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a8171a1d6b753b2a025818820fa43ae91">tree_traits::node_ptr</a></td></tr>
+<tr class="separator:ae3d040d2b3995032fd1c735f2e9922f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e956f712a46ac1cbda0be69c60d06b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a7e956f712a46ac1cbda0be69c60d06b5">iterator</a> = <a class="el" href="structtstl_1_1rb__tree__iterator.html">rb_tree_iterator</a>&lt; T &gt;</td></tr>
+<tr class="separator:a7e956f712a46ac1cbda0be69c60d06b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e2a56be43278bb2a2faae84d1412de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a> = <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a>&lt; T &gt;</td></tr>
+<tr class="separator:a55e2a56be43278bb2a2faae84d1412de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37870c367b6780cd49023b8104333c1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a></td></tr>
+<tr class="separator:ac37870c367b6780cd49023b8104333c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structtstl_1_1rb__tree__iterator__base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structtstl_1_1rb__tree__iterator__base')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="structtstl_1_1rb__tree__iterator__base.html">tstl::rb_tree_iterator_base&lt; T &gt;</a></td></tr>
+<tr class="memitem:a07ce1aad7066fb57f7a399455808a8fc inherit pub_types_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a> = typename <a class="el" href="structtstl_1_1rb__tree__traits.html">rb_tree_traits</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a></td></tr>
+<tr class="separator:a07ce1aad7066fb57f7a399455808a8fc inherit pub_types_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structtstl_1_1iterator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structtstl_1_1iterator')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="structtstl_1_1iterator.html">tstl::iterator&lt; tstl::bidirectional_iterator_tag, T &gt;</a></td></tr>
+<tr class="memitem:aa0a428a99af03588a1338134fc6b2128 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#aa0a428a99af03588a1338134fc6b2128">iterator_category</a> = <a class="el" href="structtstl_1_1bidirectional__iterator__tag.html">tstl::bidirectional_iterator_tag</a></td></tr>
+<tr class="separator:aa0a428a99af03588a1338134fc6b2128 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e850886408eefcd02384d5e1a8cc41 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#ab7e850886408eefcd02384d5e1a8cc41">value_type</a> = T</td></tr>
+<tr class="separator:ab7e850886408eefcd02384d5e1a8cc41 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcac07b57edd854c5830e16484b1092 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#a5dcac07b57edd854c5830e16484b1092">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:a5dcac07b57edd854c5830e16484b1092 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52cbf65915e8aac0a630cfe6f6350ab inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#aa52cbf65915e8aac0a630cfe6f6350ab">pointer</a> = T *</td></tr>
+<tr class="separator:aa52cbf65915e8aac0a630cfe6f6350ab inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6417b1b23e82d2223d896f106d1449 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#a4e6417b1b23e82d2223d896f106d1449">refence</a> = T &amp;</td></tr>
+<tr class="separator:a4e6417b1b23e82d2223d896f106d1449 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad332da48722ea07995f1f67f4b4383ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ad332da48722ea07995f1f67f4b4383ed">rb_tree_const_iterator</a> ()</td></tr>
+<tr class="separator:ad332da48722ea07995f1f67f4b4383ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c73cdeb386686296a58e3ab9ed2e707"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a0c73cdeb386686296a58e3ab9ed2e707">rb_tree_const_iterator</a> (<a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a> x)</td></tr>
+<tr class="separator:a0c73cdeb386686296a58e3ab9ed2e707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a7407e6c6bb433a10bd3295c09c8b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#aa0a7407e6c6bb433a10bd3295c09c8b2">rb_tree_const_iterator</a> (<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ae3d040d2b3995032fd1c735f2e9922f7">node_ptr</a> x)</td></tr>
+<tr class="separator:aa0a7407e6c6bb433a10bd3295c09c8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83495e0eec24603586e6b5d21f3086a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a83495e0eec24603586e6b5d21f3086a3">rb_tree_const_iterator</a> (const <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a7e956f712a46ac1cbda0be69c60d06b5">iterator</a> &amp;rhs)</td></tr>
+<tr class="separator:a83495e0eec24603586e6b5d21f3086a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74b68e249c51ccc2cbc7900bf35389b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ab74b68e249c51ccc2cbc7900bf35389b">rb_tree_const_iterator</a> (const <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a> &amp;rhs)</td></tr>
+<tr class="separator:ab74b68e249c51ccc2cbc7900bf35389b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab248aff9d0ae9193efc466969e08b14e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#acead9a602c58b1011c70d6978394a559">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ab248aff9d0ae9193efc466969e08b14e">operator*</a> () const</td></tr>
+<tr class="separator:ab248aff9d0ae9193efc466969e08b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c5f4e590c8008c69f776033e5e5eca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#aac144fa5e598c7960a952b901feb3171">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a06c5f4e590c8008c69f776033e5e5eca">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a06c5f4e590c8008c69f776033e5e5eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640f2b061f9e5257a63c4505190a346c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a640f2b061f9e5257a63c4505190a346c">operator++</a> ()</td></tr>
+<tr class="separator:a640f2b061f9e5257a63c4505190a346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2926661c18c16c95e1cdbb7c8477d869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a2926661c18c16c95e1cdbb7c8477d869">operator++</a> (int)</td></tr>
+<tr class="separator:a2926661c18c16c95e1cdbb7c8477d869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906feec3a26d20fe6556ae1a6e868192"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a906feec3a26d20fe6556ae1a6e868192">operator--</a> ()</td></tr>
+<tr class="separator:a906feec3a26d20fe6556ae1a6e868192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6ccff1c0e2b2afb114fe7615beb2e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a2e6ccff1c0e2b2afb114fe7615beb2e2">operator--</a> (int)</td></tr>
+<tr class="separator:a2e6ccff1c0e2b2afb114fe7615beb2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structtstl_1_1rb__tree__iterator__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structtstl_1_1rb__tree__iterator__base')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="structtstl_1_1rb__tree__iterator__base.html">tstl::rb_tree_iterator_base&lt; T &gt;</a></td></tr>
+<tr class="memitem:a1277f12551b6328d571f5f92d69cea84 inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a1277f12551b6328d571f5f92d69cea84">rb_tree_iterator_base</a> ()</td></tr>
+<tr class="separator:a1277f12551b6328d571f5f92d69cea84 inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf796e90b329b2ae042b7b5fb04aaf6d inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#acf796e90b329b2ae042b7b5fb04aaf6d">inc</a> ()</td></tr>
+<tr class="separator:acf796e90b329b2ae042b7b5fb04aaf6d inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63af63366cfbc0a87c33d4e5b2bdbede inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a63af63366cfbc0a87c33d4e5b2bdbede">dec</a> ()</td></tr>
+<tr class="separator:a63af63366cfbc0a87c33d4e5b2bdbede inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df9021ca2bf6f4cc81555516d1d111a inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a4df9021ca2bf6f4cc81555516d1d111a">operator==</a> (const <a class="el" href="structtstl_1_1rb__tree__iterator__base.html">rb_tree_iterator_base</a> &amp;rhs)</td></tr>
+<tr class="separator:a4df9021ca2bf6f4cc81555516d1d111a inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e43fbe7c9b4acbb96c1a56df28c4ef inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a79e43fbe7c9b4acbb96c1a56df28c4ef">operator!=</a> (const <a class="el" href="structtstl_1_1rb__tree__iterator__base.html">rb_tree_iterator_base</a> &amp;rhs)</td></tr>
+<tr class="separator:a79e43fbe7c9b4acbb96c1a56df28c4ef inherit pub_methods_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_structtstl_1_1rb__tree__iterator__base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structtstl_1_1rb__tree__iterator__base')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="structtstl_1_1rb__tree__iterator__base.html">tstl::rb_tree_iterator_base&lt; T &gt;</a></td></tr>
+<tr class="memitem:a0c682c7efb7aa8fb6890ca9d5c5ce4a9 inherit pub_attribs_structtstl_1_1rb__tree__iterator__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a0c682c7efb7aa8fb6890ca9d5c5ce4a9">node</a></td></tr>
+<tr class="separator:a0c682c7efb7aa8fb6890ca9d5c5ce4a9 inherit pub_attribs_structtstl_1_1rb__tree__iterator__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="afc11c705eb867a3f9bcc6ff41ab1fbc2" name="afc11c705eb867a3f9bcc6ff41ab1fbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc11c705eb867a3f9bcc6ff41ab1fbc2">&#9670;&nbsp;</a></span>tree_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#afc11c705eb867a3f9bcc6ff41ab1fbc2">tree_traits</a> =  <a class="el" href="structtstl_1_1rb__tree__traits.html">rb_tree_traits</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a740c579893edf4729fe306ca5197035e" name="a740c579893edf4729fe306ca5197035e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740c579893edf4729fe306ca5197035e">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a740c579893edf4729fe306ca5197035e">value_type</a> =  typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a55d9c548859c9c4c92a98394237314de">tree_traits::value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac144fa5e598c7960a952b901feb3171" name="aac144fa5e598c7960a952b901feb3171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac144fa5e598c7960a952b901feb3171">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#aac144fa5e598c7960a952b901feb3171">pointer</a> =  typename <a class="el" href="structtstl_1_1rb__tree__traits.html#aaf1956aa217d0418583e3dc3fcb32b2c">tree_traits::pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acead9a602c58b1011c70d6978394a559" name="acead9a602c58b1011c70d6978394a559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acead9a602c58b1011c70d6978394a559">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#acead9a602c58b1011c70d6978394a559">reference</a> =  typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a45265d64263a5ebdcb5ef2730f7596be">tree_traits::reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28948891f563898e87ef3717abd383ef" name="a28948891f563898e87ef3717abd383ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28948891f563898e87ef3717abd383ef">&#9670;&nbsp;</a></span>base_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a> =  typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a5d9e06b3000c29f65d3cca1d47bb1b51">tree_traits::base_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3d040d2b3995032fd1c735f2e9922f7" name="ae3d040d2b3995032fd1c735f2e9922f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d040d2b3995032fd1c735f2e9922f7">&#9670;&nbsp;</a></span>node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ae3d040d2b3995032fd1c735f2e9922f7">node_ptr</a> =  typename <a class="el" href="structtstl_1_1rb__tree__traits.html#a8171a1d6b753b2a025818820fa43ae91">tree_traits::node_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e956f712a46ac1cbda0be69c60d06b5" name="a7e956f712a46ac1cbda0be69c60d06b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e956f712a46ac1cbda0be69c60d06b5">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a7e956f712a46ac1cbda0be69c60d06b5">iterator</a> =  <a class="el" href="structtstl_1_1rb__tree__iterator.html">rb_tree_iterator</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55e2a56be43278bb2a2faae84d1412de" name="a55e2a56be43278bb2a2faae84d1412de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e2a56be43278bb2a2faae84d1412de">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a> =  <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac37870c367b6780cd49023b8104333c1" name="ac37870c367b6780cd49023b8104333c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37870c367b6780cd49023b8104333c1">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a> <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ad332da48722ea07995f1f67f4b4383ed" name="ad332da48722ea07995f1f67f4b4383ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad332da48722ea07995f1f67f4b4383ed">&#9670;&nbsp;</a></span>rb_tree_const_iterator() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c73cdeb386686296a58e3ab9ed2e707" name="a0c73cdeb386686296a58e3ab9ed2e707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c73cdeb386686296a58e3ab9ed2e707">&#9670;&nbsp;</a></span>rb_tree_const_iterator() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html#a07ce1aad7066fb57f7a399455808a8fc">base_ptr</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0a7407e6c6bb433a10bd3295c09c8b2" name="aa0a7407e6c6bb433a10bd3295c09c8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a7407e6c6bb433a10bd3295c09c8b2">&#9670;&nbsp;</a></span>rb_tree_const_iterator() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ae3d040d2b3995032fd1c735f2e9922f7">node_ptr</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83495e0eec24603586e6b5d21f3086a3" name="a83495e0eec24603586e6b5d21f3086a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83495e0eec24603586e6b5d21f3086a3">&#9670;&nbsp;</a></span>rb_tree_const_iterator() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a7e956f712a46ac1cbda0be69c60d06b5">iterator</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab74b68e249c51ccc2cbc7900bf35389b" name="ab74b68e249c51ccc2cbc7900bf35389b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74b68e249c51ccc2cbc7900bf35389b">&#9670;&nbsp;</a></span>rb_tree_const_iterator() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1rb__tree__const__iterator.html">rb_tree_const_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1rb__tree__const__iterator.html#a55e2a56be43278bb2a2faae84d1412de">const_iterator</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab248aff9d0ae9193efc466969e08b14e" name="ab248aff9d0ae9193efc466969e08b14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab248aff9d0ae9193efc466969e08b14e">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#acead9a602c58b1011c70d6978394a559">reference</a> <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06c5f4e590c8008c69f776033e5e5eca" name="a06c5f4e590c8008c69f776033e5e5eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c5f4e590c8008c69f776033e5e5eca">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#aac144fa5e598c7960a952b901feb3171">pointer</a> <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a640f2b061f9e5257a63c4505190a346c" name="a640f2b061f9e5257a63c4505190a346c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640f2b061f9e5257a63c4505190a346c">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> &amp; <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2926661c18c16c95e1cdbb7c8477d869" name="a2926661c18c16c95e1cdbb7c8477d869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2926661c18c16c95e1cdbb7c8477d869">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a906feec3a26d20fe6556ae1a6e868192" name="a906feec3a26d20fe6556ae1a6e868192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a906feec3a26d20fe6556ae1a6e868192">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> &amp; <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e6ccff1c0e2b2afb114fe7615beb2e2" name="a2e6ccff1c0e2b2afb114fe7615beb2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6ccff1c0e2b2afb114fe7615beb2e2">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html#ac37870c367b6780cd49023b8104333c1">self</a> <a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="rbtree_8hpp_source.html">rbtree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

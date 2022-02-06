@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: type_traits.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">type_traits.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="type__traits_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TSTL_SRC_TYPE_TRAITS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TSTL_SRC_TYPE_TRAITS_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacetstl.html">tstl</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T, T v&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtstl_1_1integral__constant.html">integral_constant</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html#a942334e04ecd9054c0866f622c712d52">   10</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> T <a class="code hl_variable" href="structtstl_1_1integral__constant.html#a942334e04ecd9054c0866f622c712d52">value</a> = v;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html#a031b1f394ad15e4525f7f876fa9c232f">   11</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="structtstl_1_1integral__constant.html#a031b1f394ad15e4525f7f876fa9c232f">value_type</a> = T;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html#a8d24474261f06ef24381d74169df0c0f">   12</a></span>    <span class="keyword">using</span> <a class="code hl_struct" href="structtstl_1_1integral__constant.html">type</a> = <a class="code hl_struct" href="structtstl_1_1integral__constant.html">integral_constant</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html#a019727052aa65cd5e40b7b8214febcf3">   13</a></span>    <span class="keyword">operator</span> <a class="code hl_typedef" href="structtstl_1_1integral__constant.html#a031b1f394ad15e4525f7f876fa9c232f">value_type</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="structtstl_1_1integral__constant.html#a942334e04ecd9054c0866f622c712d52">value</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structtstl_1_1integral__constant.html#a1ecd416573757a6466e9dcc1cfddfff8">   16</a></span>    <a class="code hl_typedef" href="structtstl_1_1integral__constant.html#a031b1f394ad15e4525f7f876fa9c232f">value_type</a> <a class="code hl_function" href="structtstl_1_1integral__constant.html#a1ecd416573757a6466e9dcc1cfddfff8">operator()</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="structtstl_1_1integral__constant.html#a942334e04ecd9054c0866f622c712d52">value</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacetstl.html#ab8ed309ae84ebec0a56c4a2401b79017">   21</a></span><span class="keyword">using</span> <a class="code hl_struct" href="structtstl_1_1integral__constant.html">true_type</a> = <a class="code hl_struct" href="structtstl_1_1integral__constant.html">integral_constant&lt;bool, true&gt;</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacetstl.html#a32942c5bc5b0dc643cc1dee73a8a04dc">   22</a></span><span class="keyword">using</span> <a class="code hl_struct" href="structtstl_1_1integral__constant.html">false_type</a> = <a class="code hl_struct" href="structtstl_1_1integral__constant.html">integral_constant&lt;bool, false&gt;</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>...&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacetstl.html#acd875d840c7ba0d954d3f6a752bf3998">   25</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="namespacetstl.html#acd875d840c7ba0d954d3f6a752bf3998">_void_t</a> = void;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace tstl</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespacetstl_html"><div class="ttname"><a href="namespacetstl.html">tstl</a></div><div class="ttdef"><b>Definition:</b> algorithm.hpp:7</div></div>
+<div class="ttc" id="anamespacetstl_html_acd875d840c7ba0d954d3f6a752bf3998"><div class="ttname"><a href="namespacetstl.html#acd875d840c7ba0d954d3f6a752bf3998">tstl::_void_t</a></div><div class="ttdeci">void _void_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:25</div></div>
+<div class="ttc" id="astructtstl_1_1integral__constant_html"><div class="ttname"><a href="structtstl_1_1integral__constant.html">tstl::integral_constant</a></div><div class="ttdef"><b>Definition:</b> type_traits.hpp:9</div></div>
+<div class="ttc" id="astructtstl_1_1integral__constant_html_a031b1f394ad15e4525f7f876fa9c232f"><div class="ttname"><a href="structtstl_1_1integral__constant.html#a031b1f394ad15e4525f7f876fa9c232f">tstl::integral_constant::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:11</div></div>
+<div class="ttc" id="astructtstl_1_1integral__constant_html_a1ecd416573757a6466e9dcc1cfddfff8"><div class="ttname"><a href="structtstl_1_1integral__constant.html#a1ecd416573757a6466e9dcc1cfddfff8">tstl::integral_constant::operator()</a></div><div class="ttdeci">value_type operator()() const</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:16</div></div>
+<div class="ttc" id="astructtstl_1_1integral__constant_html_a942334e04ecd9054c0866f622c712d52"><div class="ttname"><a href="structtstl_1_1integral__constant.html#a942334e04ecd9054c0866f622c712d52">tstl::integral_constant::value</a></div><div class="ttdeci">static constexpr T value</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

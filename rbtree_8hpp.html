@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: rbtree.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">rbtree.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;memory.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+rbtree.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="rbtree_8hpp__incl.svg" width="682" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="rbtree_8hpp__dep__incl.svg" width="110" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="rbtree_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1is__pair.html">tstl::is_pair&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1is__pair_3_01std_1_1pair_3_01_t1_00_01_t2_01_4_01_4.html">tstl::is_pair&lt; std::pair&lt; T1, T2 &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__value__traits__imp.html">tstl::rb_tree_value_traits_imp&lt; T, bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__value__traits__imp_3_01_t_00_01true_01_4.html">tstl::rb_tree_value_traits_imp&lt; T, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__value__traits.html">tstl::rb_tree_value_traits&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__node__traits.html">tstl::rb_tree_node_traits&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__node__base.html">tstl::rb_tree_node_base&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__node.html">tstl::rb_tree_node&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__traits.html">tstl::rb_tree_traits&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator__base.html">tstl::rb_tree_iterator_base&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__iterator.html">tstl::rb_tree_iterator&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1rb__tree__const__iterator.html">tstl::rb_tree_const_iterator&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1rb__tree.html">tstl::rb_tree&lt; T, Compare &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacetstl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetstl.html">tstl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a7a24061e6b0c5203a62cb7a3c95a30c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a7a24061e6b0c5203a62cb7a3c95a30c2">tstl::rb_tree_color_type</a> = bool</td></tr>
+<tr class="separator:a7a24061e6b0c5203a62cb7a3c95a30c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a264aa6421da6441142551aacafd0e9d6"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a264aa6421da6441142551aacafd0e9d6"><td class="memTemplItemLeft" align="right" valign="top">NodePtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a264aa6421da6441142551aacafd0e9d6">tstl::rb_tree_min</a> (NodePtr x) noexcept</td></tr>
+<tr class="separator:a264aa6421da6441142551aacafd0e9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73fb334c782a5ddd8594b68d84f2048"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:ad73fb334c782a5ddd8594b68d84f2048"><td class="memTemplItemLeft" align="right" valign="top">NodePtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#ad73fb334c782a5ddd8594b68d84f2048">tstl::rb_tree_max</a> (NodePtr x) noexcept</td></tr>
+<tr class="separator:ad73fb334c782a5ddd8594b68d84f2048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa16e130fcb6021d1f5f9a8b4a752f8"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a9fa16e130fcb6021d1f5f9a8b4a752f8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a9fa16e130fcb6021d1f5f9a8b4a752f8">tstl::rb_tree_is_lchild</a> (NodePtr node) noexcept</td></tr>
+<tr class="separator:a9fa16e130fcb6021d1f5f9a8b4a752f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1d164c1b7bdffb8b3dfe352ce3307f"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:afa1d164c1b7bdffb8b3dfe352ce3307f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#afa1d164c1b7bdffb8b3dfe352ce3307f">tstl::rb_tree_is_red</a> (NodePtr node) noexcept</td></tr>
+<tr class="separator:afa1d164c1b7bdffb8b3dfe352ce3307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e11f3ff6948153bb79b5d57d8ee57da"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a3e11f3ff6948153bb79b5d57d8ee57da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a3e11f3ff6948153bb79b5d57d8ee57da">tstl::rb_tree_set_black</a> (NodePtr &amp;node) noexcept</td></tr>
+<tr class="separator:a3e11f3ff6948153bb79b5d57d8ee57da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a072aeb11efe36c284f5d9ede07f9a0a8"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a072aeb11efe36c284f5d9ede07f9a0a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a072aeb11efe36c284f5d9ede07f9a0a8">tstl::rb_tree_set_red</a> (NodePtr &amp;node) noexcept</td></tr>
+<tr class="separator:a072aeb11efe36c284f5d9ede07f9a0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9b533a097d309d280b8123de7992f0"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a8c9b533a097d309d280b8123de7992f0"><td class="memTemplItemLeft" align="right" valign="top">NodePtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a8c9b533a097d309d280b8123de7992f0">tstl::rb_tree_next</a> (NodePtr node) noexcept</td></tr>
+<tr class="separator:a8c9b533a097d309d280b8123de7992f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd653cc657560b9405410f668f1afcca"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:afd653cc657560b9405410f668f1afcca"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#afd653cc657560b9405410f668f1afcca">tstl::rb_tree_rotate_left</a> (NodePtr x, NodePtr &amp;root) noexcept</td></tr>
+<tr class="separator:afd653cc657560b9405410f668f1afcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbeba3ffb3c8b9d39410561871ad3b1b"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:acbeba3ffb3c8b9d39410561871ad3b1b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#acbeba3ffb3c8b9d39410561871ad3b1b">tstl::rb_tree_rotate_right</a> (NodePtr x, NodePtr &amp;root) noexcept</td></tr>
+<tr class="separator:acbeba3ffb3c8b9d39410561871ad3b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e0207088968c488b1616fb4798d827b"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a3e0207088968c488b1616fb4798d827b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a3e0207088968c488b1616fb4798d827b">tstl::rb_tree_insert_rebalance</a> (NodePtr x, NodePtr &amp;root) noexcept</td></tr>
+<tr class="separator:a3e0207088968c488b1616fb4798d827b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f36f65ca741fdf9b8fdabe09f029145"><td class="memTemplParams" colspan="2">template&lt;class NodePtr &gt; </td></tr>
+<tr class="memitem:a9f36f65ca741fdf9b8fdabe09f029145"><td class="memTemplItemLeft" align="right" valign="top">NodePtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a9f36f65ca741fdf9b8fdabe09f029145">tstl::rb_tree_erase_rebalance</a> (NodePtr z, NodePtr &amp;root, NodePtr &amp;leftmost, NodePtr &amp;rightmost)</td></tr>
+<tr class="separator:a9f36f65ca741fdf9b8fdabe09f029145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae312ba31bbdd70af42497bd6fb9baa"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:abae312ba31bbdd70af42497bd6fb9baa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#abae312ba31bbdd70af42497bd6fb9baa">tstl::operator==</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:abae312ba31bbdd70af42497bd6fb9baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9dec0724763189aac6690d8aaa078a8"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:ac9dec0724763189aac6690d8aaa078a8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#ac9dec0724763189aac6690d8aaa078a8">tstl::operator&lt;</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:ac9dec0724763189aac6690d8aaa078a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5f92a177066b8b99566957835e4267"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:a8d5f92a177066b8b99566957835e4267"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a8d5f92a177066b8b99566957835e4267">tstl::operator!=</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:a8d5f92a177066b8b99566957835e4267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172b2695b4fb47d20c271a326a156131"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:a172b2695b4fb47d20c271a326a156131"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a172b2695b4fb47d20c271a326a156131">tstl::operator&gt;</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:a172b2695b4fb47d20c271a326a156131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad765118276972fb5740f8fc3504162de"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:ad765118276972fb5740f8fc3504162de"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#ad765118276972fb5740f8fc3504162de">tstl::operator&lt;=</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:ad765118276972fb5740f8fc3504162de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac377a136b248df3754012fd0a0e87e02"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:ac377a136b248df3754012fd0a0e87e02"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#ac377a136b248df3754012fd0a0e87e02">tstl::operator&gt;=</a> (const rb_tree&lt; T, Compare &gt; &amp;lhs, const rb_tree&lt; T, Compare &gt; &amp;rhs)</td></tr>
+<tr class="separator:ac377a136b248df3754012fd0a0e87e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc55fdbd6095cc7c77e54743ea67579d"><td class="memTemplParams" colspan="2">template&lt;class T , class Compare &gt; </td></tr>
+<tr class="memitem:afc55fdbd6095cc7c77e54743ea67579d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetstl.html#afc55fdbd6095cc7c77e54743ea67579d">tstl::swap</a> (rb_tree&lt; T, Compare &gt; &amp;lhs, rb_tree&lt; T, Compare &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:afc55fdbd6095cc7c77e54743ea67579d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a61ccc7fde3bb2b9b5ce80fb51af87676"><td class="memItemLeft" align="right" valign="top">static constexpr rb_tree_color_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a61ccc7fde3bb2b9b5ce80fb51af87676">tstl::rb_tree_red</a> = false</td></tr>
+<tr class="separator:a61ccc7fde3bb2b9b5ce80fb51af87676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66eae9011aa347ce9116fab29c859038"><td class="memItemLeft" align="right" valign="top">static constexpr rb_tree_color_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetstl.html#a66eae9011aa347ce9116fab29c859038">tstl::rb_tree_black</a> = true</td></tr>
+<tr class="separator:a66eae9011aa347ce9116fab29c859038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

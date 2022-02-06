@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::list_node_base&lt; T &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="structtstl_1_1list__node__base.html">list_node_base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structtstl_1_1list__node__base-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::list_node_base&lt; T &gt; 模板结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="list_8hpp_source.html">list.hpp</a>&quot;</code></p>
+<div class="dynheader">
+类 tstl::list_node_base&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structtstl_1_1list__node__base__inherit__graph.svg" width="174" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ad78def8d5daaf019a4c2c42c76979b00"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a></td></tr>
+<tr class="separator:ad78def8d5daaf019a4c2c42c76979b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec418af2531270c688ca413911075946"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a></td></tr>
+<tr class="separator:aec418af2531270c688ca413911075946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab9871cadae143c0c763e2042c41b0c5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#ab9871cadae143c0c763e2042c41b0c5f">list_node_base</a> ()=default</td></tr>
+<tr class="separator:ab9871cadae143c0c763e2042c41b0c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af670a3f3320f9b51af711aa7e853bfd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#af670a3f3320f9b51af711aa7e853bfd6">self</a> ()</td></tr>
+<tr class="separator:af670a3f3320f9b51af711aa7e853bfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e737e9ab3e19f63f3570f3314cdef0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#a48e737e9ab3e19f63f3570f3314cdef0">as_node</a> ()</td></tr>
+<tr class="separator:a48e737e9ab3e19f63f3570f3314cdef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa858e02f5bdf7f46522187b4ad470fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#aa858e02f5bdf7f46522187b4ad470fcb">unlink</a> ()</td></tr>
+<tr class="separator:aa858e02f5bdf7f46522187b4ad470fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a3bf8b127ba5231a1e47722a4f13a2623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#a3bf8b127ba5231a1e47722a4f13a2623">prev</a></td></tr>
+<tr class="separator:a3bf8b127ba5231a1e47722a4f13a2623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273b59363a11f378c485e9e9f7a0c992"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__node__base.html#a273b59363a11f378c485e9e9f7a0c992">next</a></td></tr>
+<tr class="separator:a273b59363a11f378c485e9e9f7a0c992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="ad78def8d5daaf019a4c2c42c76979b00" name="ad78def8d5daaf019a4c2c42c76979b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78def8d5daaf019a4c2c42c76979b00">&#9670;&nbsp;</a></span>base_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec418af2531270c688ca413911075946" name="aec418af2531270c688ca413911075946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec418af2531270c688ca413911075946">&#9670;&nbsp;</a></span>node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab9871cadae143c0c763e2042c41b0c5f" name="ab9871cadae143c0c763e2042c41b0c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9871cadae143c0c763e2042c41b0c5f">&#9670;&nbsp;</a></span>list_node_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__node__base.html">list_node_base</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af670a3f3320f9b51af711aa7e853bfd6" name="af670a3f3320f9b51af711aa7e853bfd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af670a3f3320f9b51af711aa7e853bfd6">&#9670;&nbsp;</a></span>self()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a> <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::self </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48e737e9ab3e19f63f3570f3314cdef0" name="a48e737e9ab3e19f63f3570f3314cdef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e737e9ab3e19f63f3570f3314cdef0">&#9670;&nbsp;</a></span>as_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__node__base.html#aec418af2531270c688ca413911075946">node_ptr</a> <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::as_node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa858e02f5bdf7f46522187b4ad470fcb" name="aa858e02f5bdf7f46522187b4ad470fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa858e02f5bdf7f46522187b4ad470fcb">&#9670;&nbsp;</a></span>unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::unlink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a3bf8b127ba5231a1e47722a4f13a2623" name="a3bf8b127ba5231a1e47722a4f13a2623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf8b127ba5231a1e47722a4f13a2623">&#9670;&nbsp;</a></span>prev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a> <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::prev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a273b59363a11f378c485e9e9f7a0c992" name="a273b59363a11f378c485e9e9f7a0c992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a273b59363a11f378c485e9e9f7a0c992">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__node__base.html#ad78def8d5daaf019a4c2c42c76979b00">base_ptr</a> <a class="el" href="structtstl_1_1list__node__base.html">tstl::list_node_base</a>&lt; T &gt;::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="list_8hpp_source.html">list.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

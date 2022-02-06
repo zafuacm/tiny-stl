@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: normal_iterator.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8dd3d1725a984f37a21b0944d5621ef5.html">iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">normal_iterator.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="normal__iterator_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TSTL_SRC_ITERATOR_NORMAL_ITERATOR_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TSTL_SRC_ITERATOR_NORMAL_ITERATOR_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Iter, <span class="keyword">class</span> Container&gt;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class__normal__iterator.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">    7</a></span>    Iter <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a92ef4e6ac15ef20d6243f5e1a3d65363">    8</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a92ef4e6ac15ef20d6243f5e1a3d65363">traits_type</a> = iterator_traits&lt;Iter&gt;;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a20cf2f89d01df50325de9d836ce0ba5a">   11</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a20cf2f89d01df50325de9d836ce0ba5a">iterator_type</a> = Iter;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">   12</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> = <span class="keyword">typename</span> traits_type::difference_type;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a4ae84c831c08adc24201f29c28173c5c">   13</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a4ae84c831c08adc24201f29c28173c5c">value_type</a> = <span class="keyword">typename</span> traits_type::value_type;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a6ee57c0855070e7fd3da999fe0c08e77">   14</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a6ee57c0855070e7fd3da999fe0c08e77">iterator_category</a> = <span class="keyword">typename</span> traits_type::iterator_category;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a2af85fd1832eb5f88781c79b6a321348">   15</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a2af85fd1832eb5f88781c79b6a321348">pointer</a> = <span class="keyword">typename</span> traits_type::pointer;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a2855de620e6f66525599a2439ddaf850">   16</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class__normal__iterator.html#a2855de620e6f66525599a2439ddaf850">reference</a> = <span class="keyword">typename</span> traits_type::reference;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">   18</a></span>    <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>() : <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>() {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a12dd61cf4598fcc6e5b3f353393d68f7">   21</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class__normal__iterator.html#a12dd61cf4598fcc6e5b3f353393d68f7">_normal_iterator</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a20cf2f89d01df50325de9d836ce0ba5a">iterator_type</a> x) : <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>(x) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#af0f85358c6d0284ae621014015beab73">   24</a></span>    <a class="code hl_function" href="class__normal__iterator.html#af0f85358c6d0284ae621014015beab73">_normal_iterator</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator&lt;typename Container::pointer, Container&gt;</a> &amp;i)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        : <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>(i.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>()) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a697da8372a39ee21c8fc1f9ea1bb2115">   28</a></span>    <a class="code hl_function" href="class__normal__iterator.html#a697da8372a39ee21c8fc1f9ea1bb2115">_normal_iterator</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator&lt;typename Container::const_pointer, Container&gt;</a> &amp;i)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        : <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>(i.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>()) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">   32</a></span>    <a class="code hl_typedef" href="class__normal__iterator.html#a20cf2f89d01df50325de9d836ce0ba5a">iterator_type</a> <a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ad25cb2c6bf15037b505c56c8bec4caec">   36</a></span>    <a class="code hl_typedef" href="class__normal__iterator.html#a2855de620e6f66525599a2439ddaf850">reference</a> <a class="code hl_function" href="class__normal__iterator.html#ad25cb2c6bf15037b505c56c8bec4caec">operator*</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> *<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a4f98ab3882c2535e3201f6f19e8d5fd7">   40</a></span>    <a class="code hl_typedef" href="class__normal__iterator.html#a2af85fd1832eb5f88781c79b6a321348">pointer</a> <a class="code hl_function" href="class__normal__iterator.html#a4f98ab3882c2535e3201f6f19e8d5fd7">operator-&gt;</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ab70b2235d1078a7b8a8ecbf1f8882fde">   44</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#ab70b2235d1078a7b8a8ecbf1f8882fde">operator++</a>() {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        ++<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ada193395b3368013409e4ca3aa2018d8">   49</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#ada193395b3368013409e4ca3aa2018d8">operator--</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        --<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ac437d7d7f7a374eb103e8467d798c383">   54</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> <a class="code hl_function" href="class__normal__iterator.html#ac437d7d7f7a374eb103e8467d798c383">operator++</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>(<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>++);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a121a5b4f316179a042f71113f27105be">   58</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> <a class="code hl_function" href="class__normal__iterator.html#a121a5b4f316179a042f71113f27105be">operator--</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>(<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>--);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ad633c866bbb54a147a2ae02057232d18">   62</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> <a class="code hl_function" href="class__normal__iterator.html#ad633c866bbb54a147a2ae02057232d18">operator+</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>(<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a> + n);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a0d53d85047f0a47f8bd2fb7b12251d04">   66</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> <a class="code hl_function" href="class__normal__iterator.html#a0d53d85047f0a47f8bd2fb7b12251d04">operator-</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>(<a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a> - n);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a80b0edfdfe419690beeca28348c7459c">   70</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#a80b0edfdfe419690beeca28348c7459c">operator+=</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a> += n;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a6579683c416c016d0154994253021bd1">   75</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#a6579683c416c016d0154994253021bd1">operator-=</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a> -= n;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a75a2b38617f083101befa37859471891">   80</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#a75a2b38617f083101befa37859471891">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a64e446cafd8b69c98871b123b8e8c8a1">   82</a></span>    <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;<a class="code hl_function" href="class__normal__iterator.html#a64e446cafd8b69c98871b123b8e8c8a1">operator[]</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">current</a>[n];</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a9c6493549c3114eeb8956411c4bc51ac">   86</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#a9c6493549c3114eeb8956411c4bc51ac">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() == rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a788d0ffd12e811edd07e274327edfa40">   90</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#a788d0ffd12e811edd07e274327edfa40">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() != rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a96cd174ea9464be85b5c9fe1b0345e79">   94</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#a96cd174ea9464be85b5c9fe1b0345e79">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() &lt; rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#ac122518d9d193aff05a84446cd807f69">   98</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#ac122518d9d193aff05a84446cd807f69">operator&lt;=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() &lt;= rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a35320888a035d0aa64dfbae5ee6b2d7f">  102</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#a35320888a035d0aa64dfbae5ee6b2d7f">operator&gt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() &gt; rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#a16f47b8c165a5550ce37ad813ad7b1df">  106</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class__normal__iterator.html#a16f47b8c165a5550ce37ad813ad7b1df">operator&gt;=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() &gt;= rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#aac1c54ec94831c074611187c9397f2c1">  110</a></span>    <span class="keyword">friend</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> <a class="code hl_friend" href="class__normal__iterator.html#aac1c54ec94831c074611187c9397f2c1">operator+</a>(<a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> n, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;it) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator</a>(it.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() - n);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class__normal__iterator.html#aa23c8014ed1a6c4d1f848a76bd561c96">  114</a></span>    <span class="keyword">friend</span> <a class="code hl_typedef" href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">difference_type</a> <a class="code hl_friend" href="class__normal__iterator.html#aa23c8014ed1a6c4d1f848a76bd561c96">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;lhs, <span class="keyword">const</span> <a class="code hl_class" href="class__normal__iterator.html">_normal_iterator</a> &amp;rhs) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>() - rhs.<a class="code hl_function" href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">base</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass__normal__iterator_html"><div class="ttname"><a href="class__normal__iterator.html">_normal_iterator</a></div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:5</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a0d53d85047f0a47f8bd2fb7b12251d04"><div class="ttname"><a href="class__normal__iterator.html#a0d53d85047f0a47f8bd2fb7b12251d04">_normal_iterator::operator-</a></div><div class="ttdeci">_normal_iterator operator-(difference_type n) const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:66</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a121a5b4f316179a042f71113f27105be"><div class="ttname"><a href="class__normal__iterator.html#a121a5b4f316179a042f71113f27105be">_normal_iterator::operator--</a></div><div class="ttdeci">_normal_iterator operator--(int)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:58</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a12dd61cf4598fcc6e5b3f353393d68f7"><div class="ttname"><a href="class__normal__iterator.html#a12dd61cf4598fcc6e5b3f353393d68f7">_normal_iterator::_normal_iterator</a></div><div class="ttdeci">_normal_iterator(iterator_type x)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:21</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a16f47b8c165a5550ce37ad813ad7b1df"><div class="ttname"><a href="class__normal__iterator.html#a16f47b8c165a5550ce37ad813ad7b1df">_normal_iterator::operator&gt;=</a></div><div class="ttdeci">friend bool operator&gt;=(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:106</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a1d1e90481966f3c110a80ad733bd126d"><div class="ttname"><a href="class__normal__iterator.html#a1d1e90481966f3c110a80ad733bd126d">_normal_iterator::_normal_iterator</a></div><div class="ttdeci">_normal_iterator()</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:18</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a1f57c847ca1ac796cda4af8fa2651fd4"><div class="ttname"><a href="class__normal__iterator.html#a1f57c847ca1ac796cda4af8fa2651fd4">_normal_iterator::current</a></div><div class="ttdeci">Iter current</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:7</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a20cf2f89d01df50325de9d836ce0ba5a"><div class="ttname"><a href="class__normal__iterator.html#a20cf2f89d01df50325de9d836ce0ba5a">_normal_iterator::iterator_type</a></div><div class="ttdeci">Iter iterator_type</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:11</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a2855de620e6f66525599a2439ddaf850"><div class="ttname"><a href="class__normal__iterator.html#a2855de620e6f66525599a2439ddaf850">_normal_iterator::reference</a></div><div class="ttdeci">typename traits_type::reference reference</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:16</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a2af85fd1832eb5f88781c79b6a321348"><div class="ttname"><a href="class__normal__iterator.html#a2af85fd1832eb5f88781c79b6a321348">_normal_iterator::pointer</a></div><div class="ttdeci">typename traits_type::pointer pointer</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:15</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a35320888a035d0aa64dfbae5ee6b2d7f"><div class="ttname"><a href="class__normal__iterator.html#a35320888a035d0aa64dfbae5ee6b2d7f">_normal_iterator::operator&gt;</a></div><div class="ttdeci">friend bool operator&gt;(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:102</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a4ae84c831c08adc24201f29c28173c5c"><div class="ttname"><a href="class__normal__iterator.html#a4ae84c831c08adc24201f29c28173c5c">_normal_iterator::value_type</a></div><div class="ttdeci">typename traits_type::value_type value_type</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:13</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a4f98ab3882c2535e3201f6f19e8d5fd7"><div class="ttname"><a href="class__normal__iterator.html#a4f98ab3882c2535e3201f6f19e8d5fd7">_normal_iterator::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:40</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a64e446cafd8b69c98871b123b8e8c8a1"><div class="ttname"><a href="class__normal__iterator.html#a64e446cafd8b69c98871b123b8e8c8a1">_normal_iterator::operator[]</a></div><div class="ttdeci">_normal_iterator &amp; operator[](difference_type n) const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:82</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a6579683c416c016d0154994253021bd1"><div class="ttname"><a href="class__normal__iterator.html#a6579683c416c016d0154994253021bd1">_normal_iterator::operator-=</a></div><div class="ttdeci">_normal_iterator &amp; operator-=(difference_type n)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:75</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a697da8372a39ee21c8fc1f9ea1bb2115"><div class="ttname"><a href="class__normal__iterator.html#a697da8372a39ee21c8fc1f9ea1bb2115">_normal_iterator::_normal_iterator</a></div><div class="ttdeci">_normal_iterator(const _normal_iterator&lt; typename Container::const_pointer, Container &gt; &amp;i)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:28</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a6ee57c0855070e7fd3da999fe0c08e77"><div class="ttname"><a href="class__normal__iterator.html#a6ee57c0855070e7fd3da999fe0c08e77">_normal_iterator::iterator_category</a></div><div class="ttdeci">typename traits_type::iterator_category iterator_category</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:14</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a75a2b38617f083101befa37859471891"><div class="ttname"><a href="class__normal__iterator.html#a75a2b38617f083101befa37859471891">_normal_iterator::operator=</a></div><div class="ttdeci">_normal_iterator &amp; operator=(const _normal_iterator &amp;)=default</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a788d0ffd12e811edd07e274327edfa40"><div class="ttname"><a href="class__normal__iterator.html#a788d0ffd12e811edd07e274327edfa40">_normal_iterator::operator!=</a></div><div class="ttdeci">friend bool operator!=(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:90</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a7d8f751e9040664df03dcfae3b6d695f"><div class="ttname"><a href="class__normal__iterator.html#a7d8f751e9040664df03dcfae3b6d695f">_normal_iterator::base</a></div><div class="ttdeci">iterator_type base() const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:32</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a80b0edfdfe419690beeca28348c7459c"><div class="ttname"><a href="class__normal__iterator.html#a80b0edfdfe419690beeca28348c7459c">_normal_iterator::operator+=</a></div><div class="ttdeci">_normal_iterator &amp; operator+=(difference_type n)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:70</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a92ef4e6ac15ef20d6243f5e1a3d65363"><div class="ttname"><a href="class__normal__iterator.html#a92ef4e6ac15ef20d6243f5e1a3d65363">_normal_iterator::traits_type</a></div><div class="ttdeci">iterator_traits&lt; Iter &gt; traits_type</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:8</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a9571e4ee87b1ed55332ec98a3f1a37cb"><div class="ttname"><a href="class__normal__iterator.html#a9571e4ee87b1ed55332ec98a3f1a37cb">_normal_iterator::difference_type</a></div><div class="ttdeci">typename traits_type::difference_type difference_type</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:12</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a96cd174ea9464be85b5c9fe1b0345e79"><div class="ttname"><a href="class__normal__iterator.html#a96cd174ea9464be85b5c9fe1b0345e79">_normal_iterator::operator&lt;</a></div><div class="ttdeci">friend bool operator&lt;(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:94</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_a9c6493549c3114eeb8956411c4bc51ac"><div class="ttname"><a href="class__normal__iterator.html#a9c6493549c3114eeb8956411c4bc51ac">_normal_iterator::operator==</a></div><div class="ttdeci">friend bool operator==(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:86</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_aa23c8014ed1a6c4d1f848a76bd561c96"><div class="ttname"><a href="class__normal__iterator.html#aa23c8014ed1a6c4d1f848a76bd561c96">_normal_iterator::operator-</a></div><div class="ttdeci">friend difference_type operator-(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:114</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_aac1c54ec94831c074611187c9397f2c1"><div class="ttname"><a href="class__normal__iterator.html#aac1c54ec94831c074611187c9397f2c1">_normal_iterator::operator+</a></div><div class="ttdeci">friend _normal_iterator operator+(difference_type n, const _normal_iterator &amp;it)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:110</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ab70b2235d1078a7b8a8ecbf1f8882fde"><div class="ttname"><a href="class__normal__iterator.html#ab70b2235d1078a7b8a8ecbf1f8882fde">_normal_iterator::operator++</a></div><div class="ttdeci">_normal_iterator &amp; operator++()</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:44</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ac122518d9d193aff05a84446cd807f69"><div class="ttname"><a href="class__normal__iterator.html#ac122518d9d193aff05a84446cd807f69">_normal_iterator::operator&lt;=</a></div><div class="ttdeci">friend bool operator&lt;=(const _normal_iterator &amp;lhs, const _normal_iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:98</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ac437d7d7f7a374eb103e8467d798c383"><div class="ttname"><a href="class__normal__iterator.html#ac437d7d7f7a374eb103e8467d798c383">_normal_iterator::operator++</a></div><div class="ttdeci">_normal_iterator operator++(int)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:54</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ad25cb2c6bf15037b505c56c8bec4caec"><div class="ttname"><a href="class__normal__iterator.html#ad25cb2c6bf15037b505c56c8bec4caec">_normal_iterator::operator*</a></div><div class="ttdeci">reference operator*() const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:36</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ad633c866bbb54a147a2ae02057232d18"><div class="ttname"><a href="class__normal__iterator.html#ad633c866bbb54a147a2ae02057232d18">_normal_iterator::operator+</a></div><div class="ttdeci">_normal_iterator operator+(difference_type n) const</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:62</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_ada193395b3368013409e4ca3aa2018d8"><div class="ttname"><a href="class__normal__iterator.html#ada193395b3368013409e4ca3aa2018d8">_normal_iterator::operator--</a></div><div class="ttdeci">_normal_iterator &amp; operator--()</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:49</div></div>
+<div class="ttc" id="aclass__normal__iterator_html_af0f85358c6d0284ae621014015beab73"><div class="ttname"><a href="class__normal__iterator.html#af0f85358c6d0284ae621014015beab73">_normal_iterator::_normal_iterator</a></div><div class="ttdeci">_normal_iterator(const _normal_iterator&lt; typename Container::pointer, Container &gt; &amp;i)</div><div class="ttdef"><b>Definition:</b> normal_iterator.hpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

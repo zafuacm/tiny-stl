@@ -1,0 +1,2681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::list&lt; T, Allocator &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="clasststl_1_1list.html">list</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-types">Protected 类型</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="clasststl_1_1list-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::list&lt; T, Allocator &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="list_8hpp_source.html">list.hpp</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aaf6c7fa211a42f79a400e3677906b63f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> = T</td></tr>
+<tr class="separator:aaf6c7fa211a42f79a400e3677906b63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad192b1f84c79a601c5f438061944f16"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aad192b1f84c79a601c5f438061944f16">pointer</a> = <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> *</td></tr>
+<tr class="separator:aad192b1f84c79a601c5f438061944f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819140daaa9297367937137056a0a632"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a819140daaa9297367937137056a0a632">const_pointer</a> = const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> *</td></tr>
+<tr class="separator:a819140daaa9297367937137056a0a632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a7de308ff94499fad4fcca020bff07"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a> = <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;</td></tr>
+<tr class="separator:a00a7de308ff94499fad4fcca020bff07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9378c33c8e87c490a35d2ba98e8928"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a> = const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;</td></tr>
+<tr class="separator:a3a9378c33c8e87c490a35d2ba98e8928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7282ce832076518c5a3ba22e0c5cecd1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> = std::size_t</td></tr>
+<tr class="separator:a7282ce832076518c5a3ba22e0c5cecd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5287fe86511e9969457baa6f66544e04"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5287fe86511e9969457baa6f66544e04">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:a5287fe86511e9969457baa6f66544e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24351afff80dad26b92a27d6713a1ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> = <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a>&lt; T &gt;</td></tr>
+<tr class="separator:aa24351afff80dad26b92a27d6713a1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7badf038d722afba2ef61d36c2367cac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> = <a class="el" href="structtstl_1_1list__const__iterator.html">list_const_iterator</a>&lt; T &gt;</td></tr>
+<tr class="separator:a7badf038d722afba2ef61d36c2367cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c74dc60bbc16ae71fe4ba9883bdfa7f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a> = tstl::reverse_iterator&lt; <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> &gt;</td></tr>
+<tr class="separator:a2c74dc60bbc16ae71fe4ba9883bdfa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4234a914dac60a33236b4f6b561b73f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a> = tstl::reverse_iterator&lt; <a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> &gt;</td></tr>
+<tr class="separator:ae4234a914dac60a33236b4f6b561b73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d94445e19afd138f11c50c2315a2977"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a></td></tr>
+<tr class="separator:a3d94445e19afd138f11c50c2315a2977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c2735b89a2a249f256abac8e6a7131"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a></td></tr>
+<tr class="separator:a20c2735b89a2a249f256abac8e6a7131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8518266d049aeace8ffcce79070e4aa3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a8518266d049aeace8ffcce79070e4aa3">Lnode</a> = <a class="el" href="structtstl_1_1list__node.html">list_node</a>&lt; T &gt;</td></tr>
+<tr class="separator:a8518266d049aeace8ffcce79070e4aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb309f59a3c4e803b6d2f9318c60a85f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#abb309f59a3c4e803b6d2f9318c60a85f">Lbnode</a> = <a class="el" href="structtstl_1_1list__node__base.html">list_node_base</a>&lt; T &gt;</td></tr>
+<tr class="separator:abb309f59a3c4e803b6d2f9318c60a85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f5c5a77a5d953655f38a2566c6aeb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a> = typename alloc_traits::template rebind_alloc&lt; <a class="el" href="clasststl_1_1list.html#a8518266d049aeace8ffcce79070e4aa3">Lnode</a> &gt;</td></tr>
+<tr class="separator:a07f5c5a77a5d953655f38a2566c6aeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a2114fce810dba99e13ca09be89935"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a> = typename alloc_traits::template rebind_alloc&lt; <a class="el" href="clasststl_1_1list.html#abb309f59a3c4e803b6d2f9318c60a85f">Lbnode</a> &gt;</td></tr>
+<tr class="separator:a22a2114fce810dba99e13ca09be89935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a56978852e80257f46c09fdb64b10ab18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a56978852e80257f46c09fdb64b10ab18">list</a> ()</td></tr>
+<tr class="separator:a56978852e80257f46c09fdb64b10ab18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3d19c7e01b83817fe2ca1ec9a10b53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a0b3d19c7e01b83817fe2ca1ec9a10b53">list</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> n, const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;value=<a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>())</td></tr>
+<tr class="separator:a0b3d19c7e01b83817fe2ca1ec9a10b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41dfed5e939ef2bea365edbbce19081a"><td class="memTemplParams" colspan="2">template&lt;class InputIt , typename  = tstl::_RequireInputIter&lt;InputIt&gt;&gt; </td></tr>
+<tr class="memitem:a41dfed5e939ef2bea365edbbce19081a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a41dfed5e939ef2bea365edbbce19081a">list</a> (InputIt first, InputIt last)</td></tr>
+<tr class="separator:a41dfed5e939ef2bea365edbbce19081a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eab93e9874911c605058df6f576052f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a8eab93e9874911c605058df6f576052f">list</a> (std::initializer_list&lt; T &gt; init)</td></tr>
+<tr class="separator:a8eab93e9874911c605058df6f576052f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668f71433aef1040d2d9c5fc41a24309"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a668f71433aef1040d2d9c5fc41a24309">list</a> (const <a class="el" href="clasststl_1_1list.html">list</a> &amp;l)</td></tr>
+<tr class="separator:a668f71433aef1040d2d9c5fc41a24309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df8c2b0f7a7e267d6d2398c8f58f932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html">list</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a6df8c2b0f7a7e267d6d2398c8f58f932">operator=</a> (const <a class="el" href="clasststl_1_1list.html">list</a> &amp;l) noexcept</td></tr>
+<tr class="separator:a6df8c2b0f7a7e267d6d2398c8f58f932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c8d945a499184b64c9c2ee33ba96cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aa4c8d945a499184b64c9c2ee33ba96cf">list</a> (<a class="el" href="clasststl_1_1list.html">list</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:aa4c8d945a499184b64c9c2ee33ba96cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f349a6c899bb86f623f92191976b5cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html">list</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5f349a6c899bb86f623f92191976b5cc">operator=</a> (<a class="el" href="clasststl_1_1list.html">list</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:a5f349a6c899bb86f623f92191976b5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13284abe496faadafc1f563aa6b5c56e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a13284abe496faadafc1f563aa6b5c56e">~list</a> ()</td></tr>
+<tr class="separator:a13284abe496faadafc1f563aa6b5c56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbeb944c8dc2415f02959bf5d0416c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a9cbeb944c8dc2415f02959bf5d0416c8">push_back</a> (const T &amp;value)</td></tr>
+<tr class="separator:a9cbeb944c8dc2415f02959bf5d0416c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ec9bec8b511482ef892fd2be535ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ac9ec9bec8b511482ef892fd2be535ddf">push_front</a> (const T &amp;value)</td></tr>
+<tr class="separator:ac9ec9bec8b511482ef892fd2be535ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11e2b790879c8e3fdeaf71201f8dad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ad11e2b790879c8e3fdeaf71201f8dad3">pop_front</a> ()</td></tr>
+<tr class="separator:ad11e2b790879c8e3fdeaf71201f8dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecc5001ab36c96ff41117a8ffad5e5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#acecc5001ab36c96ff41117a8ffad5e5c">pop_back</a> ()</td></tr>
+<tr class="separator:acecc5001ab36c96ff41117a8ffad5e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae508c46b1a8c7560e091da49d85c59f0"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:ae508c46b1a8c7560e091da49d85c59f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ae508c46b1a8c7560e091da49d85c59f0">emplace_back</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:ae508c46b1a8c7560e091da49d85c59f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963ad783c5b5389a0b14f72f88b9018a"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a963ad783c5b5389a0b14f72f88b9018a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a963ad783c5b5389a0b14f72f88b9018a">emplace_front</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a963ad783c5b5389a0b14f72f88b9018a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4cb8ba7c06f312a2556ce9c07ae38e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5f4cb8ba7c06f312a2556ce9c07ae38e">size</a> () const noexcept</td></tr>
+<tr class="separator:a5f4cb8ba7c06f312a2556ce9c07ae38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebbd6d825396df9c626e0b10cc95a7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#abebbd6d825396df9c626e0b10cc95a7f">empty</a> () const noexcept</td></tr>
+<tr class="separator:abebbd6d825396df9c626e0b10cc95a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e95e5bf64430014bad4a9538b76e79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a22e95e5bf64430014bad4a9538b76e79">swap</a> (<a class="el" href="clasststl_1_1list.html">list</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a22e95e5bf64430014bad4a9538b76e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7135289024aa3f143bd28c55d95fd475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a7135289024aa3f143bd28c55d95fd475">assign</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> n, const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;val=<a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>())</td></tr>
+<tr class="separator:a7135289024aa3f143bd28c55d95fd475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1b997f7b578f788447d4da5d61517e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a9c1b997f7b578f788447d4da5d61517e">assign</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> first, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a9c1b997f7b578f788447d4da5d61517e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e83c0abfc4c572576689699cb1cfa7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a0e83c0abfc4c572576689699cb1cfa7f">resize</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> n)</td></tr>
+<tr class="separator:a0e83c0abfc4c572576689699cb1cfa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb01c96df48d70c742d5eba4f1c2bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#acdb01c96df48d70c742d5eba4f1c2bb0">insert</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position)</td></tr>
+<tr class="separator:acdb01c96df48d70c742d5eba4f1c2bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05db8754f6c671ce65db09858bcc470a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a05db8754f6c671ce65db09858bcc470a">insert</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position, const T &amp;x)</td></tr>
+<tr class="separator:a05db8754f6c671ce65db09858bcc470a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8bba705199f29d254ca8b9da68089f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#acf8bba705199f29d254ca8b9da68089f">erase</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position)</td></tr>
+<tr class="separator:acf8bba705199f29d254ca8b9da68089f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5578cf9465bf35b7b49c3fc5139037e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5578cf9465bf35b7b49c3fc5139037e8">erase</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> first, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a5578cf9465bf35b7b49c3fc5139037e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107282a80ab49c00618eaa04de4365cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a107282a80ab49c00618eaa04de4365cd">clear</a> ()</td></tr>
+<tr class="separator:a107282a80ab49c00618eaa04de4365cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865140e60bb8f29b1a0720a021a8e989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a865140e60bb8f29b1a0720a021a8e989">unique</a> ()</td></tr>
+<tr class="separator:a865140e60bb8f29b1a0720a021a8e989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c02d6a9acd29f2af40bad1a1a06a9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a8c02d6a9acd29f2af40bad1a1a06a9fb">splice</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> pos, <a class="el" href="clasststl_1_1list.html">list</a> &amp;rhs)</td></tr>
+<tr class="separator:a8c02d6a9acd29f2af40bad1a1a06a9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1e95405742aa404edf5c959a0789d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a7c1e95405742aa404edf5c959a0789d2">splice</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position, <a class="el" href="clasststl_1_1list.html">list</a> &amp;l, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a7c1e95405742aa404edf5c959a0789d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f5681fb0d2a73dc44e4199d4f886c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a79f5681fb0d2a73dc44e4199d4f886c7">splice</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> pos, <a class="el" href="clasststl_1_1list.html">list</a> &amp;, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> first, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a79f5681fb0d2a73dc44e4199d4f886c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ca756e6313948c09d83034124d4520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a08ca756e6313948c09d83034124d4520">merge</a> (<a class="el" href="clasststl_1_1list.html">list</a> &amp;l)</td></tr>
+<tr class="separator:a08ca756e6313948c09d83034124d4520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa03daa891054c1c9205f5e687750aa"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
+<tr class="memitem:a6fa03daa891054c1c9205f5e687750aa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a6fa03daa891054c1c9205f5e687750aa">merge</a> (<a class="el" href="clasststl_1_1list.html">list</a> &amp;l, Compare cmp)</td></tr>
+<tr class="separator:a6fa03daa891054c1c9205f5e687750aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cbebac57595042fc1ae005d76774dd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a1cbebac57595042fc1ae005d76774dd8">reverse</a> ()</td></tr>
+<tr class="separator:a1cbebac57595042fc1ae005d76774dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdfabfadc881fe8295d317c60db56fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#acfdfabfadc881fe8295d317c60db56fa">sort</a> ()</td></tr>
+<tr class="separator:acfdfabfadc881fe8295d317c60db56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9e37daa36519ed7d024cd2a96c129c"><td class="memTemplParams" colspan="2">template&lt;class Compare &gt; </td></tr>
+<tr class="memitem:a2c9e37daa36519ed7d024cd2a96c129c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a2c9e37daa36519ed7d024cd2a96c129c">sort</a> (Compare cmp)</td></tr>
+<tr class="separator:a2c9e37daa36519ed7d024cd2a96c129c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f119a00a61d3e6a7fdf2543dec2fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#af6f119a00a61d3e6a7fdf2543dec2fa6">remove</a> (const T &amp;value)</td></tr>
+<tr class="separator:af6f119a00a61d3e6a7fdf2543dec2fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65e55f50fe619e00f34806e96879d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ad65e55f50fe619e00f34806e96879d67">begin</a> () noexcept</td></tr>
+<tr class="separator:ad65e55f50fe619e00f34806e96879d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946d429aa85a1e75f151e669e84e00c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a946d429aa85a1e75f151e669e84e00c8">end</a> () noexcept</td></tr>
+<tr class="separator:a946d429aa85a1e75f151e669e84e00c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b1f81cce16e2ff7ca77a3efe14335d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ad9b1f81cce16e2ff7ca77a3efe14335d">rbegin</a> () noexcept</td></tr>
+<tr class="separator:ad9b1f81cce16e2ff7ca77a3efe14335d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11352f27deadf02c45acb0f5359168c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ac11352f27deadf02c45acb0f5359168c">rend</a> () noexcept</td></tr>
+<tr class="separator:ac11352f27deadf02c45acb0f5359168c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95290efdf6671a3560ac1df0fdd9a3d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a95290efdf6671a3560ac1df0fdd9a3d6">front</a> () noexcept</td></tr>
+<tr class="separator:a95290efdf6671a3560ac1df0fdd9a3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30441308d0efde2406d9bb72b9501a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ac30441308d0efde2406d9bb72b9501a0">back</a> () noexcept</td></tr>
+<tr class="separator:ac30441308d0efde2406d9bb72b9501a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa78b12e6d9d2ed22851fb532aa9cc72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aaa78b12e6d9d2ed22851fb532aa9cc72">begin</a> () const noexcept</td></tr>
+<tr class="separator:aaa78b12e6d9d2ed22851fb532aa9cc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73778fa15b840eae85c7bdf540f06470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a73778fa15b840eae85c7bdf540f06470">end</a> () const noexcept</td></tr>
+<tr class="separator:a73778fa15b840eae85c7bdf540f06470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96895f1458475a20f7d6b23fcf7ac107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a96895f1458475a20f7d6b23fcf7ac107">cbegin</a> () const noexcept</td></tr>
+<tr class="separator:a96895f1458475a20f7d6b23fcf7ac107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6c3be9d736fa7a11a06c750471a0d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a1d6c3be9d736fa7a11a06c750471a0d2">cend</a> () const noexcept</td></tr>
+<tr class="separator:a1d6c3be9d736fa7a11a06c750471a0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597a86953d7fdaf14eae413e3429c0e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a597a86953d7fdaf14eae413e3429c0e8">crbegin</a> () const noexcept</td></tr>
+<tr class="separator:a597a86953d7fdaf14eae413e3429c0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed63ad2e01a3ad0f2a3df4364b3396a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a0ed63ad2e01a3ad0f2a3df4364b3396a">crend</a> () const noexcept</td></tr>
+<tr class="separator:a0ed63ad2e01a3ad0f2a3df4364b3396a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217db028ae339c9921656b736e399146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a217db028ae339c9921656b736e399146">front</a> () const noexcept</td></tr>
+<tr class="separator:a217db028ae339c9921656b736e399146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd95f628b84080f9c13cb01483cad2cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#acd95f628b84080f9c13cb01483cad2cf">back</a> () const noexcept</td></tr>
+<tr class="separator:acd95f628b84080f9c13cb01483cad2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
+Protected 类型</h2></td></tr>
+<tr class="memitem:a1b83f6f0df990c4ae311a680b1c2fca1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a1b83f6f0df990c4ae311a680b1c2fca1">node_alloc_traits</a> = std::allocator_traits&lt; <a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a> &gt;</td></tr>
+<tr class="separator:a1b83f6f0df990c4ae311a680b1c2fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d0d52c9c83aa07e07dde95fdbaa19c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a12d0d52c9c83aa07e07dde95fdbaa19c">bnode_alloc_traits</a> = std::allocator_traits&lt; <a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a> &gt;</td></tr>
+<tr class="separator:a12d0d52c9c83aa07e07dde95fdbaa19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a95e2d520df1afa843af2479435ba3458"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a95e2d520df1afa843af2479435ba3458">m_node</a></td></tr>
+<tr class="separator:a95e2d520df1afa843af2479435ba3458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bdb9f70d94c78e91d1c842c1ad5bb68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a0bdb9f70d94c78e91d1c842c1ad5bb68">m_size</a></td></tr>
+<tr class="separator:a0bdb9f70d94c78e91d1c842c1ad5bb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc0a10649e4d6d79ddb92cdde81855f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#affc0a10649e4d6d79ddb92cdde81855f">m_bnode_alloc</a></td></tr>
+<tr class="separator:affc0a10649e4d6d79ddb92cdde81855f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aeb6de177075cfbb1de7b63bdbed866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5aeb6de177075cfbb1de7b63bdbed866">m_node_alloc</a></td></tr>
+<tr class="separator:a5aeb6de177075cfbb1de7b63bdbed866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:a03042497f5c7e6d7c2e71c04fc6cbbc0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a03042497f5c7e6d7c2e71c04fc6cbbc0">alloc_traits</a> = std::allocator_traits&lt; Allocator &gt;</td></tr>
+<tr class="separator:a03042497f5c7e6d7c2e71c04fc6cbbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aeb09a3b3a1fc377638e5d3a802af24e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aeb09a3b3a1fc377638e5d3a802af24e4">m_bnode_allocate</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> count)</td></tr>
+<tr class="separator:aeb09a3b3a1fc377638e5d3a802af24e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc73ff4b3a52ae07e85480acf308af0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#afc73ff4b3a52ae07e85480acf308af0c">m_node_allocate</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> count)</td></tr>
+<tr class="separator:afc73ff4b3a52ae07e85480acf308af0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2243c09eb2cd809411ad25f2077a08f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a2243c09eb2cd809411ad25f2077a08f5">create_node</a> (const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;value)</td></tr>
+<tr class="separator:a2243c09eb2cd809411ad25f2077a08f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa6c1138974119a8019d6a3e7cc284d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a1aa6c1138974119a8019d6a3e7cc284d">m_deallocate</a> (<a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> p)</td></tr>
+<tr class="separator:a1aa6c1138974119a8019d6a3e7cc284d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ae1feefed68ce44e7cb41b48cf650d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#ae3ae1feefed68ce44e7cb41b48cf650d">m_deallocate</a> (<a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> p)</td></tr>
+<tr class="separator:ae3ae1feefed68ce44e7cb41b48cf650d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f039297cfe0dac4922561ca83d8e507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a1f039297cfe0dac4922561ca83d8e507">destroy_node</a> (<a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> p)</td></tr>
+<tr class="separator:a1f039297cfe0dac4922561ca83d8e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8533400bdda86df57a3e43e16419c9eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a8533400bdda86df57a3e43e16419c9eb">destroy_node</a> (<a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> p)</td></tr>
+<tr class="separator:a8533400bdda86df57a3e43e16419c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ef5186f682cb24f16a624d90057563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a14ef5186f682cb24f16a624d90057563">empty_initialized</a> ()</td></tr>
+<tr class="separator:a14ef5186f682cb24f16a624d90057563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9205694994a9c23137fe22047de2c5"><td class="memTemplParams" colspan="2">template&lt;class InputIt &gt; </td></tr>
+<tr class="memitem:afa9205694994a9c23137fe22047de2c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#afa9205694994a9c23137fe22047de2c5">list_insert</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position, InputIt first, InputIt last)</td></tr>
+<tr class="separator:afa9205694994a9c23137fe22047de2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d485b8baae54f7e5021ac5af8f5e8da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a2d485b8baae54f7e5021ac5af8f5e8da">fill_insert</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position, <a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> n, const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;val)</td></tr>
+<tr class="separator:a2d485b8baae54f7e5021ac5af8f5e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3474983e96c37e2865265c7b30eb85b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#aa3474983e96c37e2865265c7b30eb85b">fill_assign</a> (<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> n, const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;val=<a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>())</td></tr>
+<tr class="separator:aa3474983e96c37e2865265c7b30eb85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540297558d0d755fdea3e1d78773eae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a540297558d0d755fdea3e1d78773eae0">assign_dispatch</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> first, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a540297558d0d755fdea3e1d78773eae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcbea682d822f3d73c4e08d52a422ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1list.html#a5bcbea682d822f3d73c4e08d52a422ac">transfer</a> (<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> position, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> first, <a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> last)</td></tr>
+<tr class="separator:a5bcbea682d822f3d73c4e08d52a422ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a03042497f5c7e6d7c2e71c04fc6cbbc0" name="a03042497f5c7e6d7c2e71c04fc6cbbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03042497f5c7e6d7c2e71c04fc6cbbc0">&#9670;&nbsp;</a></span>alloc_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a03042497f5c7e6d7c2e71c04fc6cbbc0">alloc_traits</a> =  std::allocator_traits&lt;Allocator&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf6c7fa211a42f79a400e3677906b63f" name="aaf6c7fa211a42f79a400e3677906b63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6c7fa211a42f79a400e3677906b63f">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad192b1f84c79a601c5f438061944f16" name="aad192b1f84c79a601c5f438061944f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad192b1f84c79a601c5f438061944f16">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#aad192b1f84c79a601c5f438061944f16">pointer</a> =  <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819140daaa9297367937137056a0a632" name="a819140daaa9297367937137056a0a632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819140daaa9297367937137056a0a632">&#9670;&nbsp;</a></span>const_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a819140daaa9297367937137056a0a632">const_pointer</a> =  const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00a7de308ff94499fad4fcca020bff07" name="a00a7de308ff94499fad4fcca020bff07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a7de308ff94499fad4fcca020bff07">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a> =  <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a9378c33c8e87c490a35d2ba98e8928" name="a3a9378c33c8e87c490a35d2ba98e8928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9378c33c8e87c490a35d2ba98e8928">&#9670;&nbsp;</a></span>const_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a> =  const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7282ce832076518c5a3ba22e0c5cecd1" name="a7282ce832076518c5a3ba22e0c5cecd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7282ce832076518c5a3ba22e0c5cecd1">&#9670;&nbsp;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> =  std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5287fe86511e9969457baa6f66544e04" name="a5287fe86511e9969457baa6f66544e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5287fe86511e9969457baa6f66544e04">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a5287fe86511e9969457baa6f66544e04">difference_type</a> =  std::ptrdiff_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa24351afff80dad26b92a27d6713a1ed" name="aa24351afff80dad26b92a27d6713a1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24351afff80dad26b92a27d6713a1ed">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> =  <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7badf038d722afba2ef61d36c2367cac" name="a7badf038d722afba2ef61d36c2367cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7badf038d722afba2ef61d36c2367cac">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> =  <a class="el" href="structtstl_1_1list__const__iterator.html">list_const_iterator</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c74dc60bbc16ae71fe4ba9883bdfa7f" name="a2c74dc60bbc16ae71fe4ba9883bdfa7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c74dc60bbc16ae71fe4ba9883bdfa7f">&#9670;&nbsp;</a></span>reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a> =  tstl::reverse_iterator&lt;<a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4234a914dac60a33236b4f6b561b73f" name="ae4234a914dac60a33236b4f6b561b73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4234a914dac60a33236b4f6b561b73f">&#9670;&nbsp;</a></span>const_reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a> =  tstl::reverse_iterator&lt;<a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d94445e19afd138f11c50c2315a2977" name="a3d94445e19afd138f11c50c2315a2977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d94445e19afd138f11c50c2315a2977">&#9670;&nbsp;</a></span>base_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c2735b89a2a249f256abac8e6a7131" name="a20c2735b89a2a249f256abac8e6a7131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c2735b89a2a249f256abac8e6a7131">&#9670;&nbsp;</a></span>node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8518266d049aeace8ffcce79070e4aa3" name="a8518266d049aeace8ffcce79070e4aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8518266d049aeace8ffcce79070e4aa3">&#9670;&nbsp;</a></span>Lnode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a8518266d049aeace8ffcce79070e4aa3">Lnode</a> =  <a class="el" href="structtstl_1_1list__node.html">list_node</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb309f59a3c4e803b6d2f9318c60a85f" name="abb309f59a3c4e803b6d2f9318c60a85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb309f59a3c4e803b6d2f9318c60a85f">&#9670;&nbsp;</a></span>Lbnode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#abb309f59a3c4e803b6d2f9318c60a85f">Lbnode</a> =  <a class="el" href="structtstl_1_1list__node__base.html">list_node_base</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07f5c5a77a5d953655f38a2566c6aeb7" name="a07f5c5a77a5d953655f38a2566c6aeb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f5c5a77a5d953655f38a2566c6aeb7">&#9670;&nbsp;</a></span>list_node_alloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a> =  typename alloc_traits::template rebind_alloc&lt;<a class="el" href="clasststl_1_1list.html#a8518266d049aeace8ffcce79070e4aa3">Lnode</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22a2114fce810dba99e13ca09be89935" name="a22a2114fce810dba99e13ca09be89935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a2114fce810dba99e13ca09be89935">&#9670;&nbsp;</a></span>list_bnode_alloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a> =  typename alloc_traits::template rebind_alloc&lt;<a class="el" href="clasststl_1_1list.html#abb309f59a3c4e803b6d2f9318c60a85f">Lbnode</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b83f6f0df990c4ae311a680b1c2fca1" name="a1b83f6f0df990c4ae311a680b1c2fca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b83f6f0df990c4ae311a680b1c2fca1">&#9670;&nbsp;</a></span>node_alloc_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a1b83f6f0df990c4ae311a680b1c2fca1">node_alloc_traits</a> =  std::allocator_traits&lt;<a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12d0d52c9c83aa07e07dde95fdbaa19c" name="a12d0d52c9c83aa07e07dde95fdbaa19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d0d52c9c83aa07e07dde95fdbaa19c">&#9670;&nbsp;</a></span>bnode_alloc_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html#a12d0d52c9c83aa07e07dde95fdbaa19c">bnode_alloc_traits</a> =  std::allocator_traits&lt;<a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a56978852e80257f46c09fdb64b10ab18" name="a56978852e80257f46c09fdb64b10ab18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56978852e80257f46c09fdb64b10ab18">&#9670;&nbsp;</a></span>list() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b3d19c7e01b83817fe2ca1ec9a10b53" name="a0b3d19c7e01b83817fe2ca1ec9a10b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3d19c7e01b83817fe2ca1ec9a10b53">&#9670;&nbsp;</a></span>list() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em> = <code><a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41dfed5e939ef2bea365edbbce19081a" name="a41dfed5e939ef2bea365edbbce19081a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41dfed5e939ef2bea365edbbce19081a">&#9670;&nbsp;</a></span>list() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIt , typename  = tstl::_RequireInputIter&lt;InputIt&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8eab93e9874911c605058df6f576052f" name="a8eab93e9874911c605058df6f576052f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eab93e9874911c605058df6f576052f">&#9670;&nbsp;</a></span>list() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>init</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a668f71433aef1040d2d9c5fc41a24309" name="a668f71433aef1040d2d9c5fc41a24309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668f71433aef1040d2d9c5fc41a24309">&#9670;&nbsp;</a></span>list() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4c8d945a499184b64c9c2ee33ba96cf" name="aa4c8d945a499184b64c9c2ee33ba96cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c8d945a499184b64c9c2ee33ba96cf">&#9670;&nbsp;</a></span>list() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13284abe496faadafc1f563aa6b5c56e" name="a13284abe496faadafc1f563aa6b5c56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13284abe496faadafc1f563aa6b5c56e">&#9670;&nbsp;</a></span>~list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::~<a class="el" href="clasststl_1_1list.html">list</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6df8c2b0f7a7e267d6d2398c8f58f932" name="a6df8c2b0f7a7e267d6d2398c8f58f932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df8c2b0f7a7e267d6d2398c8f58f932">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">list</a> &amp; <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f349a6c899bb86f623f92191976b5cc" name="a5f349a6c899bb86f623f92191976b5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f349a6c899bb86f623f92191976b5cc">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html">list</a> &amp; <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cbeb944c8dc2415f02959bf5d0416c8" name="a9cbeb944c8dc2415f02959bf5d0416c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cbeb944c8dc2415f02959bf5d0416c8">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9ec9bec8b511482ef892fd2be535ddf" name="ac9ec9bec8b511482ef892fd2be535ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9ec9bec8b511482ef892fd2be535ddf">&#9670;&nbsp;</a></span>push_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::push_front </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad11e2b790879c8e3fdeaf71201f8dad3" name="ad11e2b790879c8e3fdeaf71201f8dad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11e2b790879c8e3fdeaf71201f8dad3">&#9670;&nbsp;</a></span>pop_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::pop_front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acecc5001ab36c96ff41117a8ffad5e5c" name="acecc5001ab36c96ff41117a8ffad5e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecc5001ab36c96ff41117a8ffad5e5c">&#9670;&nbsp;</a></span>pop_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::pop_back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae508c46b1a8c7560e091da49d85c59f0" name="ae508c46b1a8c7560e091da49d85c59f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae508c46b1a8c7560e091da49d85c59f0">&#9670;&nbsp;</a></span>emplace_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::emplace_back </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a963ad783c5b5389a0b14f72f88b9018a" name="a963ad783c5b5389a0b14f72f88b9018a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963ad783c5b5389a0b14f72f88b9018a">&#9670;&nbsp;</a></span>emplace_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::emplace_front </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f4cb8ba7c06f312a2556ce9c07ae38e" name="a5f4cb8ba7c06f312a2556ce9c07ae38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4cb8ba7c06f312a2556ce9c07ae38e">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abebbd6d825396df9c626e0b10cc95a7f" name="abebbd6d825396df9c626e0b10cc95a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebbd6d825396df9c626e0b10cc95a7f">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22e95e5bf64430014bad4a9538b76e79" name="a22e95e5bf64430014bad4a9538b76e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e95e5bf64430014bad4a9538b76e79">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7135289024aa3f143bd28c55d95fd475" name="a7135289024aa3f143bd28c55d95fd475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7135289024aa3f143bd28c55d95fd475">&#9670;&nbsp;</a></span>assign() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em> = <code><a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c1b997f7b578f788447d4da5d61517e" name="a9c1b997f7b578f788447d4da5d61517e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1b997f7b578f788447d4da5d61517e">&#9670;&nbsp;</a></span>assign() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e83c0abfc4c572576689699cb1cfa7f" name="a0e83c0abfc4c572576689699cb1cfa7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e83c0abfc4c572576689699cb1cfa7f">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdb01c96df48d70c742d5eba4f1c2bb0" name="acdb01c96df48d70c742d5eba4f1c2bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdb01c96df48d70c742d5eba4f1c2bb0">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05db8754f6c671ce65db09858bcc470a" name="a05db8754f6c671ce65db09858bcc470a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05db8754f6c671ce65db09858bcc470a">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf8bba705199f29d254ca8b9da68089f" name="acf8bba705199f29d254ca8b9da68089f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf8bba705199f29d254ca8b9da68089f">&#9670;&nbsp;</a></span>erase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5578cf9465bf35b7b49c3fc5139037e8" name="a5578cf9465bf35b7b49c3fc5139037e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5578cf9465bf35b7b49c3fc5139037e8">&#9670;&nbsp;</a></span>erase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a107282a80ab49c00618eaa04de4365cd" name="a107282a80ab49c00618eaa04de4365cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a107282a80ab49c00618eaa04de4365cd">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a865140e60bb8f29b1a0720a021a8e989" name="a865140e60bb8f29b1a0720a021a8e989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865140e60bb8f29b1a0720a021a8e989">&#9670;&nbsp;</a></span>unique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::unique </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c02d6a9acd29f2af40bad1a1a06a9fb" name="a8c02d6a9acd29f2af40bad1a1a06a9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c02d6a9acd29f2af40bad1a1a06a9fb">&#9670;&nbsp;</a></span>splice() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::splice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c1e95405742aa404edf5c959a0789d2" name="a7c1e95405742aa404edf5c959a0789d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1e95405742aa404edf5c959a0789d2">&#9670;&nbsp;</a></span>splice() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::splice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79f5681fb0d2a73dc44e4199d4f886c7" name="a79f5681fb0d2a73dc44e4199d4f886c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f5681fb0d2a73dc44e4199d4f886c7">&#9670;&nbsp;</a></span>splice() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::splice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08ca756e6313948c09d83034124d4520" name="a08ca756e6313948c09d83034124d4520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ca756e6313948c09d83034124d4520">&#9670;&nbsp;</a></span>merge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::merge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fa03daa891054c1c9205f5e687750aa" name="a6fa03daa891054c1c9205f5e687750aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa03daa891054c1c9205f5e687750aa">&#9670;&nbsp;</a></span>merge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::merge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html">list</a>&lt; T, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>cmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cbebac57595042fc1ae005d76774dd8" name="a1cbebac57595042fc1ae005d76774dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cbebac57595042fc1ae005d76774dd8">&#9670;&nbsp;</a></span>reverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::reverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfdfabfadc881fe8295d317c60db56fa" name="acfdfabfadc881fe8295d317c60db56fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdfabfadc881fe8295d317c60db56fa">&#9670;&nbsp;</a></span>sort() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::sort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c9e37daa36519ed7d024cd2a96c129c" name="a2c9e37daa36519ed7d024cd2a96c129c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9e37daa36519ed7d024cd2a96c129c">&#9670;&nbsp;</a></span>sort() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::sort </td>
+          <td>(</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>cmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6f119a00a61d3e6a7fdf2543dec2fa6" name="af6f119a00a61d3e6a7fdf2543dec2fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f119a00a61d3e6a7fdf2543dec2fa6">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::remove </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65e55f50fe619e00f34806e96879d67" name="ad65e55f50fe619e00f34806e96879d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65e55f50fe619e00f34806e96879d67">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a946d429aa85a1e75f151e669e84e00c8" name="a946d429aa85a1e75f151e669e84e00c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a946d429aa85a1e75f151e669e84e00c8">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9b1f81cce16e2ff7ca77a3efe14335d" name="ad9b1f81cce16e2ff7ca77a3efe14335d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b1f81cce16e2ff7ca77a3efe14335d">&#9670;&nbsp;</a></span>rbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac11352f27deadf02c45acb0f5359168c" name="ac11352f27deadf02c45acb0f5359168c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11352f27deadf02c45acb0f5359168c">&#9670;&nbsp;</a></span>rend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a2c74dc60bbc16ae71fe4ba9883bdfa7f">reverse_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95290efdf6671a3560ac1df0fdd9a3d6" name="a95290efdf6671a3560ac1df0fdd9a3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95290efdf6671a3560ac1df0fdd9a3d6">&#9670;&nbsp;</a></span>front() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac30441308d0efde2406d9bb72b9501a0" name="ac30441308d0efde2406d9bb72b9501a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30441308d0efde2406d9bb72b9501a0">&#9670;&nbsp;</a></span>back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a00a7de308ff94499fad4fcca020bff07">reference</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa78b12e6d9d2ed22851fb532aa9cc72" name="aaa78b12e6d9d2ed22851fb532aa9cc72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa78b12e6d9d2ed22851fb532aa9cc72">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73778fa15b840eae85c7bdf540f06470" name="a73778fa15b840eae85c7bdf540f06470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73778fa15b840eae85c7bdf540f06470">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96895f1458475a20f7d6b23fcf7ac107" name="a96895f1458475a20f7d6b23fcf7ac107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96895f1458475a20f7d6b23fcf7ac107">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d6c3be9d736fa7a11a06c750471a0d2" name="a1d6c3be9d736fa7a11a06c750471a0d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6c3be9d736fa7a11a06c750471a0d2">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7badf038d722afba2ef61d36c2367cac">const_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a597a86953d7fdaf14eae413e3429c0e8" name="a597a86953d7fdaf14eae413e3429c0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597a86953d7fdaf14eae413e3429c0e8">&#9670;&nbsp;</a></span>crbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::crbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ed63ad2e01a3ad0f2a3df4364b3396a" name="a0ed63ad2e01a3ad0f2a3df4364b3396a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed63ad2e01a3ad0f2a3df4364b3396a">&#9670;&nbsp;</a></span>crend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#ae4234a914dac60a33236b4f6b561b73f">const_reverse_iterator</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::crend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a217db028ae339c9921656b736e399146" name="a217db028ae339c9921656b736e399146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217db028ae339c9921656b736e399146">&#9670;&nbsp;</a></span>front() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd95f628b84080f9c13cb01483cad2cf" name="acd95f628b84080f9c13cb01483cad2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd95f628b84080f9c13cb01483cad2cf">&#9670;&nbsp;</a></span>back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a3a9378c33c8e87c490a35d2ba98e8928">const_reference</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb09a3b3a1fc377638e5d3a802af24e4" name="aeb09a3b3a1fc377638e5d3a802af24e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb09a3b3a1fc377638e5d3a802af24e4">&#9670;&nbsp;</a></span>m_bnode_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_bnode_allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc73ff4b3a52ae07e85480acf308af0c" name="afc73ff4b3a52ae07e85480acf308af0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc73ff4b3a52ae07e85480acf308af0c">&#9670;&nbsp;</a></span>m_node_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_node_allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2243c09eb2cd809411ad25f2077a08f5" name="a2243c09eb2cd809411ad25f2077a08f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2243c09eb2cd809411ad25f2077a08f5">&#9670;&nbsp;</a></span>create_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::create_node </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aa6c1138974119a8019d6a3e7cc284d" name="a1aa6c1138974119a8019d6a3e7cc284d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa6c1138974119a8019d6a3e7cc284d">&#9670;&nbsp;</a></span>m_deallocate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_deallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3ae1feefed68ce44e7cb41b48cf650d" name="ae3ae1feefed68ce44e7cb41b48cf650d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ae1feefed68ce44e7cb41b48cf650d">&#9670;&nbsp;</a></span>m_deallocate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_deallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f039297cfe0dac4922561ca83d8e507" name="a1f039297cfe0dac4922561ca83d8e507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f039297cfe0dac4922561ca83d8e507">&#9670;&nbsp;</a></span>destroy_node() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::destroy_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8533400bdda86df57a3e43e16419c9eb" name="a8533400bdda86df57a3e43e16419c9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8533400bdda86df57a3e43e16419c9eb">&#9670;&nbsp;</a></span>destroy_node() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::destroy_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a20c2735b89a2a249f256abac8e6a7131">node_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14ef5186f682cb24f16a624d90057563" name="a14ef5186f682cb24f16a624d90057563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ef5186f682cb24f16a624d90057563">&#9670;&nbsp;</a></span>empty_initialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::empty_initialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa9205694994a9c23137fe22047de2c5" name="afa9205694994a9c23137fe22047de2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9205694994a9c23137fe22047de2c5">&#9670;&nbsp;</a></span>list_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIt &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::list_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d485b8baae54f7e5021ac5af8f5e8da" name="a2d485b8baae54f7e5021ac5af8f5e8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d485b8baae54f7e5021ac5af8f5e8da">&#9670;&nbsp;</a></span>fill_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::fill_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3474983e96c37e2865265c7b30eb85b" name="aa3474983e96c37e2865265c7b30eb85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3474983e96c37e2865265c7b30eb85b">&#9670;&nbsp;</a></span>fill_assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::fill_assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em> = <code><a class="el" href="clasststl_1_1list.html#aaf6c7fa211a42f79a400e3677906b63f">value_type</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a540297558d0d755fdea3e1d78773eae0" name="a540297558d0d755fdea3e1d78773eae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a540297558d0d755fdea3e1d78773eae0">&#9670;&nbsp;</a></span>assign_dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::assign_dispatch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bcbea682d822f3d73c4e08d52a422ac" name="a5bcbea682d822f3d73c4e08d52a422ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcbea682d822f3d73c4e08d52a422ac">&#9670;&nbsp;</a></span>transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::transfer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1list.html#aa24351afff80dad26b92a27d6713a1ed">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a95e2d520df1afa843af2479435ba3458" name="a95e2d520df1afa843af2479435ba3458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e2d520df1afa843af2479435ba3458">&#9670;&nbsp;</a></span>m_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a3d94445e19afd138f11c50c2315a2977">base_ptr</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_node</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bdb9f70d94c78e91d1c842c1ad5bb68" name="a0bdb9f70d94c78e91d1c842c1ad5bb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bdb9f70d94c78e91d1c842c1ad5bb68">&#9670;&nbsp;</a></span>m_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a7282ce832076518c5a3ba22e0c5cecd1">size_type</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affc0a10649e4d6d79ddb92cdde81855f" name="affc0a10649e4d6d79ddb92cdde81855f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc0a10649e4d6d79ddb92cdde81855f">&#9670;&nbsp;</a></span>m_bnode_alloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a22a2114fce810dba99e13ca09be89935">list_bnode_alloc</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_bnode_alloc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aeb6de177075cfbb1de7b63bdbed866" name="a5aeb6de177075cfbb1de7b63bdbed866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aeb6de177075cfbb1de7b63bdbed866">&#9670;&nbsp;</a></span>m_node_alloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Allocator  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1list.html#a07f5c5a77a5d953655f38a2566c6aeb7">list_node_alloc</a> <a class="el" href="clasststl_1_1list.html">tstl::list</a>&lt; T, Allocator &gt;::m_node_alloc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="list_8hpp_source.html">list.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

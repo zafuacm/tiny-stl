@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::iterator_traits&lt; const T * &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html">iterator_traits&lt; const T * &gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::iterator_traits&lt; const T * &gt; 模板结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a03f71a34537eb894768c3ae9d98620a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a03f71a34537eb894768c3ae9d98620a6">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:a03f71a34537eb894768c3ae9d98620a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa584663ff2a94ce9e1fc548755f90a3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#afa584663ff2a94ce9e1fc548755f90a3">value_type</a> = T</td></tr>
+<tr class="separator:afa584663ff2a94ce9e1fc548755f90a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ee1e762ed930dac9d94c21ad2c012a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#ae5ee1e762ed930dac9d94c21ad2c012a">pointer</a> = const T *</td></tr>
+<tr class="separator:ae5ee1e762ed930dac9d94c21ad2c012a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087cc57067eaddfdd70e8be4888bf420"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a087cc57067eaddfdd70e8be4888bf420">reference</a> = const T &amp;</td></tr>
+<tr class="separator:a087cc57067eaddfdd70e8be4888bf420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec469ca504cb5497f250736665ae4e0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a1ec469ca504cb5497f250736665ae4e0">iterator_category</a> = <a class="el" href="structtstl_1_1random__access__iterator__tag.html">random_access_iterator_tag</a></td></tr>
+<tr class="separator:a1ec469ca504cb5497f250736665ae4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a03f71a34537eb894768c3ae9d98620a6" name="a03f71a34537eb894768c3ae9d98620a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f71a34537eb894768c3ae9d98620a6">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1iterator__traits.html">tstl::iterator_traits</a>&lt; const T * &gt;::<a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a03f71a34537eb894768c3ae9d98620a6">difference_type</a> =  std::ptrdiff_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa584663ff2a94ce9e1fc548755f90a3" name="afa584663ff2a94ce9e1fc548755f90a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa584663ff2a94ce9e1fc548755f90a3">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1iterator__traits.html">tstl::iterator_traits</a>&lt; const T * &gt;::<a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#afa584663ff2a94ce9e1fc548755f90a3">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5ee1e762ed930dac9d94c21ad2c012a" name="ae5ee1e762ed930dac9d94c21ad2c012a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ee1e762ed930dac9d94c21ad2c012a">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1iterator__traits.html">tstl::iterator_traits</a>&lt; const T * &gt;::<a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#ae5ee1e762ed930dac9d94c21ad2c012a">pointer</a> =  const T *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a087cc57067eaddfdd70e8be4888bf420" name="a087cc57067eaddfdd70e8be4888bf420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087cc57067eaddfdd70e8be4888bf420">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1iterator__traits.html">tstl::iterator_traits</a>&lt; const T * &gt;::<a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a087cc57067eaddfdd70e8be4888bf420">reference</a> =  const T &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ec469ca504cb5497f250736665ae4e0" name="a1ec469ca504cb5497f250736665ae4e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec469ca504cb5497f250736665ae4e0">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1iterator__traits.html">tstl::iterator_traits</a>&lt; const T * &gt;::<a class="el" href="structtstl_1_1iterator__traits_3_01const_01_t_01_5_01_4.html#a1ec469ca504cb5497f250736665ae4e0">iterator_category</a> =  <a class="el" href="structtstl_1_1random__access__iterator__tag.html">random_access_iterator_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="iterator_8hpp_source.html">iterator.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

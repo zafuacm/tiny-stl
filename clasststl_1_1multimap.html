@@ -1,0 +1,2044 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::multimap&lt; Key, T, Compare &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="clasststl_1_1multimap.html">multimap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="clasststl_1_1multimap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::multimap&lt; Key, T, Compare &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="multimap_8hpp_source.html">multimap.hpp</a>&quot;</code></p>
+<div class="dynheader">
+tstl::multimap&lt; Key, T, Compare &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="clasststl_1_1multimap__coll__graph.svg" width="159" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html">value_compare</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a2f1ff491cf13d0de62689f3f0aef4429"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> = Key</td></tr>
+<tr class="separator:a2f1ff491cf13d0de62689f3f0aef4429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4b413708b31459d403aa2dde4d5085"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a5e4b413708b31459d403aa2dde4d5085">mapped_type</a> = T</td></tr>
+<tr class="separator:a5e4b413708b31459d403aa2dde4d5085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51afa0acf7b33aa205f5295ab00299c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> = std::pair&lt; const Key, T &gt;</td></tr>
+<tr class="separator:af51afa0acf7b33aa205f5295ab00299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2252e00aa55d934fef2c78c1e59df0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a> = Compare</td></tr>
+<tr class="separator:a6d2252e00aa55d934fef2c78c1e59df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfcedc7f0cfc8ca3a1b891561f96612"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#adcfcedc7f0cfc8ca3a1b891561f96612">node_type</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#ae79583baea6b966f5f3a84bc3aab0586">base_type::node_type</a></td></tr>
+<tr class="separator:adcfcedc7f0cfc8ca3a1b891561f96612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fb2465730706282c9bcf13001a240c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a10fb2465730706282c9bcf13001a240c">pointer</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a7d7e2113741b1fc766910bd41681eed9">base_type::pointer</a></td></tr>
+<tr class="separator:a10fb2465730706282c9bcf13001a240c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0c18f73af8259fb85a81c3ea954ba9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#acd0c18f73af8259fb85a81c3ea954ba9">const_pointer</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#afd189dd867220cf5ac47785ba5933d38">base_type::const_pointer</a></td></tr>
+<tr class="separator:acd0c18f73af8259fb85a81c3ea954ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97a4adb0dea93309707f4dd2be680ef"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ad97a4adb0dea93309707f4dd2be680ef">reference</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#af9371444a12e162305213234f8cd100c">base_type::reference</a></td></tr>
+<tr class="separator:ad97a4adb0dea93309707f4dd2be680ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b13ca1e0297dc38ead3bd1fb4bc1994"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a5b13ca1e0297dc38ead3bd1fb4bc1994">const_reference</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a2270208e5ed3198e3a77f758ba78f258">base_type::const_reference</a></td></tr>
+<tr class="separator:a5b13ca1e0297dc38ead3bd1fb4bc1994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b97507b9b2819ccc4886ef52566ca8c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a52bde63907a0984125419f79a74b0592">base_type::iterator</a></td></tr>
+<tr class="separator:a0b97507b9b2819ccc4886ef52566ca8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae7f92391ac0732b62f594bcaaffbb3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a8e7a19d6bdeba383a635c97cb18f4014">base_type::const_iterator</a></td></tr>
+<tr class="separator:afae7f92391ac0732b62f594bcaaffbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecc4b07b1e7f439f1e650f52b965d40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#aebf1490108bfd55e3ce4edc44fa4241f">base_type::reverse_iterator</a></td></tr>
+<tr class="separator:a3ecc4b07b1e7f439f1e650f52b965d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace034178c3458954a95b27b2a082f8bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a4bb5bd09a8a725ab13e74486fa0a039d">base_type::const_reverse_iterator</a></td></tr>
+<tr class="separator:ace034178c3458954a95b27b2a082f8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0653be460328bbdb224ca26f7f8e8f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#a9c1473d61e3b8bd3fb886c42b27e9899">base_type::size_type</a></td></tr>
+<tr class="separator:abe0653be460328bbdb224ca26f7f8e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc91ba05a546066668343996215ac87"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a4bc91ba05a546066668343996215ac87">difference_type</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#adf5aed7029e25bb76b07aae1f78885c7">base_type::difference_type</a></td></tr>
+<tr class="separator:a4bc91ba05a546066668343996215ac87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89393c992a31e773d3c54077356f3e8e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a89393c992a31e773d3c54077356f3e8e">allocator_type</a> = typename <a class="el" href="clasststl_1_1rb__tree.html#ab483f9b554edc967cb334aad5be25822">base_type::allocator_type</a></td></tr>
+<tr class="separator:a89393c992a31e773d3c54077356f3e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a791077d425e96bda81e14cee4b12314a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a791077d425e96bda81e14cee4b12314a">multimap</a> ()=default</td></tr>
+<tr class="separator:a791077d425e96bda81e14cee4b12314a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a728071824df870f8e52ccbf2d39128"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3a728071824df870f8e52ccbf2d39128">~multimap</a> ()=default</td></tr>
+<tr class="separator:a3a728071824df870f8e52ccbf2d39128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee6a68e20f18db1e65670859b404dac"><td class="memTemplParams" colspan="2">template&lt;class InputIt , typename  = tstl::_RequireInputIter&lt;InputIt&gt;&gt; </td></tr>
+<tr class="memitem:a7ee6a68e20f18db1e65670859b404dac"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a7ee6a68e20f18db1e65670859b404dac">multimap</a> (InputIt first, InputIt last)</td></tr>
+<tr class="separator:a7ee6a68e20f18db1e65670859b404dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9427f8eb2345f71e98842745d13a477"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ac9427f8eb2345f71e98842745d13a477">multimap</a> (std::initializer_list&lt; <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &gt; ilist)</td></tr>
+<tr class="separator:ac9427f8eb2345f71e98842745d13a477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccc779bd9273fba59a57e5be399c1a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3ccc779bd9273fba59a57e5be399c1a3">multimap</a> (const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;other)</td></tr>
+<tr class="separator:a3ccc779bd9273fba59a57e5be399c1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6921b5d894bc2b2734f38ded509fd310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a6921b5d894bc2b2734f38ded509fd310">multimap</a> (<a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a6921b5d894bc2b2734f38ded509fd310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56630a6227bc093f07079f52e8428362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a56630a6227bc093f07079f52e8428362">operator=</a> (const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;rhs)</td></tr>
+<tr class="separator:a56630a6227bc093f07079f52e8428362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3459d12c467cb8c27984cd033076f9b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3459d12c467cb8c27984cd033076f9b5">operator=</a> (<a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:a3459d12c467cb8c27984cd033076f9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddd52618309b26a0e8e61cb18f50284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#acddd52618309b26a0e8e61cb18f50284">operator=</a> (std::initializer_list&lt; T &gt; ilist)</td></tr>
+<tr class="separator:acddd52618309b26a0e8e61cb18f50284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada423e1ec51c075e900a2e3d3c2a7869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ada423e1ec51c075e900a2e3d3c2a7869">key_comp</a> () const</td></tr>
+<tr class="separator:ada423e1ec51c075e900a2e3d3c2a7869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e3c9de379382bd483d48eb00656ffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html">value_compare</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a29e3c9de379382bd483d48eb00656ffc">value_comp</a> () const</td></tr>
+<tr class="separator:a29e3c9de379382bd483d48eb00656ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058fb9c13adf3714bb2f59e29d283842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a89393c992a31e773d3c54077356f3e8e">allocator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a058fb9c13adf3714bb2f59e29d283842">get_allocator</a> () const</td></tr>
+<tr class="separator:a058fb9c13adf3714bb2f59e29d283842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e6524931c6771d6691ee4c1a9132e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#aa0e6524931c6771d6691ee4c1a9132e3">begin</a> () noexcept</td></tr>
+<tr class="separator:aa0e6524931c6771d6691ee4c1a9132e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac684d4b98f2a543eb17a3796a6597729"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ac684d4b98f2a543eb17a3796a6597729">begin</a> () const noexcept</td></tr>
+<tr class="separator:ac684d4b98f2a543eb17a3796a6597729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adceb312b2cfcc84f51b13cd1d04de7da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#adceb312b2cfcc84f51b13cd1d04de7da">end</a> () noexcept</td></tr>
+<tr class="separator:adceb312b2cfcc84f51b13cd1d04de7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3748c917f036ecf54d1ce24662b07bac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3748c917f036ecf54d1ce24662b07bac">end</a> () const noexcept</td></tr>
+<tr class="separator:a3748c917f036ecf54d1ce24662b07bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc241ffa957c04514189987e00bc571c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#afc241ffa957c04514189987e00bc571c">rbegin</a> () noexcept</td></tr>
+<tr class="separator:afc241ffa957c04514189987e00bc571c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9728111017996772949220f00277b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#aea9728111017996772949220f00277b2">rbegin</a> () const noexcept</td></tr>
+<tr class="separator:aea9728111017996772949220f00277b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a62be5ff5171c9a63579760496a55f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a54a62be5ff5171c9a63579760496a55f">rend</a> () noexcept</td></tr>
+<tr class="separator:a54a62be5ff5171c9a63579760496a55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33db64ca1a3411d466225edf1400e5fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a33db64ca1a3411d466225edf1400e5fd">rend</a> () const noexcept</td></tr>
+<tr class="separator:a33db64ca1a3411d466225edf1400e5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64cf91db8302061736851706c3e263f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a64cf91db8302061736851706c3e263f6">cbegin</a> () const noexcept</td></tr>
+<tr class="separator:a64cf91db8302061736851706c3e263f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3443036013558f5b27d7f70341cb34b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3443036013558f5b27d7f70341cb34b2">cend</a> () const noexcept</td></tr>
+<tr class="separator:a3443036013558f5b27d7f70341cb34b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf97168ec8d759af1bdca070f61ce0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#aacf97168ec8d759af1bdca070f61ce0d">crbegin</a> () const noexcept</td></tr>
+<tr class="separator:aacf97168ec8d759af1bdca070f61ce0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddae881c3a2c779ba26d3558f3576df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a5ddae881c3a2c779ba26d3558f3576df">crend</a> () const noexcept</td></tr>
+<tr class="separator:a5ddae881c3a2c779ba26d3558f3576df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a1c91c0d87d8ca4fe1d94cc6a5ba2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a79a1c91c0d87d8ca4fe1d94cc6a5ba2b">empty</a> () const noexcept</td></tr>
+<tr class="separator:a79a1c91c0d87d8ca4fe1d94cc6a5ba2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae9948c539130a6a86041a1324d0577"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#acae9948c539130a6a86041a1324d0577">size</a> () const noexcept</td></tr>
+<tr class="separator:acae9948c539130a6a86041a1324d0577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09460b1cdd063e7614d3f47f6e7432cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a09460b1cdd063e7614d3f47f6e7432cd">max_size</a> () const noexcept</td></tr>
+<tr class="separator:a09460b1cdd063e7614d3f47f6e7432cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08483fd1e6208dd18463530589c48bb0"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a08483fd1e6208dd18463530589c48bb0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a08483fd1e6208dd18463530589c48bb0">emplace</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a08483fd1e6208dd18463530589c48bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd862faea9170a8d13f6490fa269f55"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a7bd862faea9170a8d13f6490fa269f55"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a7bd862faea9170a8d13f6490fa269f55">emplace_hint</a> (<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> hint, Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a7bd862faea9170a8d13f6490fa269f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae502fd32760fb709e551fae92417050c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ae502fd32760fb709e551fae92417050c">insert</a> (const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;value)</td></tr>
+<tr class="separator:ae502fd32760fb709e551fae92417050c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465b47292d9f2132efb7844ab7015054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a465b47292d9f2132efb7844ab7015054">insert</a> (<a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&amp;value)</td></tr>
+<tr class="separator:a465b47292d9f2132efb7844ab7015054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ef2fcbb7307b5062f896f2cfed3b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a11ef2fcbb7307b5062f896f2cfed3b17">insert</a> (<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> hint, const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;value)</td></tr>
+<tr class="separator:a11ef2fcbb7307b5062f896f2cfed3b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647707450510ffa2c6e43277e4cb7c1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a647707450510ffa2c6e43277e4cb7c1b">insert</a> (<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> hint, <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&amp;value)</td></tr>
+<tr class="separator:a647707450510ffa2c6e43277e4cb7c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7745ae4ab6447a66749ddb51eb9c16"><td class="memTemplParams" colspan="2">template&lt;class InputIt &gt; </td></tr>
+<tr class="memitem:a1d7745ae4ab6447a66749ddb51eb9c16"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a1d7745ae4ab6447a66749ddb51eb9c16">insert</a> (InputIt first, InputIt last)</td></tr>
+<tr class="separator:a1d7745ae4ab6447a66749ddb51eb9c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68fe27c2ca8f6e5ace059fc0fbf644d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ac68fe27c2ca8f6e5ace059fc0fbf644d">erase</a> (<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> position)</td></tr>
+<tr class="separator:ac68fe27c2ca8f6e5ace059fc0fbf644d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8">erase</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key)</td></tr>
+<tr class="separator:a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82c7fd824760b85b55141efe6f8d325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ac82c7fd824760b85b55141efe6f8d325">erase</a> (<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> first, <a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> last)</td></tr>
+<tr class="separator:ac82c7fd824760b85b55141efe6f8d325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f86ab93b8efa0d2e3a829aebb69a7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#af6f86ab93b8efa0d2e3a829aebb69a7e">clear</a> ()</td></tr>
+<tr class="separator:af6f86ab93b8efa0d2e3a829aebb69a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b20e12a9f56dc64254d9e60862bbc59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a8b20e12a9f56dc64254d9e60862bbc59">find</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key)</td></tr>
+<tr class="separator:a8b20e12a9f56dc64254d9e60862bbc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b373d26b64e8ab727f9604b3c185b66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a9b373d26b64e8ab727f9604b3c185b66">find</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key) const</td></tr>
+<tr class="separator:a9b373d26b64e8ab727f9604b3c185b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5696f05b06de01ddbbf4d7ecc8e7ce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ab5696f05b06de01ddbbf4d7ecc8e7ce1">count</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key) const</td></tr>
+<tr class="separator:ab5696f05b06de01ddbbf4d7ecc8e7ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c378ae86e9366cc942e9e32593446c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a8c378ae86e9366cc942e9e32593446c4">lower_bound</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key)</td></tr>
+<tr class="separator:a8c378ae86e9366cc942e9e32593446c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7b0a1f338c7e837fbc04b6613ed24c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#aed7b0a1f338c7e837fbc04b6613ed24c">lower_bound</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key) const</td></tr>
+<tr class="separator:aed7b0a1f338c7e837fbc04b6613ed24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478013f28ade8206bf3438e418fbcad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a478013f28ade8206bf3438e418fbcad9">upper_bound</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key)</td></tr>
+<tr class="separator:a478013f28ade8206bf3438e418fbcad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d961cc45053ac171085eef2d534cd7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a3d961cc45053ac171085eef2d534cd7a">upper_bound</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key) const</td></tr>
+<tr class="separator:a3d961cc45053ac171085eef2d534cd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e19803e881dc3e85f88c3c574cd25f"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>, <a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a07e19803e881dc3e85f88c3c574cd25f">equal_range</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key)</td></tr>
+<tr class="separator:a07e19803e881dc3e85f88c3c574cd25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140f95c86426a6207fdf55c44c256ea1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>, <a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a140f95c86426a6207fdf55c44c256ea1">equal_range</a> (const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;key) const</td></tr>
+<tr class="separator:a140f95c86426a6207fdf55c44c256ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d1958f8b3af4ce5cca12a837a653fc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a0d1958f8b3af4ce5cca12a837a653fc0">swap</a> (<a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a0d1958f8b3af4ce5cca12a837a653fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:ad130e0e1f9680aac6e8cc6dc5da99b98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#ad130e0e1f9680aac6e8cc6dc5da99b98">base_type</a> = <a class="el" href="clasststl_1_1rb__tree.html">tstl::rb_tree</a>&lt; <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a>, <a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a> &gt;</td></tr>
+<tr class="separator:ad130e0e1f9680aac6e8cc6dc5da99b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1f6a9aec4873efd52ab2abc6c4fab276"><td class="memItemLeft" align="right" valign="top"><a class="el" href="clasststl_1_1multimap.html#ad130e0e1f9680aac6e8cc6dc5da99b98">base_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a1f6a9aec4873efd52ab2abc6c4fab276">m_tree</a></td></tr>
+<tr class="separator:a1f6a9aec4873efd52ab2abc6c4fab276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a6a91d0170d1497829fb18dbca4204b31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a6a91d0170d1497829fb18dbca4204b31">operator==</a> (const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;lhs, const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;rhs)</td></tr>
+<tr class="separator:a6a91d0170d1497829fb18dbca4204b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477ad3e3134965d22c4055724c23f2ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap.html#a477ad3e3134965d22c4055724c23f2ec">operator&lt;</a> (const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;lhs, const <a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp;rhs)</td></tr>
+<tr class="separator:a477ad3e3134965d22c4055724c23f2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a2f1ff491cf13d0de62689f3f0aef4429" name="a2f1ff491cf13d0de62689f3f0aef4429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1ff491cf13d0de62689f3f0aef4429">&#9670;&nbsp;</a></span>key_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> =  Key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e4b413708b31459d403aa2dde4d5085" name="a5e4b413708b31459d403aa2dde4d5085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4b413708b31459d403aa2dde4d5085">&#9670;&nbsp;</a></span>mapped_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a5e4b413708b31459d403aa2dde4d5085">mapped_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af51afa0acf7b33aa205f5295ab00299c" name="af51afa0acf7b33aa205f5295ab00299c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51afa0acf7b33aa205f5295ab00299c">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> =  std::pair&lt;const Key, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d2252e00aa55d934fef2c78c1e59df0" name="a6d2252e00aa55d934fef2c78c1e59df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2252e00aa55d934fef2c78c1e59df0">&#9670;&nbsp;</a></span>key_compare</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a> =  Compare</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad130e0e1f9680aac6e8cc6dc5da99b98" name="ad130e0e1f9680aac6e8cc6dc5da99b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad130e0e1f9680aac6e8cc6dc5da99b98">&#9670;&nbsp;</a></span>base_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#ad130e0e1f9680aac6e8cc6dc5da99b98">base_type</a> =  <a class="el" href="clasststl_1_1rb__tree.html">tstl::rb_tree</a>&lt;<a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a>, <a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcfcedc7f0cfc8ca3a1b891561f96612" name="adcfcedc7f0cfc8ca3a1b891561f96612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfcedc7f0cfc8ca3a1b891561f96612">&#9670;&nbsp;</a></span>node_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#adcfcedc7f0cfc8ca3a1b891561f96612">node_type</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#ae79583baea6b966f5f3a84bc3aab0586">base_type::node_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10fb2465730706282c9bcf13001a240c" name="a10fb2465730706282c9bcf13001a240c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10fb2465730706282c9bcf13001a240c">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a10fb2465730706282c9bcf13001a240c">pointer</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a7d7e2113741b1fc766910bd41681eed9">base_type::pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd0c18f73af8259fb85a81c3ea954ba9" name="acd0c18f73af8259fb85a81c3ea954ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0c18f73af8259fb85a81c3ea954ba9">&#9670;&nbsp;</a></span>const_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#acd0c18f73af8259fb85a81c3ea954ba9">const_pointer</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#afd189dd867220cf5ac47785ba5933d38">base_type::const_pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad97a4adb0dea93309707f4dd2be680ef" name="ad97a4adb0dea93309707f4dd2be680ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97a4adb0dea93309707f4dd2be680ef">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#ad97a4adb0dea93309707f4dd2be680ef">reference</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#af9371444a12e162305213234f8cd100c">base_type::reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b13ca1e0297dc38ead3bd1fb4bc1994" name="a5b13ca1e0297dc38ead3bd1fb4bc1994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b13ca1e0297dc38ead3bd1fb4bc1994">&#9670;&nbsp;</a></span>const_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a5b13ca1e0297dc38ead3bd1fb4bc1994">const_reference</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a2270208e5ed3198e3a77f758ba78f258">base_type::const_reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b97507b9b2819ccc4886ef52566ca8c" name="a0b97507b9b2819ccc4886ef52566ca8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b97507b9b2819ccc4886ef52566ca8c">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a52bde63907a0984125419f79a74b0592">base_type::iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afae7f92391ac0732b62f594bcaaffbb3" name="afae7f92391ac0732b62f594bcaaffbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae7f92391ac0732b62f594bcaaffbb3">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a8e7a19d6bdeba383a635c97cb18f4014">base_type::const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ecc4b07b1e7f439f1e650f52b965d40" name="a3ecc4b07b1e7f439f1e650f52b965d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecc4b07b1e7f439f1e650f52b965d40">&#9670;&nbsp;</a></span>reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#aebf1490108bfd55e3ce4edc44fa4241f">base_type::reverse_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace034178c3458954a95b27b2a082f8bc" name="ace034178c3458954a95b27b2a082f8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace034178c3458954a95b27b2a082f8bc">&#9670;&nbsp;</a></span>const_reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a4bb5bd09a8a725ab13e74486fa0a039d">base_type::const_reverse_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe0653be460328bbdb224ca26f7f8e8f" name="abe0653be460328bbdb224ca26f7f8e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0653be460328bbdb224ca26f7f8e8f">&#9670;&nbsp;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#a9c1473d61e3b8bd3fb886c42b27e9899">base_type::size_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bc91ba05a546066668343996215ac87" name="a4bc91ba05a546066668343996215ac87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc91ba05a546066668343996215ac87">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a4bc91ba05a546066668343996215ac87">difference_type</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#adf5aed7029e25bb76b07aae1f78885c7">base_type::difference_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89393c992a31e773d3c54077356f3e8e" name="a89393c992a31e773d3c54077356f3e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89393c992a31e773d3c54077356f3e8e">&#9670;&nbsp;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html#a89393c992a31e773d3c54077356f3e8e">allocator_type</a> =  typename <a class="el" href="clasststl_1_1rb__tree.html#ab483f9b554edc967cb334aad5be25822">base_type::allocator_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a791077d425e96bda81e14cee4b12314a" name="a791077d425e96bda81e14cee4b12314a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a791077d425e96bda81e14cee4b12314a">&#9670;&nbsp;</a></span>multimap() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a728071824df870f8e52ccbf2d39128" name="a3a728071824df870f8e52ccbf2d39128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a728071824df870f8e52ccbf2d39128">&#9670;&nbsp;</a></span>~multimap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::~<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ee6a68e20f18db1e65670859b404dac" name="a7ee6a68e20f18db1e65670859b404dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee6a68e20f18db1e65670859b404dac">&#9670;&nbsp;</a></span>multimap() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIt , typename  = tstl::_RequireInputIter&lt;InputIt&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9427f8eb2345f71e98842745d13a477" name="ac9427f8eb2345f71e98842745d13a477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9427f8eb2345f71e98842745d13a477">&#9670;&nbsp;</a></span>multimap() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &gt;&#160;</td>
+          <td class="paramname"><em>ilist</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ccc779bd9273fba59a57e5be399c1a3" name="a3ccc779bd9273fba59a57e5be399c1a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccc779bd9273fba59a57e5be399c1a3">&#9670;&nbsp;</a></span>multimap() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6921b5d894bc2b2734f38ded509fd310" name="a6921b5d894bc2b2734f38ded509fd310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6921b5d894bc2b2734f38ded509fd310">&#9670;&nbsp;</a></span>multimap() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::<a class="el" href="clasststl_1_1multimap.html">multimap</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a56630a6227bc093f07079f52e8428362" name="a56630a6227bc093f07079f52e8428362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56630a6227bc093f07079f52e8428362">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp; <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3459d12c467cb8c27984cd033076f9b5" name="a3459d12c467cb8c27984cd033076f9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3459d12c467cb8c27984cd033076f9b5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp; <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acddd52618309b26a0e8e61cb18f50284" name="acddd52618309b26a0e8e61cb18f50284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddd52618309b26a0e8e61cb18f50284">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">multimap</a> &amp; <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>ilist</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada423e1ec51c075e900a2e3d3c2a7869" name="ada423e1ec51c075e900a2e3d3c2a7869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada423e1ec51c075e900a2e3d3c2a7869">&#9670;&nbsp;</a></span>key_comp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a6d2252e00aa55d934fef2c78c1e59df0">key_compare</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::key_comp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29e3c9de379382bd483d48eb00656ffc" name="a29e3c9de379382bd483d48eb00656ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e3c9de379382bd483d48eb00656ffc">&#9670;&nbsp;</a></span>value_comp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html">value_compare</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::value_comp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a058fb9c13adf3714bb2f59e29d283842" name="a058fb9c13adf3714bb2f59e29d283842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058fb9c13adf3714bb2f59e29d283842">&#9670;&nbsp;</a></span>get_allocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a89393c992a31e773d3c54077356f3e8e">allocator_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::get_allocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0e6524931c6771d6691ee4c1a9132e3" name="aa0e6524931c6771d6691ee4c1a9132e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e6524931c6771d6691ee4c1a9132e3">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac684d4b98f2a543eb17a3796a6597729" name="ac684d4b98f2a543eb17a3796a6597729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac684d4b98f2a543eb17a3796a6597729">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adceb312b2cfcc84f51b13cd1d04de7da" name="adceb312b2cfcc84f51b13cd1d04de7da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adceb312b2cfcc84f51b13cd1d04de7da">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3748c917f036ecf54d1ce24662b07bac" name="a3748c917f036ecf54d1ce24662b07bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3748c917f036ecf54d1ce24662b07bac">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc241ffa957c04514189987e00bc571c" name="afc241ffa957c04514189987e00bc571c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc241ffa957c04514189987e00bc571c">&#9670;&nbsp;</a></span>rbegin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea9728111017996772949220f00277b2" name="aea9728111017996772949220f00277b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9728111017996772949220f00277b2">&#9670;&nbsp;</a></span>rbegin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a62be5ff5171c9a63579760496a55f" name="a54a62be5ff5171c9a63579760496a55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a62be5ff5171c9a63579760496a55f">&#9670;&nbsp;</a></span>rend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a3ecc4b07b1e7f439f1e650f52b965d40">reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33db64ca1a3411d466225edf1400e5fd" name="a33db64ca1a3411d466225edf1400e5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33db64ca1a3411d466225edf1400e5fd">&#9670;&nbsp;</a></span>rend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64cf91db8302061736851706c3e263f6" name="a64cf91db8302061736851706c3e263f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64cf91db8302061736851706c3e263f6">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3443036013558f5b27d7f70341cb34b2" name="a3443036013558f5b27d7f70341cb34b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3443036013558f5b27d7f70341cb34b2">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacf97168ec8d759af1bdca070f61ce0d" name="aacf97168ec8d759af1bdca070f61ce0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf97168ec8d759af1bdca070f61ce0d">&#9670;&nbsp;</a></span>crbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::crbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ddae881c3a2c779ba26d3558f3576df" name="a5ddae881c3a2c779ba26d3558f3576df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddae881c3a2c779ba26d3558f3576df">&#9670;&nbsp;</a></span>crend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#ace034178c3458954a95b27b2a082f8bc">const_reverse_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::crend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79a1c91c0d87d8ca4fe1d94cc6a5ba2b" name="a79a1c91c0d87d8ca4fe1d94cc6a5ba2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a1c91c0d87d8ca4fe1d94cc6a5ba2b">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acae9948c539130a6a86041a1324d0577" name="acae9948c539130a6a86041a1324d0577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae9948c539130a6a86041a1324d0577">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09460b1cdd063e7614d3f47f6e7432cd" name="a09460b1cdd063e7614d3f47f6e7432cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09460b1cdd063e7614d3f47f6e7432cd">&#9670;&nbsp;</a></span>max_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::max_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08483fd1e6208dd18463530589c48bb0" name="a08483fd1e6208dd18463530589c48bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08483fd1e6208dd18463530589c48bb0">&#9670;&nbsp;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::emplace </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bd862faea9170a8d13f6490fa269f55" name="a7bd862faea9170a8d13f6490fa269f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd862faea9170a8d13f6490fa269f55">&#9670;&nbsp;</a></span>emplace_hint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::emplace_hint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>hint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae502fd32760fb709e551fae92417050c" name="ae502fd32760fb709e551fae92417050c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae502fd32760fb709e551fae92417050c">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a465b47292d9f2132efb7844ab7015054" name="a465b47292d9f2132efb7844ab7015054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465b47292d9f2132efb7844ab7015054">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11ef2fcbb7307b5062f896f2cfed3b17" name="a11ef2fcbb7307b5062f896f2cfed3b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ef2fcbb7307b5062f896f2cfed3b17">&#9670;&nbsp;</a></span>insert() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>hint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a647707450510ffa2c6e43277e4cb7c1b" name="a647707450510ffa2c6e43277e4cb7c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a647707450510ffa2c6e43277e4cb7c1b">&#9670;&nbsp;</a></span>insert() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>hint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d7745ae4ab6447a66749ddb51eb9c16" name="a1d7745ae4ab6447a66749ddb51eb9c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7745ae4ab6447a66749ddb51eb9c16">&#9670;&nbsp;</a></span>insert() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;class InputIt &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac68fe27c2ca8f6e5ace059fc0fbf644d" name="ac68fe27c2ca8f6e5ace059fc0fbf644d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68fe27c2ca8f6e5ace059fc0fbf644d">&#9670;&nbsp;</a></span>erase() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8" name="a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9d4ea7b69b5ffd2ef10ea7fd76f6a8">&#9670;&nbsp;</a></span>erase() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac82c7fd824760b85b55141efe6f8d325" name="ac82c7fd824760b85b55141efe6f8d325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac82c7fd824760b85b55141efe6f8d325">&#9670;&nbsp;</a></span>erase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6f86ab93b8efa0d2e3a829aebb69a7e" name="af6f86ab93b8efa0d2e3a829aebb69a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f86ab93b8efa0d2e3a829aebb69a7e">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b20e12a9f56dc64254d9e60862bbc59" name="a8b20e12a9f56dc64254d9e60862bbc59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b20e12a9f56dc64254d9e60862bbc59">&#9670;&nbsp;</a></span>find() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b373d26b64e8ab727f9604b3c185b66" name="a9b373d26b64e8ab727f9604b3c185b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b373d26b64e8ab727f9604b3c185b66">&#9670;&nbsp;</a></span>find() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5696f05b06de01ddbbf4d7ecc8e7ce1" name="ab5696f05b06de01ddbbf4d7ecc8e7ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5696f05b06de01ddbbf4d7ecc8e7ce1">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#abe0653be460328bbdb224ca26f7f8e8f">size_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c378ae86e9366cc942e9e32593446c4" name="a8c378ae86e9366cc942e9e32593446c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c378ae86e9366cc942e9e32593446c4">&#9670;&nbsp;</a></span>lower_bound() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::lower_bound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed7b0a1f338c7e837fbc04b6613ed24c" name="aed7b0a1f338c7e837fbc04b6613ed24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7b0a1f338c7e837fbc04b6613ed24c">&#9670;&nbsp;</a></span>lower_bound() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::lower_bound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a478013f28ade8206bf3438e418fbcad9" name="a478013f28ade8206bf3438e418fbcad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478013f28ade8206bf3438e418fbcad9">&#9670;&nbsp;</a></span>upper_bound() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::upper_bound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d961cc45053ac171085eef2d534cd7a" name="a3d961cc45053ac171085eef2d534cd7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d961cc45053ac171085eef2d534cd7a">&#9670;&nbsp;</a></span>upper_bound() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::upper_bound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07e19803e881dc3e85f88c3c574cd25f" name="a07e19803e881dc3e85f88c3c574cd25f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e19803e881dc3e85f88c3c574cd25f">&#9670;&nbsp;</a></span>equal_range() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a>, <a class="el" href="clasststl_1_1multimap.html#a0b97507b9b2819ccc4886ef52566ca8c">iterator</a> &gt; <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::equal_range </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a140f95c86426a6207fdf55c44c256ea1" name="a140f95c86426a6207fdf55c44c256ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140f95c86426a6207fdf55c44c256ea1">&#9670;&nbsp;</a></span>equal_range() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a>, <a class="el" href="clasststl_1_1multimap.html#afae7f92391ac0732b62f594bcaaffbb3">const_iterator</a> &gt; <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::equal_range </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#a2f1ff491cf13d0de62689f3f0aef4429">key_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d1958f8b3af4ce5cca12a837a653fc0" name="a0d1958f8b3af4ce5cca12a837a653fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d1958f8b3af4ce5cca12a837a653fc0">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a6a91d0170d1497829fb18dbca4204b31" name="a6a91d0170d1497829fb18dbca4204b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a91d0170d1497829fb18dbca4204b31">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a477ad3e3134965d22c4055724c23f2ec" name="a477ad3e3134965d22c4055724c23f2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477ad3e3134965d22c4055724c23f2ec">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a1f6a9aec4873efd52ab2abc6c4fab276" name="a1f6a9aec4873efd52ab2abc6c4fab276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6a9aec4873efd52ab2abc6c4fab276">&#9670;&nbsp;</a></span>m_tree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html#ad130e0e1f9680aac6e8cc6dc5da99b98">base_type</a> <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::m_tree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="multimap_8hpp_source.html">multimap.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::multimap&lt; Key, T, Compare &gt;::value_compare类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="clasststl_1_1multimap.html">multimap</a></li><li class="navelem"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html">value_compare</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="clasststl_1_1multimap_1_1value__compare-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::multimap&lt; Key, T, Compare &gt;::value_compare类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="multimap_8hpp_source.html">multimap.hpp</a>&quot;</code></p>
+<div class="dynheader">
+类 tstl::multimap&lt; Key, T, Compare &gt;::value_compare 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="clasststl_1_1multimap_1_1value__compare__inherit__graph.svg" width="179" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+tstl::multimap&lt; Key, T, Compare &gt;::value_compare 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="clasststl_1_1multimap_1_1value__compare__coll__graph.svg" width="179" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7e69839dab1d6c037c62f13a13a0f95b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html#a7e69839dab1d6c037c62f13a13a0f95b">operator()</a> (const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;lhs, const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;rhs) const</td></tr>
+<tr class="separator:a7e69839dab1d6c037c62f13a13a0f95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aca463392997e037d5757d0cfaa0c2e74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html#aca463392997e037d5757d0cfaa0c2e74">value_compare</a> (Compare c)</td></tr>
+<tr class="separator:aca463392997e037d5757d0cfaa0c2e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a87b17010d3cb8fb818e3bfb7e25a8b65"><td class="memItemLeft" align="right" valign="top">Compare&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html#a87b17010d3cb8fb818e3bfb7e25a8b65">comp</a></td></tr>
+<tr class="separator:a87b17010d3cb8fb818e3bfb7e25a8b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a352c0bb4abda6766c1f72f5d66b29069"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clasststl_1_1multimap_1_1value__compare.html#a352c0bb4abda6766c1f72f5d66b29069">multimap&lt; Key, T, Compare &gt;</a></td></tr>
+<tr class="separator:a352c0bb4abda6766c1f72f5d66b29069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aca463392997e037d5757d0cfaa0c2e74" name="aca463392997e037d5757d0cfaa0c2e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca463392997e037d5757d0cfaa0c2e74">&#9670;&nbsp;</a></span>value_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::value_compare::value_compare </td>
+          <td>(</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7e69839dab1d6c037c62f13a13a0f95b" name="a7e69839dab1d6c037c62f13a13a0f95b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e69839dab1d6c037c62f13a13a0f95b">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::value_compare::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="clasststl_1_1multimap.html#af51afa0acf7b33aa205f5295ab00299c">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a352c0bb4abda6766c1f72f5d66b29069" name="a352c0bb4abda6766c1f72f5d66b29069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352c0bb4abda6766c1f72f5d66b29069">&#9670;&nbsp;</a></span>multimap&lt; Key, T, Compare &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="clasststl_1_1multimap.html">multimap</a>&lt; Key, T, Compare &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a87b17010d3cb8fb818e3bfb7e25a8b65" name="a87b17010d3cb8fb818e3bfb7e25a8b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b17010d3cb8fb818e3bfb7e25a8b65">&#9670;&nbsp;</a></span>comp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Compare <a class="el" href="clasststl_1_1multimap.html">tstl::multimap</a>&lt; Key, T, Compare &gt;::value_compare::comp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="multimap_8hpp_source.html">multimap.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

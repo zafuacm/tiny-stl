@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::list_iterator&lt; T &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structtstl_1_1list__iterator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::list_iterator&lt; T &gt; 模板结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="list_8hpp_source.html">list.hpp</a>&quot;</code></p>
+<div class="dynheader">
+类 tstl::list_iterator&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structtstl_1_1list__iterator__inherit__graph.svg" width="155" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+tstl::list_iterator&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structtstl_1_1list__iterator__coll__graph.svg" width="155" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a9047bf4434b774f8943edbcdd0761eee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a9047bf4434b774f8943edbcdd0761eee">value_type</a> = T</td></tr>
+<tr class="separator:a9047bf4434b774f8943edbcdd0761eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0047d8dd62d1c190b12c8e47af1afdb2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a0047d8dd62d1c190b12c8e47af1afdb2">pointer</a> = T *</td></tr>
+<tr class="separator:a0047d8dd62d1c190b12c8e47af1afdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776c153ec57b5af99f5afbe856becf51"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a776c153ec57b5af99f5afbe856becf51">reference</a> = T &amp;</td></tr>
+<tr class="separator:a776c153ec57b5af99f5afbe856becf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f86078654212f7f0a9ad3ac5c7b06b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a></td></tr>
+<tr class="separator:a1f86078654212f7f0a9ad3ac5c7b06b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c3f3b87d110781106703fb71f8931f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a> = typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a></td></tr>
+<tr class="separator:a60c3f3b87d110781106703fb71f8931f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fcd0b28ab698244b2476019d33461d2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> = <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a></td></tr>
+<tr class="separator:a9fcd0b28ab698244b2476019d33461d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structtstl_1_1iterator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structtstl_1_1iterator')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="structtstl_1_1iterator.html">tstl::iterator&lt; tstl::bidirectional_iterator_tag, T &gt;</a></td></tr>
+<tr class="memitem:aa0a428a99af03588a1338134fc6b2128 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#aa0a428a99af03588a1338134fc6b2128">iterator_category</a> = <a class="el" href="structtstl_1_1bidirectional__iterator__tag.html">tstl::bidirectional_iterator_tag</a></td></tr>
+<tr class="separator:aa0a428a99af03588a1338134fc6b2128 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e850886408eefcd02384d5e1a8cc41 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#ab7e850886408eefcd02384d5e1a8cc41">value_type</a> = T</td></tr>
+<tr class="separator:ab7e850886408eefcd02384d5e1a8cc41 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcac07b57edd854c5830e16484b1092 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#a5dcac07b57edd854c5830e16484b1092">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:a5dcac07b57edd854c5830e16484b1092 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52cbf65915e8aac0a630cfe6f6350ab inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#aa52cbf65915e8aac0a630cfe6f6350ab">pointer</a> = T *</td></tr>
+<tr class="separator:aa52cbf65915e8aac0a630cfe6f6350ab inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6417b1b23e82d2223d896f106d1449 inherit pub_types_structtstl_1_1iterator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1iterator.html#a4e6417b1b23e82d2223d896f106d1449">refence</a> = T &amp;</td></tr>
+<tr class="separator:a4e6417b1b23e82d2223d896f106d1449 inherit pub_types_structtstl_1_1iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a079bef1a7a3f742b0a5e3467a60f7db5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a079bef1a7a3f742b0a5e3467a60f7db5">list_iterator</a> ()=default</td></tr>
+<tr class="separator:a079bef1a7a3f742b0a5e3467a60f7db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135955125622fe1894e4562de3e731e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a135955125622fe1894e4562de3e731e1">list_iterator</a> (<a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a> p)</td></tr>
+<tr class="separator:a135955125622fe1894e4562de3e731e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffa7018687e83563c7f54173691c855"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#acffa7018687e83563c7f54173691c855">list_iterator</a> (<a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a> p)</td></tr>
+<tr class="separator:acffa7018687e83563c7f54173691c855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5bb0b9cc3f5979d1484fc49042e69e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a9f5bb0b9cc3f5979d1484fc49042e69e">list_iterator</a> (const <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a> &amp;other)=default</td></tr>
+<tr class="separator:a9f5bb0b9cc3f5979d1484fc49042e69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f386e2d6ceb57f50d9691565653baad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a776c153ec57b5af99f5afbe856becf51">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a0f386e2d6ceb57f50d9691565653baad">operator*</a> () const</td></tr>
+<tr class="separator:a0f386e2d6ceb57f50d9691565653baad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b31f6e76a658d63160d0ff86f33b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a0047d8dd62d1c190b12c8e47af1afdb2">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#aa0b31f6e76a658d63160d0ff86f33b40">operator-&gt;</a> () const</td></tr>
+<tr class="separator:aa0b31f6e76a658d63160d0ff86f33b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d1fa869117f66460deba7c5e803eff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a64d1fa869117f66460deba7c5e803eff">operator==</a> (const <a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;iter) const</td></tr>
+<tr class="separator:a64d1fa869117f66460deba7c5e803eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcf1b85b96db330ec0de3a2d1056d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#adfcf1b85b96db330ec0de3a2d1056d89">operator!=</a> (const <a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;iter) const</td></tr>
+<tr class="separator:adfcf1b85b96db330ec0de3a2d1056d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492ffe32c8ecc0fe801c1d2c487376ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a492ffe32c8ecc0fe801c1d2c487376ea">operator++</a> ()</td></tr>
+<tr class="separator:a492ffe32c8ecc0fe801c1d2c487376ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab359e451625777dd60ce3026d7e76954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#ab359e451625777dd60ce3026d7e76954">operator++</a> (int)</td></tr>
+<tr class="separator:ab359e451625777dd60ce3026d7e76954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695502c04a18cae85598a54b5b643ab3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a695502c04a18cae85598a54b5b643ab3">operator--</a> ()</td></tr>
+<tr class="separator:a695502c04a18cae85598a54b5b643ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966693ecccb961c2c69d046c647db2e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a966693ecccb961c2c69d046c647db2e8">operator--</a> (int)</td></tr>
+<tr class="separator:a966693ecccb961c2c69d046c647db2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a31e77e70278c470b93e993c84c2dec4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1list__iterator.html#a31e77e70278c470b93e993c84c2dec4c">m_node</a></td></tr>
+<tr class="separator:a31e77e70278c470b93e993c84c2dec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a9047bf4434b774f8943edbcdd0761eee" name="a9047bf4434b774f8943edbcdd0761eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9047bf4434b774f8943edbcdd0761eee">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a9047bf4434b774f8943edbcdd0761eee">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0047d8dd62d1c190b12c8e47af1afdb2" name="a0047d8dd62d1c190b12c8e47af1afdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0047d8dd62d1c190b12c8e47af1afdb2">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a0047d8dd62d1c190b12c8e47af1afdb2">pointer</a> =  T *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a776c153ec57b5af99f5afbe856becf51" name="a776c153ec57b5af99f5afbe856becf51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776c153ec57b5af99f5afbe856becf51">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a776c153ec57b5af99f5afbe856becf51">reference</a> =  T &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f86078654212f7f0a9ad3ac5c7b06b5" name="a1f86078654212f7f0a9ad3ac5c7b06b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f86078654212f7f0a9ad3ac5c7b06b5">&#9670;&nbsp;</a></span>base_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60c3f3b87d110781106703fb71f8931f" name="a60c3f3b87d110781106703fb71f8931f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c3f3b87d110781106703fb71f8931f">&#9670;&nbsp;</a></span>node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a> =  typename <a class="el" href="structtstl_1_1node__traits.html">node_traits</a>&lt;T&gt;::<a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fcd0b28ab698244b2476019d33461d2" name="a9fcd0b28ab698244b2476019d33461d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fcd0b28ab698244b2476019d33461d2">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> =  <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a079bef1a7a3f742b0a5e3467a60f7db5" name="a079bef1a7a3f742b0a5e3467a60f7db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a079bef1a7a3f742b0a5e3467a60f7db5">&#9670;&nbsp;</a></span>list_iterator() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a135955125622fe1894e4562de3e731e1" name="a135955125622fe1894e4562de3e731e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135955125622fe1894e4562de3e731e1">&#9670;&nbsp;</a></span>list_iterator() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acffa7018687e83563c7f54173691c855" name="acffa7018687e83563c7f54173691c855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acffa7018687e83563c7f54173691c855">&#9670;&nbsp;</a></span>list_iterator() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1list__iterator.html#a60c3f3b87d110781106703fb71f8931f">node_ptr</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f5bb0b9cc3f5979d1484fc49042e69e" name="a9f5bb0b9cc3f5979d1484fc49042e69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5bb0b9cc3f5979d1484fc49042e69e">&#9670;&nbsp;</a></span>list_iterator() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::<a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1list__iterator.html">list_iterator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0f386e2d6ceb57f50d9691565653baad" name="a0f386e2d6ceb57f50d9691565653baad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f386e2d6ceb57f50d9691565653baad">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a776c153ec57b5af99f5afbe856becf51">reference</a> <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0b31f6e76a658d63160d0ff86f33b40" name="aa0b31f6e76a658d63160d0ff86f33b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b31f6e76a658d63160d0ff86f33b40">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a0047d8dd62d1c190b12c8e47af1afdb2">pointer</a> <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64d1fa869117f66460deba7c5e803eff" name="a64d1fa869117f66460deba7c5e803eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d1fa869117f66460deba7c5e803eff">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfcf1b85b96db330ec0de3a2d1056d89" name="adfcf1b85b96db330ec0de3a2d1056d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcf1b85b96db330ec0de3a2d1056d89">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a492ffe32c8ecc0fe801c1d2c487376ea" name="a492ffe32c8ecc0fe801c1d2c487376ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492ffe32c8ecc0fe801c1d2c487376ea">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp; <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab359e451625777dd60ce3026d7e76954" name="ab359e451625777dd60ce3026d7e76954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab359e451625777dd60ce3026d7e76954">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695502c04a18cae85598a54b5b643ab3" name="a695502c04a18cae85598a54b5b643ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695502c04a18cae85598a54b5b643ab3">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> &amp; <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a966693ecccb961c2c69d046c647db2e8" name="a966693ecccb961c2c69d046c647db2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966693ecccb961c2c69d046c647db2e8">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a9fcd0b28ab698244b2476019d33461d2">self</a> <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a31e77e70278c470b93e993c84c2dec4c" name="a31e77e70278c470b93e993c84c2dec4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e77e70278c470b93e993c84c2dec4c">&#9670;&nbsp;</a></span>m_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1list__iterator.html#a1f86078654212f7f0a9ad3ac5c7b06b5">base_ptr</a> <a class="el" href="structtstl_1_1list__iterator.html">tstl::list_iterator</a>&lt; T &gt;::m_node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="list_8hpp_source.html">list.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

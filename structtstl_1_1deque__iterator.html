@@ -1,0 +1,1184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiny STL: tstl::deque_iterator&lt; T, Ref, Ptr &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tiny STL
+   </div>
+   <div id="projectbrief">A Tiny C++14 STL.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetstl.html">tstl</a></li><li class="navelem"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="structtstl_1_1deque__iterator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">tstl::deque_iterator&lt; T, Ref, Ptr &gt; 模板结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &quot;<a class="el" href="deque_8hpp_source.html">deque.hpp</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a1b92e1f09f3c40e270c253e7a8250749"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:a1b92e1f09f3c40e270c253e7a8250749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779e1169e1a21520ca3a33d4e051a374"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a779e1169e1a21520ca3a33d4e051a374">value_type</a> = T</td></tr>
+<tr class="separator:a779e1169e1a21520ca3a33d4e051a374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60974f9965066e3ac54482dc394fdbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a> = Ref</td></tr>
+<tr class="separator:ab60974f9965066e3ac54482dc394fdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb357e9d4163d976a5aba294c763d7f8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#adb357e9d4163d976a5aba294c763d7f8">pointer</a> = Ptr</td></tr>
+<tr class="separator:adb357e9d4163d976a5aba294c763d7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a53904afc8d021e017ab3313226a75"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#af0a53904afc8d021e017ab3313226a75">iterator_category</a> = <a class="el" href="structtstl_1_1random__access__iterator__tag.html">random_access_iterator_tag</a></td></tr>
+<tr class="separator:af0a53904afc8d021e017ab3313226a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2147f8e05ca78370de709681a6065588"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> = <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a></td></tr>
+<tr class="separator:a2147f8e05ca78370de709681a6065588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21d808b46b753ff14fa118d9005ccbd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#af21d808b46b753ff14fa118d9005ccbd">iterator</a> = <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&lt; T, T &amp;, T * &gt;</td></tr>
+<tr class="separator:af21d808b46b753ff14fa118d9005ccbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08679dfa090559cb16d334b983b436e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ae08679dfa090559cb16d334b983b436e">const_iterator</a> = <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&lt; T, const T &amp;, const T * &gt;</td></tr>
+<tr class="separator:ae08679dfa090559cb16d334b983b436e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ebd82eda883e32f89fc5ab7dff0cfd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> = T *</td></tr>
+<tr class="separator:a01ebd82eda883e32f89fc5ab7dff0cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b707fc4ed33aa9a681ca6c512bb465"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a> = T **</td></tr>
+<tr class="separator:ad2b707fc4ed33aa9a681ca6c512bb465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae1ae24d2ab6f6a62365de1ca3c07542a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ae1ae24d2ab6f6a62365de1ca3c07542a">deque_iterator</a> ()=default</td></tr>
+<tr class="separator:ae1ae24d2ab6f6a62365de1ca3c07542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb77e588474661ed2a816ecb32b3f77e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#abb77e588474661ed2a816ecb32b3f77e">deque_iterator</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> off, <a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a> n)</td></tr>
+<tr class="separator:abb77e588474661ed2a816ecb32b3f77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc029910ef4426f17f7824729172d073"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#afc029910ef4426f17f7824729172d073">deque_iterator</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#af21d808b46b753ff14fa118d9005ccbd">iterator</a> &amp;other)</td></tr>
+<tr class="separator:afc029910ef4426f17f7824729172d073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899d142f3880d3466d080cd65c5d91d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a899d142f3880d3466d080cd65c5d91d3">deque_iterator</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#ae08679dfa090559cb16d334b983b436e">const_iterator</a> &amp;other)</td></tr>
+<tr class="separator:a899d142f3880d3466d080cd65c5d91d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692b720d2f21ea95602164541ba214ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a692b720d2f21ea95602164541ba214ea">operator=</a> (const <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> &amp;other)=default</td></tr>
+<tr class="separator:a692b720d2f21ea95602164541ba214ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc664b2e9ade4b84f50b699a95104863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#acc664b2e9ade4b84f50b699a95104863">operator*</a> () const</td></tr>
+<tr class="separator:acc664b2e9ade4b84f50b699a95104863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaddbaa3d01099cc0f22ffd99ec0b7b5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#adb357e9d4163d976a5aba294c763d7f8">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#aaddbaa3d01099cc0f22ffd99ec0b7b5a">operator-&gt;</a> () const</td></tr>
+<tr class="separator:aaddbaa3d01099cc0f22ffd99ec0b7b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8399a37f0042b2cabc96c2a2d7581f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a5b8399a37f0042b2cabc96c2a2d7581f">operator++</a> ()</td></tr>
+<tr class="separator:a5b8399a37f0042b2cabc96c2a2d7581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9eb24fb05c974be460e8975e575606a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#aa9eb24fb05c974be460e8975e575606a">operator++</a> (int)</td></tr>
+<tr class="separator:aa9eb24fb05c974be460e8975e575606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6cfad6ef5dfeee974517b9c9ec7a72a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ac6cfad6ef5dfeee974517b9c9ec7a72a">operator--</a> ()</td></tr>
+<tr class="separator:ac6cfad6ef5dfeee974517b9c9ec7a72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6914f2d6168939ed20c4fafd6a77cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a2a6914f2d6168939ed20c4fafd6a77cc">operator--</a> (int)</td></tr>
+<tr class="separator:a2a6914f2d6168939ed20c4fafd6a77cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8bdd66cb1779eb59624e518f964087"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a7a8bdd66cb1779eb59624e518f964087">operator+=</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> n)</td></tr>
+<tr class="separator:a7a8bdd66cb1779eb59624e518f964087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abccafa0ba96c925446aa44b34675c4c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#abccafa0ba96c925446aa44b34675c4c4">operator-=</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> n)</td></tr>
+<tr class="separator:abccafa0ba96c925446aa44b34675c4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6548440cdaeb99f1a4a51d50d438ab10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a6548440cdaeb99f1a4a51d50d438ab10">operator+</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> n) const</td></tr>
+<tr class="separator:a6548440cdaeb99f1a4a51d50d438ab10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3244aec39276dafc63be6ac5356881d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#af3244aec39276dafc63be6ac5356881d">operator-</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> n) const</td></tr>
+<tr class="separator:af3244aec39276dafc63be6ac5356881d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6864371caa272b273d31e47eb89eea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a5f6864371caa272b273d31e47eb89eea">operator-</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;other) const</td></tr>
+<tr class="separator:a5f6864371caa272b273d31e47eb89eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2707d4e3da551dc4a32082dcd756e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#af2707d4e3da551dc4a32082dcd756e3f">operator[]</a> (<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> n) const</td></tr>
+<tr class="separator:af2707d4e3da551dc4a32082dcd756e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad666f985446eeef5f44da9a7a238746b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ad666f985446eeef5f44da9a7a238746b">m_set_node</a> (<a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a> new_node)</td></tr>
+<tr class="separator:ad666f985446eeef5f44da9a7a238746b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a95b7a519752536842fb730d7e3b4e3ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a95b7a519752536842fb730d7e3b4e3ec">m_cur</a> = nullptr</td></tr>
+<tr class="separator:a95b7a519752536842fb730d7e3b4e3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b407792473b4f2790e944698758325b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a3b407792473b4f2790e944698758325b">m_first</a> = nullptr</td></tr>
+<tr class="separator:a3b407792473b4f2790e944698758325b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2732f425704bf8c1ecefd26e80ada2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ac2732f425704bf8c1ecefd26e80ada2e">m_last</a> = nullptr</td></tr>
+<tr class="separator:ac2732f425704bf8c1ecefd26e80ada2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b2b748345d59d84af7e81b6dc8bd25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ad6b2b748345d59d84af7e81b6dc8bd25">m_node</a> = nullptr</td></tr>
+<tr class="separator:ad6b2b748345d59d84af7e81b6dc8bd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a876d6f01073fb250ddb540f658cf145e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a876d6f01073fb250ddb540f658cf145e">m_buffer_size</a> = <a class="el" href="structtstl_1_1__deque__buf__size.html">_deque_buf_size</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a876d6f01073fb250ddb540f658cf145e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a4138af0ab640a66a482a91de379a67a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a4138af0ab640a66a482a91de379a67a4">operator==</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:a4138af0ab640a66a482a91de379a67a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f1cf1ea96bb55f57a1adafc038cf6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a18f1cf1ea96bb55f57a1adafc038cf6f">operator&lt;</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:a18f1cf1ea96bb55f57a1adafc038cf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa6d031ad05c2a2ab4374699c300d6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#afaa6d031ad05c2a2ab4374699c300d6a">operator&gt;</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:afaa6d031ad05c2a2ab4374699c300d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab769065ba97e178af35a243fda74cbe0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#ab769065ba97e178af35a243fda74cbe0">operator&lt;=</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:ab769065ba97e178af35a243fda74cbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674fb22ab6730c2609e9130ac029dbcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a674fb22ab6730c2609e9130ac029dbcb">operator&gt;=</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:a674fb22ab6730c2609e9130ac029dbcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb3f7b085b59993a078c2c39c90434c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtstl_1_1deque__iterator.html#a5bb3f7b085b59993a078c2c39c90434c">operator!=</a> (const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;lhs, const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;rhs)</td></tr>
+<tr class="separator:a5bb3f7b085b59993a078c2c39c90434c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a1b92e1f09f3c40e270c253e7a8250749" name="a1b92e1f09f3c40e270c253e7a8250749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b92e1f09f3c40e270c253e7a8250749">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> =  std::ptrdiff_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a779e1169e1a21520ca3a33d4e051a374" name="a779e1169e1a21520ca3a33d4e051a374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779e1169e1a21520ca3a33d4e051a374">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#a779e1169e1a21520ca3a33d4e051a374">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab60974f9965066e3ac54482dc394fdbb" name="ab60974f9965066e3ac54482dc394fdbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60974f9965066e3ac54482dc394fdbb">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a> =  Ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb357e9d4163d976a5aba294c763d7f8" name="adb357e9d4163d976a5aba294c763d7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb357e9d4163d976a5aba294c763d7f8">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#adb357e9d4163d976a5aba294c763d7f8">pointer</a> =  Ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0a53904afc8d021e017ab3313226a75" name="af0a53904afc8d021e017ab3313226a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0a53904afc8d021e017ab3313226a75">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#af0a53904afc8d021e017ab3313226a75">iterator_category</a> =  <a class="el" href="structtstl_1_1random__access__iterator__tag.html">random_access_iterator_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2147f8e05ca78370de709681a6065588" name="a2147f8e05ca78370de709681a6065588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2147f8e05ca78370de709681a6065588">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> =  <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af21d808b46b753ff14fa118d9005ccbd" name="af21d808b46b753ff14fa118d9005ccbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21d808b46b753ff14fa118d9005ccbd">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#af21d808b46b753ff14fa118d9005ccbd">iterator</a> =  <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&lt;T, T &amp;, T *&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae08679dfa090559cb16d334b983b436e" name="ae08679dfa090559cb16d334b983b436e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08679dfa090559cb16d334b983b436e">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#ae08679dfa090559cb16d334b983b436e">const_iterator</a> =  <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&lt;T, const T &amp;, const T *&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01ebd82eda883e32f89fc5ab7dff0cfd" name="a01ebd82eda883e32f89fc5ab7dff0cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ebd82eda883e32f89fc5ab7dff0cfd">&#9670;&nbsp;</a></span>value_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> =  T *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2b707fc4ed33aa9a681ca6c512bb465" name="ad2b707fc4ed33aa9a681ca6c512bb465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b707fc4ed33aa9a681ca6c512bb465">&#9670;&nbsp;</a></span>map_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a> =  T **</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae1ae24d2ab6f6a62365de1ca3c07542a" name="ae1ae24d2ab6f6a62365de1ca3c07542a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ae24d2ab6f6a62365de1ca3c07542a">&#9670;&nbsp;</a></span>deque_iterator() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb77e588474661ed2a816ecb32b3f77e" name="abb77e588474661ed2a816ecb32b3f77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb77e588474661ed2a816ecb32b3f77e">&#9670;&nbsp;</a></span>deque_iterator() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a>&#160;</td>
+          <td class="paramname"><em>off</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc029910ef4426f17f7824729172d073" name="afc029910ef4426f17f7824729172d073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc029910ef4426f17f7824729172d073">&#9670;&nbsp;</a></span>deque_iterator() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#af21d808b46b753ff14fa118d9005ccbd">iterator</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a899d142f3880d3466d080cd65c5d91d3" name="a899d142f3880d3466d080cd65c5d91d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899d142f3880d3466d080cd65c5d91d3">&#9670;&nbsp;</a></span>deque_iterator() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::<a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#ae08679dfa090559cb16d334b983b436e">const_iterator</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a692b720d2f21ea95602164541ba214ea" name="a692b720d2f21ea95602164541ba214ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692b720d2f21ea95602164541ba214ea">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> &amp; <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a>&lt; T, Ref, Ptr &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc664b2e9ade4b84f50b699a95104863" name="acc664b2e9ade4b84f50b699a95104863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc664b2e9ade4b84f50b699a95104863">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaddbaa3d01099cc0f22ffd99ec0b7b5a" name="aaddbaa3d01099cc0f22ffd99ec0b7b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaddbaa3d01099cc0f22ffd99ec0b7b5a">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#adb357e9d4163d976a5aba294c763d7f8">pointer</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b8399a37f0042b2cabc96c2a2d7581f" name="a5b8399a37f0042b2cabc96c2a2d7581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8399a37f0042b2cabc96c2a2d7581f">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp; <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9eb24fb05c974be460e8975e575606a" name="aa9eb24fb05c974be460e8975e575606a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9eb24fb05c974be460e8975e575606a">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6cfad6ef5dfeee974517b9c9ec7a72a" name="ac6cfad6ef5dfeee974517b9c9ec7a72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6cfad6ef5dfeee974517b9c9ec7a72a">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp; <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a6914f2d6168939ed20c4fafd6a77cc" name="a2a6914f2d6168939ed20c4fafd6a77cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6914f2d6168939ed20c4fafd6a77cc">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a8bdd66cb1779eb59624e518f964087" name="a7a8bdd66cb1779eb59624e518f964087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8bdd66cb1779eb59624e518f964087">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp; <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abccafa0ba96c925446aa44b34675c4c4" name="abccafa0ba96c925446aa44b34675c4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccafa0ba96c925446aa44b34675c4c4">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> &amp; <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6548440cdaeb99f1a4a51d50d438ab10" name="a6548440cdaeb99f1a4a51d50d438ab10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6548440cdaeb99f1a4a51d50d438ab10">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3244aec39276dafc63be6ac5356881d" name="af3244aec39276dafc63be6ac5356881d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3244aec39276dafc63be6ac5356881d">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html">deque_iterator</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f6864371caa272b273d31e47eb89eea" name="a5f6864371caa272b273d31e47eb89eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6864371caa272b273d31e47eb89eea">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2707d4e3da551dc4a32082dcd756e3f" name="af2707d4e3da551dc4a32082dcd756e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2707d4e3da551dc4a32082dcd756e3f">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#ab60974f9965066e3ac54482dc394fdbb">reference</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad666f985446eeef5f44da9a7a238746b" name="ad666f985446eeef5f44da9a7a238746b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad666f985446eeef5f44da9a7a238746b">&#9670;&nbsp;</a></span>m_set_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_set_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a>&#160;</td>
+          <td class="paramname"><em>new_node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a4138af0ab640a66a482a91de379a67a4" name="a4138af0ab640a66a482a91de379a67a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4138af0ab640a66a482a91de379a67a4">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18f1cf1ea96bb55f57a1adafc038cf6f" name="a18f1cf1ea96bb55f57a1adafc038cf6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f1cf1ea96bb55f57a1adafc038cf6f">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaa6d031ad05c2a2ab4374699c300d6a" name="afaa6d031ad05c2a2ab4374699c300d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa6d031ad05c2a2ab4374699c300d6a">&#9670;&nbsp;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab769065ba97e178af35a243fda74cbe0" name="ab769065ba97e178af35a243fda74cbe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab769065ba97e178af35a243fda74cbe0">&#9670;&nbsp;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a674fb22ab6730c2609e9130ac029dbcb" name="a674fb22ab6730c2609e9130ac029dbcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674fb22ab6730c2609e9130ac029dbcb">&#9670;&nbsp;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb3f7b085b59993a078c2c39c90434c" name="a5bb3f7b085b59993a078c2c39c90434c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb3f7b085b59993a078c2c39c90434c">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtstl_1_1deque__iterator.html#a2147f8e05ca78370de709681a6065588">self</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a876d6f01073fb250ddb540f658cf145e" name="a876d6f01073fb250ddb540f658cf145e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876d6f01073fb250ddb540f658cf145e">&#9670;&nbsp;</a></span>m_buffer_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="structtstl_1_1deque__iterator.html#a1b92e1f09f3c40e270c253e7a8250749">difference_type</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_buffer_size = <a class="el" href="structtstl_1_1__deque__buf__size.html">_deque_buf_size</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95b7a519752536842fb730d7e3b4e3ec" name="a95b7a519752536842fb730d7e3b4e3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b7a519752536842fb730d7e3b4e3ec">&#9670;&nbsp;</a></span>m_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_cur = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b407792473b4f2790e944698758325b" name="a3b407792473b4f2790e944698758325b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b407792473b4f2790e944698758325b">&#9670;&nbsp;</a></span>m_first</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_first = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2732f425704bf8c1ecefd26e80ada2e" name="ac2732f425704bf8c1ecefd26e80ada2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2732f425704bf8c1ecefd26e80ada2e">&#9670;&nbsp;</a></span>m_last</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#a01ebd82eda883e32f89fc5ab7dff0cfd">value_pointer</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_last = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6b2b748345d59d84af7e81b6dc8bd25" name="ad6b2b748345d59d84af7e81b6dc8bd25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b2b748345d59d84af7e81b6dc8bd25">&#9670;&nbsp;</a></span>m_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Ref , class Ptr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtstl_1_1deque__iterator.html#ad2b707fc4ed33aa9a681ca6c512bb465">map_pointer</a> <a class="el" href="structtstl_1_1deque__iterator.html">tstl::deque_iterator</a>&lt; T, Ref, Ptr &gt;::m_node = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="deque_8hpp_source.html">deque.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2022年 二月 6日 星期日 06:14:12 , 为 Tiny STL使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
